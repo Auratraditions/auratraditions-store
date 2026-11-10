@@ -41,9 +41,11 @@
         <a href="#contact" class="hover:text-[#1B3B2B] transition">Contact & Support</a>
       </nav>
 
-      <a href="#payment" onclick="openUpiModal()" class="bg-[#1B3B2B] hover:bg-[#2C4A38] text-[#F4F1EA] px-5 py-2.5 rounded-full text-xs font-semibold shadow-sm transition">
-        Pay via UPI
-      </a>
+      <!-- Cart Button with Counter -->
+      <button onclick="toggleCart()" class="bg-[#1B3B2B] hover:bg-[#2C4A38] text-[#F4F1EA] px-5 py-2.5 rounded-full text-xs font-semibold shadow-sm transition flex items-center gap-2">
+        <span>🛒 Cart</span>
+        <span id="cartCount" class="bg-[#D4A373] text-[#1B3B2B] rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-bold">0</span>
+      </button>
     </div>
   </header>
 
@@ -62,7 +64,6 @@
         Sustainable neem wood combs, organic bamboo brushes, and bespoke corporate gifting packages shipped directly from Coimbatore.
       </p>
       
-      <!-- Retail and Wholesale Buttons (Aligned Exactly as MissEco) -->
       <div class="flex flex-col sm:flex-row justify-center gap-4">
         <a href="#products" class="bg-[#D4A373] hover:bg-[#C29260] text-[#1B3B2B] font-semibold px-8 py-3.5 rounded-full shadow-lg transition duration-300 text-center">
           Shop Retail
@@ -74,7 +75,7 @@
     </div>
   </section>
 
-  <!-- Products Section (Framer Images & Details) -->
+  <!-- Products Section -->
   <section id="products" class="max-w-7xl mx-auto px-6 py-20">
     <div class="text-center max-w-xl mx-auto mb-14">
       <h2 class="text-3xl font-serif font-bold text-[#1B3B2B] mb-3">Our Eco Collection</h2>
@@ -83,7 +84,7 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       
-      <!-- Product 1: Handle Grip Neem Wooden Comb -->
+      <!-- Product 1 -->
       <div class="bg-white rounded-2xl p-5 border border-[#E3EDE8] shadow-sm hover:shadow-md transition flex flex-col justify-between">
         <div>
           <div class="h-64 rounded-xl mb-4 overflow-hidden bg-[#F4F6F5]">
@@ -95,13 +96,13 @@
         </div>
         <div class="flex justify-between items-center pt-3 border-t border-[#F2F5F3]">
           <span class="font-bold text-lg text-[#1B3B2B]">₹150</span>
-          <button onclick="openUpiModal('Handle grip neem wooden comb - ₹150')" class="bg-[#1B3B2B] text-white px-4 py-2 rounded-lg text-xs font-medium hover:bg-[#2C4A38] transition">
-            Buy via UPI
+          <button onclick="addToCart('Handle grip neem wooden comb', 150)" class="bg-[#1B3B2B] text-white px-4 py-2 rounded-lg text-xs font-medium hover:bg-[#2C4A38] transition">
+            Add to Cart
           </button>
         </div>
       </div>
 
-      <!-- Product 2: Bamboo Toothbrush -->
+      <!-- Product 2 -->
       <div class="bg-white rounded-2xl p-5 border border-[#E3EDE8] shadow-sm hover:shadow-md transition flex flex-col justify-between">
         <div>
           <div class="h-64 rounded-xl mb-4 overflow-hidden bg-[#F4F6F5]">
@@ -113,13 +114,13 @@
         </div>
         <div class="flex justify-between items-center pt-3 border-t border-[#F2F5F3]">
           <span class="font-bold text-lg text-[#1B3B2B]">₹100</span>
-          <button onclick="openUpiModal('Bamboo Toothbrush - ₹100')" class="bg-[#1B3B2B] text-white px-4 py-2 rounded-lg text-xs font-medium hover:bg-[#2C4A38] transition">
-            Buy via UPI
+          <button onclick="addToCart('Bamboo Toothbrush', 100)" class="bg-[#1B3B2B] text-white px-4 py-2 rounded-lg text-xs font-medium hover:bg-[#2C4A38] transition">
+            Add to Cart
           </button>
         </div>
       </div>
 
-      <!-- Product 3: Combo Kit / Eco Box -->
+      <!-- Product 3 -->
       <div class="bg-white rounded-2xl p-5 border border-[#E3EDE8] shadow-sm hover:shadow-md transition flex flex-col justify-between">
         <div>
           <div class="h-64 rounded-xl mb-4 overflow-hidden bg-[#F4F6F5]">
@@ -131,8 +132,8 @@
         </div>
         <div class="flex justify-between items-center pt-3 border-t border-[#F2F5F3]">
           <span class="font-bold text-lg text-[#1B3B2B]">₹499</span>
-          <button onclick="openUpiModal('Aura Traditions Signature Kit - ₹499')" class="bg-[#1B3B2B] text-white px-4 py-2 rounded-lg text-xs font-medium hover:bg-[#2C4A38] transition">
-            Buy via UPI
+          <button onclick="addToCart('Aura Traditions Signature Kit', 499)" class="bg-[#1B3B2B] text-white px-4 py-2 rounded-lg text-xs font-medium hover:bg-[#2C4A38] transition">
+            Add to Cart
           </button>
         </div>
       </div>
@@ -187,38 +188,109 @@
     </div>
   </footer>
 
-  <!-- UPI Modal Dialog -->
-  <div id="upiModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full text-[#2C3531] shadow-2xl relative">
-      <button onclick="closeUpiModal()" class="absolute top-4 right-4 text-gray-400 hover:text-black text-xl font-bold">✕</button>
-      
-      <h3 class="font-serif font-bold text-2xl text-[#1B3B2B] mb-2">Instant UPI Payment</h3>
-      <p id="modalItemText" class="text-xs text-[#5C7665] mb-6">Order Payment</p>
+  <!-- Shopping Cart Drawer / Modal -->
+  <div id="cartModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex justify-end">
+    <div class="bg-white w-full max-w-md h-full shadow-2xl flex flex-col justify-between p-6 text-[#2C3531] relative">
+      <div>
+        <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+          <h3 class="font-serif font-bold text-xl text-[#1B3B2B]">Your Shopping Cart</h3>
+          <button onclick="toggleCart()" class="text-gray-400 hover:text-black text-xl font-bold">✕</button>
+        </div>
 
-      <div class="bg-[#F4F6F5] p-4 rounded-2xl text-center mb-6 border border-[#EBEAE5]">
-        <span class="text-xs text-[#5C7665] block uppercase font-bold tracking-wider mb-1">Pay to UPI ID</span>
-        <span class="text-xl font-bold font-mono text-[#1B3B2B] select-all">9385410034@upi</span>
+        <div id="cartItemsContainer" class="py-6 space-y-4 max-h-[60vh] overflow-y-auto">
+          <!-- Cart items dynamically updated -->
+          <p class="text-sm text-gray-500 text-center py-8">Your cart is empty.</p>
+        </div>
       </div>
 
-      <div class="space-y-2 text-xs text-[#5C7665] mb-6">
-        <p>1. Open Google Pay, PhonePe, or Paytm.</p>
-        <p>2. Send payment to <strong>9385410034@upi</strong>.</p>
-        <p>3. WhatsApp your payment screenshot to <strong>+91 93854 10034</strong> for order dispatch.</p>
-      </div>
+      <div class="border-t border-gray-100 pt-4">
+        <div class="flex justify-between items-center mb-4 text-base font-bold">
+          <span>Total:</span>
+          <span id="cartTotal">₹0</span>
+        </div>
 
-      <a href="https://wa.me/919385410034" target="_blank" class="block text-center bg-[#1B3B2B] hover:bg-[#2C4A38] text-white py-3.5 rounded-full font-bold text-sm transition">
-        Confirm via WhatsApp
-      </a>
+        <div class="bg-[#F4F6F5] p-3 rounded-xl text-center mb-4 text-xs">
+          <span>Pay via UPI ID: </span><strong class="text-[#1B3B2B]">9385410034@upi</strong>
+        </div>
+
+        <button onclick="checkoutViaWhatsApp()" class="w-full bg-[#1B3B2B] hover:bg-[#2C4A38] text-white py-3.5 rounded-full font-bold text-sm transition text-center shadow-lg">
+          Proceed & Pay via UPI (WhatsApp Order)
+        </button>
+      </div>
     </div>
   </div>
 
   <script>
-    function openUpiModal(item = 'Direct Payment') {
-      document.getElementById('modalItemText').innerText = item;
-      document.getElementById('upiModal').classList.remove('hidden');
+    let cart = [];
+
+    function addToCart(name, price) {
+      let existingItem = cart.find(item => item.name === name);
+      if (existingItem) {
+        existingItem.qty += 1;
+      } else {
+        cart.push({ name, price, qty: 1 });
+      }
+      updateCartUI();
+      toggleCart();
     }
-    function closeUpiModal() {
-      document.getElementById('upiModal').classList.add('hidden');
+
+    function updateCartUI() {
+      let cartCount = document.getElementById('cartCount');
+      let cartItemsContainer = document.getElementById('cartItemsContainer');
+      let cartTotal = document.getElementById('cartTotal');
+
+      let totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+      let totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+      cartCount.innerText = totalCount;
+      cartTotal.innerText = '₹' + totalPrice;
+
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p class="text-sm text-gray-500 text-center py-8">Your cart is empty.</p>';
+        return;
+      }
+
+      let html = '';
+      cart.forEach((item, index) => {
+        html += `
+          <div class="flex justify-between items-center bg-[#F9F8F6] p-3 rounded-xl border border-gray-100">
+            <div>
+              <h4 class="font-bold text-sm text-[#1B3B2B]">${item.name}</h4>
+              <p class="text-xs text-gray-500">₹${item.price} × ${item.qty}</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-sm">₹${item.price * item.qty}</span>
+              <button onclick="removeItem(${index})" class="text-red-500 text-xs px-2 py-1 font-bold">🗑️</button>
+            </div>
+          </div>
+        `;
+      });
+      cartItemsContainer.innerHTML = html;
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      updateCartUI();
+    }
+
+    function toggleCart() {
+      let modal = document.getElementById('cartModal');
+      modal.classList.toggle('hidden');
+    }
+
+    function checkoutViaWhatsApp() {
+      if (cart.length === 0) {
+        alert('Your cart is empty!');
+        return;
+      }
+      let totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      let message = "Hello Aura Traditions, I would like to place an order:%0A";
+      cart.forEach(item => {
+        message += `- ${item.name} (Qty: ${item.qty}) - ₹${item.price * item.qty}%0A`;
+      });
+      message += `%0ATotal Amount: ₹${totalPrice}%0APaying via UPI ID: 9385410034@upi`;
+      
+      window.open(`https://wa.me/919385410034?text=${message}`, '_blank');
     }
   </script>
 
