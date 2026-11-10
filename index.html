@@ -1,160 +1,303 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aura Traditions | Natural Elegance</title>
+  <title>Aura Traditions | Premium Handcrafted Eco-Essentials</title>
+  
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
   <style>
-    html { scroll-behavior: smooth; }
     .font-serif { font-family: 'Playfair Display', serif; }
     .font-sans { font-family: 'Plus Jakarta Sans', sans-serif; }
+    
+    /* Framer-style background noise / radial glow */
+    .framer-hero-glow {
+      background: radial-gradient(circle at 50% 20%, rgba(212, 163, 115, 0.15) 0%, rgba(27, 59, 43, 0) 70%);
+    }
+    .framer-card-shadow {
+      box-shadow: 0 20px 40px -15px rgba(27, 59, 43, 0.07);
+    }
   </style>
 </head>
-<body class="min-h-screen bg-[#F9F8F6] text-[#2C3531] font-sans antialiased">
+<body class="min-h-screen bg-[#FAFAF8] text-[#2C3531] font-sans antialiased selection:bg-[#D4A373] selection:text-[#1B3B2B]">
 
   <!-- Top Announcement Bar -->
-  <div class="bg-[#1B3B2B] text-[#F4F1EA] text-xs sm:text-sm py-2 px-4 text-center font-medium tracking-wide">
-    🌿 100% Zero-Plastic Packaging | Pan-India Delivery | Wholesale & Corporate Gifting Available
-    <span class="block sm:inline sm:ml-4">Call/WhatsApp: +91 9385410034</span>
+  <div class="bg-[#152E22] text-[#E8ECE9] text-xs sm:text-sm py-2.5 px-4 text-center font-medium tracking-wide border-b border-[#234836]">
+    🌿 100% Zero-Plastic Packaging • Pan-India Delivery • Wholesale & Corporate Gifting
+    <span class="block sm:inline sm:ml-4 text-[#D4A373] font-semibold">Call/WhatsApp: +91 93854 10034</span>
   </div>
 
-  <!-- Header / Navigation with Logo -->
-  <header class="sticky top-0 z-50 bg-[#F9F8F6]/95 backdrop-blur-md border-b border-[#E3EDE8] shadow-sm">
-    <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-      <div class="flex items-center gap-3">
-        <!-- Aura Traditions Logo Image -->
-        <div class="w-12 h-12 rounded-full overflow-hidden border border-[#D4A373] shadow-md bg-[#1B3B2B] flex items-center justify-center">
-          <img src="logo.jpg" alt="Aura Traditions Logo" class="w-full h-full object-cover">
+  <!-- Header / Navbar -->
+  <header class="sticky top-0 z-40 bg-[#FAFAF8]/90 backdrop-blur-md border-b border-[#EBEAE5]">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      
+      <!-- Brand Logo Emblem -->
+      <a href="#home" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-full bg-[#1B3B2B] border-2 border-[#D4A373] flex items-center justify-center text-[#D4A373] shadow-md group-hover:scale-105 transition-transform duration-300">
+          <span class="font-serif font-bold text-lg">AT</span>
         </div>
         <div>
-          <h1 class="text-base sm:text-lg font-serif font-bold text-[#1B3B2B] tracking-tight">Aura Traditions</h1>
-          <p class="text-[10px] uppercase tracking-widest text-[#5C7665] font-semibold">Natural Elegance • இயற்கையின் நேர்த்தி</p>
+          <span class="text-xl font-serif font-bold text-[#1B3B2B] tracking-tight block">Aura Traditions</span>
+          <span class="text-[10px] uppercase tracking-widest text-[#5C7665] font-semibold block">Natural Elegance • Est. 2026</span>
         </div>
-      </div>
+      </a>
       
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-[#4A5D52]">
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-[#4A5D52]">
         <a href="#home" class="hover:text-[#1B3B2B] transition">Home</a>
         <a href="#products" class="hover:text-[#1B3B2B] transition">Products</a>
-        <a href="#b2b" class="hover:text-[#1B3B2B] transition">B2B & Wholesale</a>
+        <a href="#payment" class="hover:text-[#1B3B2B] transition">UPI Payment</a>
+        <a href="#contact" class="hover:text-[#1B3B2B] transition">Contact & Support</a>
       </nav>
 
-      <a href="#products" class="bg-[#1B3B2B] hover:bg-[#2C4A38] text-[#F4F1EA] px-5 py-2.5 rounded-full text-sm font-medium shadow-sm transition">
-        Cart (0)
-      </a>
+      <!-- Cart / Quick Pay CTA -->
+      <div class="flex items-center gap-3">
+        <a href="#payment" onclick="openUpiModal()" class="bg-[#1B3B2B] hover:bg-[#2C4A38] text-[#F4F1EA] px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold shadow-md hover:shadow-lg transition duration-300 flex items-center gap-2">
+          <span>⚡ Quick UPI Pay</span>
+        </a>
+      </div>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="relative bg-[#1B3B2B] text-[#F4F1EA] py-20 lg:py-28 px-6 overflow-hidden">
-    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4A373_1px,transparent_1px)] [background-size:16px_16px]"></div>
-    
-    <div class="relative max-w-4xl mx-auto text-center z-10">
-      <div class="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden border-2 border-[#D4A373] shadow-2xl">
-        <img src="logo.jpg" alt="Aura Traditions Emblem" class="w-full h-full object-cover">
+  <section id="home" class="relative bg-[#1B3B2B] text-[#F4F1EA] pt-24 pb-28 px-6 overflow-hidden framer-hero-glow">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      
+      <!-- Big Emblem Badge -->
+      <div class="w-20 h-20 mx-auto mb-8 rounded-full bg-[#152E22] border-2 border-[#D4A373] flex items-center justify-center text-[#D4A373] shadow-2xl">
+        <span class="text-3xl">🪞</span>
       </div>
-      <span class="inline-block bg-[#2C4A38] text-[#D4A373] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4 border border-[#3A5F4B]">
-        இயற்கையின் நேர்த்தி • Natural Elegance
+
+      <span class="inline-block bg-[#2C4A38] text-[#D4A373] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 border border-[#3A5F4B]">
+        Crafted in Tamil Nadu
       </span>
+
       <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight mb-6 leading-tight">
         Handcrafted Eco-Friendly Essentials for Global Living
       </h1>
+
       <p class="text-lg sm:text-xl text-[#D8E2DC] max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-        பாரம்பரிய தமிழ்நாட்டின் இயற்கை தயாரிப்புகள் — வேப்ப மர சீப்புகள், மூங்கில் பிரஷ்கள் மற்றும் ஹோட்டல்/கார்ப்பரேட் மொத்த விற்பனை தீர்வுகள்.
+        Sustainable neem wood combs, organic bamboo brushes, and bespoke corporate gifting packages shipped directly from Coimbatore.
       </p>
       
       <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="#products" class="bg-[#D4A373] hover:bg-[#C29260] text-[#1B3B2B] font-semibold px-8 py-3.5 rounded-full shadow-lg transition duration-300">
-          Shop Retail
+        <a href="#products" class="bg-[#D4A373] hover:bg-[#C29260] text-[#1B3B2B] font-bold px-8 py-4 rounded-full shadow-xl transition duration-300">
+          Explore Products
         </a>
-        <a href="#b2b" class="border-2 border-[#D4A373] text-[#D4A373] hover:bg-[#D4A373] hover:text-[#1B3B2B] font-semibold px-8 py-3.5 rounded-full transition duration-300">
-          B2B Wholesale Inquiry
+        <a href="#payment" onclick="openUpiModal()" class="border-2 border-[#D4A373] text-[#D4A373] hover:bg-[#D4A373] hover:text-[#1B3B2B] font-bold px-8 py-4 rounded-full transition duration-300">
+          Direct UPI Payment
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Products Section -->
-  <section id="products" class="max-w-7xl mx-auto px-6 py-20">
-    <div class="text-center max-w-xl mx-auto mb-14">
-      <h2 class="text-3xl font-serif font-bold text-[#1B3B2B] mb-3">எங்களது தயாரிப்புகள் (Our Eco Products)</h2>
-      <p class="text-[#5C7665]">Choose sustainable, zero-plastic alternatives for your daily routine.</p>
+  <!-- Products Showcase -->
+  <section id="products" class="max-w-7xl mx-auto px-6 py-24">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#1B3B2B] mb-4">Our Sustainable Collection</h2>
+      <p class="text-[#5C7665]">Zero-plastic daily essentials handcrafted with natural materials.</p>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
       <!-- Product Card 1 -->
-      <div class="bg-white rounded-2xl p-5 border border-[#E3EDE8] shadow-sm hover:shadow-md transition">
-        <div class="h-64 bg-[#F2F5F3] rounded-xl mb-4 flex items-center justify-center text-[#5C7665] font-medium">
-          [Neem Wood Comb Image]
+      <div class="bg-white rounded-3xl p-6 border border-[#EBEAE5] framer-card-shadow hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="h-64 bg-[#F4F6F5] rounded-2xl mb-6 flex items-center justify-center text-4xl">
+            🪴
+          </div>
+          <span class="text-xs uppercase tracking-widest text-[#D4A373] font-bold">Hair Care</span>
+          <h3 class="font-serif font-bold text-xl text-[#1B3B2B] mt-1 mb-2">Organic Neem Wood Comb</h3>
+          <p class="text-sm text-[#5C7665] leading-relaxed mb-6">Antibacterial, scalp-stimulating natural neem comb to reduce hair breakage.</p>
         </div>
-        <h3 class="font-serif font-bold text-lg text-[#1B3B2B] mb-1">Neem Wood Combs</h3>
-        <p class="text-sm text-[#5C7665] mb-4">Chemical-free traditional scalp care for healthy hair.</p>
-        <div class="flex justify-between items-center">
-          <span class="font-bold text-[#1B3B2B]">₹199</span>
-          <button class="bg-[#1B3B2B] text-white px-4 py-2 rounded-lg text-xs font-medium hover:bg-[#2C4A38]">Add to Cart</button>
+        <div class="flex justify-between items-center pt-4 border-t border-[#F4F6F5]">
+          <div>
+            <span class="text-xs text-[#5C7665] block">Price</span>
+            <span class="text-xl font-bold text-[#1B3B2B]">₹199</span>
+          </div>
+          <button onclick="openUpiModal('Neem Wood Comb - ₹199')" class="bg-[#1B3B2B] hover:bg-[#2C4A38] text-white px-5 py-2.5 rounded-full text-xs font-semibold transition">
+            Buy via UPI
+          </button>
         </div>
       </div>
 
       <!-- Product Card 2 -->
-      <div class="bg-white rounded-2xl p-5 border border-[#E3EDE8] shadow-sm hover:shadow-md transition">
-        <div class="h-64 bg-[#F2F5F3] rounded-xl mb-4 flex items-center justify-center text-[#5C7665] font-medium">
-          [Bamboo Toothbrush Image]
+      <div class="bg-white rounded-3xl p-6 border border-[#EBEAE5] framer-card-shadow hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="h-64 bg-[#F4F6F5] rounded-2xl mb-6 flex items-center justify-center text-4xl">
+            🪥
+          </div>
+          <span class="text-xs uppercase tracking-widest text-[#D4A373] font-bold">Oral Hygiene</span>
+          <h3 class="font-serif font-bold text-xl text-[#1B3B2B] mt-1 mb-2">Charcoal Bamboo Brush</h3>
+          <p class="text-sm text-[#5C7665] leading-relaxed mb-6">Biodegradable bamboo handle with soft charcoal-infused bristles.</p>
         </div>
-        <h3 class="font-serif font-bold text-lg text-[#1B3B2B] mb-1">Bamboo Toothbrush</h3>
-        <p class="text-sm text-[#5C7665] mb-4">Biodegradable handle with soft charcoal bristles.</p>
-        <div class="flex justify-between items-center">
-          <span class="font-bold text-[#1B3B2B]">₹149</span>
-          <button class="bg-[#1B3B2B] text-white px-4 py-2 rounded-lg text-xs font-medium hover:bg-[#2C4A38]">Add to Cart</button>
+        <div class="flex justify-between items-center pt-4 border-t border-[#F4F6F5]">
+          <div>
+            <span class="text-xs text-[#5C7665] block">Price</span>
+            <span class="text-xl font-bold text-[#1B3B2B]">₹149</span>
+          </div>
+          <button onclick="openUpiModal('Bamboo Toothbrush - ₹149')" class="bg-[#1B3B2B] hover:bg-[#2C4A38] text-white px-5 py-2.5 rounded-full text-xs font-semibold transition">
+            Buy via UPI
+          </button>
         </div>
       </div>
 
       <!-- Product Card 3 -->
-      <div class="bg-white rounded-2xl p-5 border border-[#E3EDE8] shadow-sm hover:shadow-md transition">
-        <div class="h-64 bg-[#F2F5F3] rounded-xl mb-4 flex items-center justify-center text-[#5C7665] font-medium">
-          [Eco Gift Hamper Image]
+      <div class="bg-white rounded-3xl p-6 border border-[#EBEAE5] framer-card-shadow hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="h-64 bg-[#F4F6F5] rounded-2xl mb-6 flex items-center justify-center text-4xl">
+            🎁
+          </div>
+          <span class="text-xs uppercase tracking-widest text-[#D4A373] font-bold">Corporate & Bulk</span>
+          <h3 class="font-serif font-bold text-xl text-[#1B3B2B] mt-1 mb-2">B2B Eco Gift Kit</h3>
+          <p class="text-sm text-[#5C7665] leading-relaxed mb-6">Custom white-label eco hampers for corporate events, hotels & retail.</p>
         </div>
-        <h3 class="font-serif font-bold text-lg text-[#1B3B2B] mb-1">Corporate Eco Kit</h3>
-        <p class="text-sm text-[#5C7665] mb-4">Customized sustainable gifting hampers for events.</p>
-        <div class="flex justify-between items-center">
-          <span class="font-bold text-[#1B3B2B]">Bulk Pricing</span>
-          <button class="bg-[#1B3B2B] text-white px-4 py-2 rounded-lg text-xs font-medium hover:bg-[#2C4A38]">Inquire</button>
+        <div class="flex justify-between items-center pt-4 border-t border-[#F4F6F5]">
+          <div>
+            <span class="text-xs text-[#5C7665] block">Wholesale</span>
+            <span class="text-xl font-bold text-[#1B3B2B]">Custom Quote</span>
+          </div>
+          <a href="mailto:puro@auratraditions.com" class="bg-[#D4A373] hover:bg-[#C29260] text-[#1B3B2B] px-5 py-2.5 rounded-full text-xs font-bold transition">
+            Inquire Bulk
+          </a>
         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- UPI Payment Section -->
+  <section id="payment" class="bg-[#152E22] text-[#F4F1EA] py-20 px-6 relative">
+    <div class="max-w-4xl mx-auto bg-[#1B3B2B] rounded-3xl p-8 sm:p-12 border border-[#234836] shadow-2xl">
+      <div class="text-center mb-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#D4A373]">Instant Checkout</span>
+        <h2 class="text-3xl font-serif font-bold mt-2">Direct Payment via UPI</h2>
+        <p class="text-sm text-[#D8E2DC] mt-2">Scan or transfer directly using GPay, PhonePe, Paytm, or BHIM UPI.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-[#152E22] p-6 sm:p-8 rounded-2xl border border-[#234836]">
+        
+        <!-- UPI ID Details -->
+        <div class="space-y-4">
+          <div>
+            <span class="text-xs uppercase tracking-wider text-[#A3B8AC]">Primary UPI ID / Phone</span>
+            <div class="text-2xl font-bold text-[#D4A373] mt-1 select-all font-mono">
+              9385410034@paytm
+            </div>
+            <p class="text-xs text-[#A3B8AC] mt-1">(Works with GPay / PhonePe / Paytm / BHIM)</p>
+          </div>
+
+          <div class="pt-4 border-t border-[#234836]">
+            <span class="text-xs uppercase tracking-wider text-[#A3B8AC]">Official WhatsApp Confirmation</span>
+            <p class="text-sm text-white font-semibold mt-1">+91 93854 10034</p>
+          </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="space-y-3 text-sm text-[#D8E2DC]">
+          <h4 class="font-bold text-white text-base mb-2">How to Pay:</h4>
+          <p class="flex items-start gap-2">
+            <span>1.</span> Open your preferred UPI App (GPay/PhonePe/Paytm).
+          </p>
+          <p class="flex items-start gap-2">
+            <span>2.</span> Enter UPI ID <strong class="text-[#D4A373]">9385410034@paytm</strong> or mobile number <strong class="text-[#D4A373]">+91 9385410034</strong>.
+          </p>
+          <p class="flex items-start gap-2">
+            <span>3.</span> Share payment screenshot to <strong class="text-white">puro@auratraditions.com</strong> or WhatsApp for order dispatch.
+          </p>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer id="b2b" class="bg-[#152E22] text-[#D8E2DC] py-12 px-6 border-t border-[#234836]">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+  <!-- Contact & Footer Section -->
+  <footer id="contact" class="bg-[#0F2319] text-[#D8E2DC] py-16 px-6 border-t border-[#1C3D2C]">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+      
+      <!-- Brand Info -->
       <div>
         <div class="flex items-center gap-3 mb-4">
-          <div class="w-10 h-10 rounded-full overflow-hidden border border-[#D4A373]">
-            <img src="logo.jpg" alt="Logo" class="w-full h-full object-cover">
+          <div class="w-10 h-10 rounded-full bg-[#1B3B2B] border border-[#D4A373] flex items-center justify-center text-[#D4A373] font-serif font-bold">
+            AT
           </div>
-          <h3 class="font-serif font-bold text-lg text-white">Aura Traditions</h3>
+          <h3 class="font-serif font-bold text-xl text-white">Aura Traditions</h3>
         </div>
         <p class="text-sm text-[#A3B8AC] leading-relaxed">
-          Bringing timeless Tamil Nadu craftsmanship to global households with sustainable zero-plastic solutions.
+          Bringing timeless Tamil Nadu craftsmanship to global households with zero-plastic sustainable living solutions.
         </p>
       </div>
+
+      <!-- Support & Contact -->
       <div>
-        <h4 class="font-semibold text-white mb-3 text-sm tracking-wider uppercase">Contact Details</h4>
-        <p class="text-sm text-[#A3B8AC] mb-2">Phone / WhatsApp: +91 9385410034</p>
-        <p class="text-sm text-[#A3B8AC]">Official Email: <a href="mailto:support@auratraditions.com" class="text-[#D4A373] hover:underline">support@auratraditions.com</a></p>
+        <h4 class="font-semibold text-white mb-4 text-xs tracking-widest uppercase">Contact & Support</h4>
+        <ul class="space-y-2 text-sm text-[#A3B8AC]">
+          <li><strong>Phone / WhatsApp:</strong> +91 93854 10034</li>
+          <li><strong>Email:</strong> <a href="mailto:puro@auratraditions.com" class="text-[#D4A373] hover:underline">puro@auratraditions.com</a></li>
+          <li><strong>Website:</strong> <a href="https://www.auratraditions.com" class="text-[#D4A373] hover:underline">www.auratraditions.com</a></li>
+        </ul>
       </div>
+
+      <!-- Registered Address -->
       <div>
-        <h4 class="font-semibold text-white mb-3 text-sm tracking-wider uppercase">Registered Address (MSME / GST)</h4>
+        <h4 class="font-semibold text-white mb-4 text-xs tracking-widest uppercase">Registered Address & GST</h4>
         <p class="text-sm text-[#A3B8AC] leading-relaxed">
-          Uliyampalayam, Coimbatore, Tamil Nadu, India.<br />
-          GST: 33DKOPJ5982H1ZO
+          Aura Traditions,<br/>
+          No. 16, near Dhaksha Zephrine, Balaji Avenue,<br/>
+          Dhaliyur, Uliyampalayam, Dheenampalayam (PO),<br/>
+          Coimbatore - 641109, Tamil Nadu, India.<br/>
+          <strong class="text-white mt-1 block">GSTIN: 33DKOPJ5982H1ZO</strong>
         </p>
       </div>
+
     </div>
-    <div class="max-w-7xl mx-auto pt-6 border-t border-[#234836] text-center text-xs text-[#A3B8AC]">
-      © 2026 Aura Traditions (SARASWATHI JAYABAL). All rights reserved.
+
+    <div class="max-w-7xl mx-auto pt-8 border-t border-[#1C3D2C] text-center text-xs text-[#A3B8AC]">
+      © 2026 Aura Traditions. All rights reserved.
     </div>
   </footer>
+
+  <!-- UPI Modal Dialog -->
+  <div id="upiModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full text-[#2C3531] shadow-2xl relative">
+      <button onclick="closeUpiModal()" class="absolute top-4 right-4 text-gray-400 hover:text-black text-xl font-bold">✕</button>
+      
+      <h3 class="font-serif font-bold text-2xl text-[#1B3B2B] mb-2">Complete UPI Payment</h3>
+      <p id="modalItemText" class="text-xs text-[#5C7665] mb-6">Order Payment</p>
+
+      <div class="bg-[#F4F6F5] p-4 rounded-2xl text-center mb-6 border border-[#EBEAE5]">
+        <span class="text-xs text-[#5C7665] block uppercase font-bold tracking-wider mb-1">Pay to UPI ID</span>
+        <span class="text-xl font-bold font-mono text-[#1B3B2B] select-all">9385410034@paytm</span>
+      </div>
+
+      <div class="space-y-3 text-xs text-[#5C7665] mb-6">
+        <p>1. Open Google Pay, PhonePe, or Paytm.</p>
+        <p>2. Send payment to <strong>9385410034@paytm</strong>.</p>
+        <p>3. WhatsApp your transaction ID to <strong>+91 93854 10034</strong>.</p>
+      </div>
+
+      <a href="https://wa.me/919385410034" target="_blank" class="block text-center bg-[#1B3B2B] hover:bg-[#2C4A38] text-white py-3.5 rounded-full font-bold text-sm transition">
+        Confirm Order via WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function openUpiModal(item = 'Direct Payment') {
+      document.getElementById('modalItemText').innerText = item;
+      document.getElementById('upiModal').classList.remove('hidden');
+    }
+    function closeUpiModal() {
+      document.getElementById('upiModal').classList.add('hidden');
+    }
+  </script>
 
 </body>
 </html>
