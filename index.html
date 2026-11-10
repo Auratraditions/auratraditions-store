@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Aura Traditions | Natural Elegance</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
+    html { scroll-behavior: smooth; }
     .font-serif { font-family: 'Playfair Display', serif; }
     .font-sans { font-family: 'Plus Jakarta Sans', sans-serif; }
   </style>
@@ -19,17 +20,17 @@
     <span class="block sm:inline sm:ml-4">Call/WhatsApp: +91 9385410034</span>
   </div>
 
-  <!-- Header / Navigation -->
-  <header class="sticky top-0 z-50 bg-[#F9F8F6]/90 backdrop-blur-md border-b border-[#E3EDE8]">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+  <!-- Header / Navigation with Logo -->
+  <header class="sticky top-0 z-50 bg-[#F9F8F6]/95 backdrop-blur-md border-b border-[#E3EDE8] shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
       <div class="flex items-center gap-3">
-        <!-- Logo -->
-        <div class="w-10 h-10 rounded-full bg-[#1B3B2B] flex items-center justify-center text-[#D4A373] font-bold text-xl shadow-md">
-          🪞
+        <!-- Aura Traditions Logo Image -->
+        <div class="w-12 h-12 rounded-full overflow-hidden border border-[#D4A373] shadow-md bg-[#1B3B2B] flex items-center justify-center">
+          <img src="logo.jpg" alt="Aura Traditions Logo" class="w-full h-full object-cover">
         </div>
         <div>
-          <h1 class="text-lg font-serif font-bold text-[#1B3B2B] tracking-tight">Aura Traditions</h1>
-          <p class="text-[10px] uppercase tracking-widest text-[#5C7665] font-semibold">Natural Elegance • Est. 2026</p>
+          <h1 class="text-base sm:text-lg font-serif font-bold text-[#1B3B2B] tracking-tight">Aura Traditions</h1>
+          <p class="text-[10px] uppercase tracking-widest text-[#5C7665] font-semibold">Natural Elegance • இயற்கையின் நேர்த்தி</p>
         </div>
       </div>
       
@@ -50,8 +51,11 @@
     <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4A373_1px,transparent_1px)] [background-size:16px_16px]"></div>
     
     <div class="relative max-w-4xl mx-auto text-center z-10">
+      <div class="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden border-2 border-[#D4A373] shadow-2xl">
+        <img src="logo.jpg" alt="Aura Traditions Emblem" class="w-full h-full object-cover">
+      </div>
       <span class="inline-block bg-[#2C4A38] text-[#D4A373] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4 border border-[#3A5F4B]">
-        இயற்கையின் நேர்த்தி
+        இயற்கையின் நேர்த்தி • Natural Elegance
       </span>
       <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight mb-6 leading-tight">
         Handcrafted Eco-Friendly Essentials for Global Living
@@ -68,3 +72,89 @@
           B2B Wholesale Inquiry
         </a>
       </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="max-w-7xl mx-auto px-6 py-20">
+    <div class="text-center max-w-xl mx-auto mb-14">
+      <h2 class="text-3xl font-serif font-bold text-[#1B3B2B] mb-3">எங்களது தயாரிப்புகள் (Our Eco Products)</h2>
+      <p class="text-[#5C7665]">Choose sustainable, zero-plastic alternatives for your daily routine.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Product Card 1 -->
+      <div class="bg-white rounded-2xl p-5 border border-[#E3EDE8] shadow-sm hover:shadow-md transition">
+        <div class="h-64 bg-[#F2F5F3] rounded-xl mb-4 flex items-center justify-center text-[#5C7665] font-medium">
+          [Neem Wood Comb Image]
+        </div>
+        <h3 class="font-serif font-bold text-lg text-[#1B3B2B] mb-1">Neem Wood Combs</h3>
+        <p class="text-sm text-[#5C7665] mb-4">Chemical-free traditional scalp care for healthy hair.</p>
+        <div class="flex justify-between items-center">
+          <span class="font-bold text-[#1B3B2B]">₹199</span>
+          <button class="bg-[#1B3B2B] text-white px-4 py-2 rounded-lg text-xs font-medium hover:bg-[#2C4A38]">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="bg-white rounded-2xl p-5 border border-[#E3EDE8] shadow-sm hover:shadow-md transition">
+        <div class="h-64 bg-[#F2F5F3] rounded-xl mb-4 flex items-center justify-center text-[#5C7665] font-medium">
+          [Bamboo Toothbrush Image]
+        </div>
+        <h3 class="font-serif font-bold text-lg text-[#1B3B2B] mb-1">Bamboo Toothbrush</h3>
+        <p class="text-sm text-[#5C7665] mb-4">Biodegradable handle with soft charcoal bristles.</p>
+        <div class="flex justify-between items-center">
+          <span class="font-bold text-[#1B3B2B]">₹149</span>
+          <button class="bg-[#1B3B2B] text-white px-4 py-2 rounded-lg text-xs font-medium hover:bg-[#2C4A38]">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="bg-white rounded-2xl p-5 border border-[#E3EDE8] shadow-sm hover:shadow-md transition">
+        <div class="h-64 bg-[#F2F5F3] rounded-xl mb-4 flex items-center justify-center text-[#5C7665] font-medium">
+          [Eco Gift Hamper Image]
+        </div>
+        <h3 class="font-serif font-bold text-lg text-[#1B3B2B] mb-1">Corporate Eco Kit</h3>
+        <p class="text-sm text-[#5C7665] mb-4">Customized sustainable gifting hampers for events.</p>
+        <div class="flex justify-between items-center">
+          <span class="font-bold text-[#1B3B2B]">Bulk Pricing</span>
+          <button class="bg-[#1B3B2B] text-white px-4 py-2 rounded-lg text-xs font-medium hover:bg-[#2C4A38]">Inquire</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="b2b" class="bg-[#152E22] text-[#D8E2DC] py-12 px-6 border-t border-[#234836]">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-full overflow-hidden border border-[#D4A373]">
+            <img src="logo.jpg" alt="Logo" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-serif font-bold text-lg text-white">Aura Traditions</h3>
+        </div>
+        <p class="text-sm text-[#A3B8AC] leading-relaxed">
+          Bringing timeless Tamil Nadu craftsmanship to global households with sustainable zero-plastic solutions.
+        </p>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white mb-3 text-sm tracking-wider uppercase">Contact Details</h4>
+        <p class="text-sm text-[#A3B8AC] mb-2">Phone / WhatsApp: +91 9385410034</p>
+        <p class="text-sm text-[#A3B8AC]">Official Email: <a href="mailto:support@auratraditions.com" class="text-[#D4A373] hover:underline">support@auratraditions.com</a></p>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white mb-3 text-sm tracking-wider uppercase">Registered Address (MSME / GST)</h4>
+        <p class="text-sm text-[#A3B8AC] leading-relaxed">
+          Uliyampalayam, Coimbatore, Tamil Nadu, India.<br />
+          GST: 33DKOPJ5982H1ZO
+        </p>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto pt-6 border-t border-[#234836] text-center text-xs text-[#A3B8AC]">
+      © 2026 Aura Traditions (SARASWATHI JAYABAL). All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
