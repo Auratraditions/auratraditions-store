@@ -15,13 +15,13 @@
 </head>
 <body class="min-h-screen bg-[#FFFFFF] text-[#333333] antialiased">
 
-  <!-- Top Announcement Bar (Fixed Alignment) -->
+  <!-- Top Announcement Bar -->
   <div class="bg-[#003822] text-white text-[11px] sm:text-xs py-2 px-3 text-center font-medium leading-tight">
     🌿 100% Zero-Plastic Packaging | Pan-India Delivery
     <span class="inline-block sm:ml-2 text-[#79B948] font-semibold">| Call/WhatsApp: +91 93854 10034</span>
   </div>
 
-  <!-- Header / Navigation (Perfect Padding & Spacing) -->
+  <!-- Header / Navigation -->
   <header class="sticky top-0 z-40 bg-[#003822] text-white shadow-md">
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
       
@@ -36,9 +36,10 @@
         </div>
       </div>
       
-      <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-wider font-semibold text-gray-200">
+      <nav class="hidden md:flex items-center gap-6 text-xs uppercase tracking-wider font-semibold text-gray-200">
         <a href="#home" class="hover:text-[#79B948] transition">Home</a>
         <a href="#products" class="hover:text-[#79B948] transition">Shop</a>
+        <a href="#bulk-enquiry" class="text-[#79B948] hover:underline transition">Bulk Enquiry</a>
         <a href="#checkout" class="hover:text-[#79B948] transition">Checkout</a>
         <a href="#contact" class="hover:text-[#79B948] transition">Contact</a>
       </nav>
@@ -60,11 +61,15 @@
       <span class="text-[#FF2E93] text-[11px] font-bold uppercase tracking-widest mb-2">Take the Green Step</span>
       <h2 class="text-2xl sm:text-4xl font-serif font-bold text-[#003822] mb-3 leading-tight">Handcrafted Eco-Friendly Essentials</h2>
       <p class="text-xs sm:text-sm text-gray-600 mb-6 max-w-xl">Sustainable neem wood combs, organic bamboo toothbrushes, and corporate eco hampers crafted in Tamil Nadu.</p>
-      <a href="#products" class="bg-[#79B948] hover:bg-[#68A33C] text-white px-7 py-3 rounded-md text-xs font-bold uppercase tracking-wider shadow-sm transition">Shop Now</a>
+      
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="#products" class="bg-[#79B948] hover:bg-[#68A33C] text-white px-7 py-3 rounded-md text-xs font-bold uppercase tracking-wider shadow-sm transition">Shop Retail</a>
+        <a href="#bulk-enquiry" class="bg-[#003822] hover:bg-[#154E36] text-white px-7 py-3 rounded-md text-xs font-bold uppercase tracking-wider shadow-sm transition">B2B Bulk Enquiry</a>
+      </div>
     </div>
   </section>
 
-  <!-- Products Section (Working Images & Proper Alignment) -->
+  <!-- Products Section -->
   <section id="products" class="max-w-7xl mx-auto px-4 py-12">
     <div class="text-center mb-8">
       <h3 class="text-xl font-bold text-[#333333] tracking-wide">Our Trending Products</h3>
@@ -136,6 +141,50 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- B2B Wholesale / Bulk Enquiry Section (MissEco Style) -->
+  <section id="bulk-enquiry" class="bg-[#F8F9FA] py-14 px-4 border-t border-b border-gray-200">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-8">
+        <span class="text-[#79B948] text-xs font-bold uppercase tracking-widest">Corporate Gifting & Wholesale</span>
+        <h3 class="text-2xl font-serif font-bold text-[#003822] mt-1">Bulk & Wholesale Enquiry</h3>
+        <p class="text-xs sm:text-sm text-gray-600 mt-2">Looking for custom branding, corporate gifting hampers, or wholesale pricing? Fill out the form below.</p>
+      </div>
+
+      <form onsubmit="handleBulkEnquiry(event)" class="bg-white p-6 rounded-md shadow-sm border border-gray-200 space-y-4 text-xs">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-semibold text-gray-700 mb-1">Your / Company Name <span class="text-red-500">*</span></label>
+            <input type="text" id="bulkName" required class="w-full p-2.5 bg-[#F8F9FA] border border-gray-200 rounded focus:outline-none focus:border-[#79B948]">
+          </div>
+          <div>
+            <label class="block font-semibold text-gray-700 mb-1">Phone Number / WhatsApp <span class="text-red-500">*</span></label>
+            <input type="tel" id="bulkPhone" required class="w-full p-2.5 bg-[#F8F9FA] border border-gray-200 rounded focus:outline-none focus:border-[#79B948]">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-semibold text-gray-700 mb-1">Email Address <span class="text-red-500">*</span></label>
+            <input type="email" id="bulkEmail" required class="w-full p-2.5 bg-[#F8F9FA] border border-gray-200 rounded focus:outline-none focus:border-[#79B948]">
+          </div>
+          <div>
+            <label class="block font-semibold text-gray-700 mb-1">Estimated Quantity <span class="text-red-500">*</span></label>
+            <input type="text" id="bulkQty" placeholder="e.g. 100 sets / 500 pcs" required class="w-full p-2.5 bg-[#F8F9FA] border border-gray-200 rounded focus:outline-none focus:border-[#79B948]">
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-gray-700 mb-1">Requirements / Product Details</label>
+          <textarea id="bulkMessage" rows="3" placeholder="Tell us about your specific products or custom branding requirements." class="w-full p-2.5 bg-[#F8F9FA] border border-gray-200 rounded focus:outline-none focus:border-[#79B948]"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-[#003822] hover:bg-[#154E36] text-white py-3.5 rounded text-xs font-bold uppercase tracking-widest transition shadow-sm cursor-pointer">
+          SUBMIT BULK ENQUIRY
+        </button>
+      </form>
     </div>
   </section>
 
@@ -428,6 +477,18 @@
       document.getElementById('optionalWhatsappLink').href = `https://wa.me/919385410034?text=${waMessage}`;
 
       document.getElementById('upiPayGatewayModal').classList.remove('hidden');
+    }
+
+    function handleBulkEnquiry(e) {
+      e.preventDefault();
+      let name = document.getElementById('bulkName').value;
+      let phone = document.getElementById('bulkPhone').value;
+      let email = document.getElementById('bulkEmail').value;
+      let qty = document.getElementById('bulkQty').value;
+      let message = document.getElementById('bulkMessage').value;
+
+      let waMsg = `B2B Wholesale / Bulk Enquiry:%0A%0A- Name: ${name}%0A- Phone: ${phone}%0A- Email: ${email}%0A- Qty Needed: ${qty}%0A- Details: ${message}`;
+      window.open(`https://wa.me/919385410034?text=${waMsg}`, '_blank');
     }
 
     function closeUpiGateway() {
