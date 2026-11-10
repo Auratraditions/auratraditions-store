@@ -15,23 +15,24 @@
 </head>
 <body class="min-h-screen bg-[#FFFFFF] text-[#333333] antialiased">
 
-  <!-- Top Announcement Bar -->
-  <div class="bg-[#003822] text-white text-xs py-2 px-4 text-center font-medium">
-    🌿 100% Zero-Plastic Packaging | Pan-India Delivery | Wholesale & Corporate Gifting
-    <span class="ml-3 text-[#79B948]">Call/WhatsApp: +91 93854 10034</span>
+  <!-- Top Announcement Bar (Fixed Alignment) -->
+  <div class="bg-[#003822] text-white text-[11px] sm:text-xs py-2 px-3 text-center font-medium leading-tight">
+    🌿 100% Zero-Plastic Packaging | Pan-India Delivery
+    <span class="inline-block sm:ml-2 text-[#79B948] font-semibold">| Call/WhatsApp: +91 93854 10034</span>
   </div>
 
-  <!-- Header / Navigation -->
+  <!-- Header / Navigation (Perfect Padding & Spacing) -->
   <header class="sticky top-0 z-40 bg-[#003822] text-white shadow-md">
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
       
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-[#79B948] text-[#003822] font-serif font-bold text-lg flex items-center justify-center shadow-sm">
+      <!-- Brand Logo & Title -->
+      <div class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-full bg-[#79B948] text-[#003822] font-serif font-bold text-base flex items-center justify-center shadow-sm shrink-0">
           AT
         </div>
         <div>
-          <h1 class="text-lg font-serif font-bold text-white tracking-wide">Aura Traditions</h1>
-          <p class="text-[9px] uppercase tracking-widest text-[#79B948] font-medium">Natural Elegance</p>
+          <h1 class="text-base sm:text-lg font-serif font-bold text-white tracking-wide leading-tight">Aura Traditions</h1>
+          <p class="text-[8px] sm:text-[9px] uppercase tracking-widest text-[#79B948] font-medium">Natural Elegance</p>
         </div>
       </div>
       
@@ -45,27 +46,27 @@
       <!-- Cart Icon Button -->
       <button onclick="toggleCart()" class="relative flex items-center justify-center p-1 cursor-pointer">
         <span class="text-xl">🛍️</span>
-        <span id="cartCount" class="bg-[#79B948] text-white font-bold text-[11px] px-1.5 py-0.2 rounded-sm ml-1">0</span>
+        <span id="cartCount" class="bg-[#79B948] text-white font-bold text-[10px] px-1.5 py-0.2 rounded-sm ml-1">0</span>
       </button>
     </div>
   </header>
 
   <!-- Hero Section Banner -->
-  <section id="home" class="bg-[#FFF5F7] py-16 px-4 text-center border-b border-gray-100">
+  <section id="home" class="bg-[#FFF5F7] py-12 px-4 text-center border-b border-gray-100">
     <div class="max-w-4xl mx-auto flex flex-col items-center">
-      <div class="w-20 h-20 rounded-full bg-[#003822] text-[#79B948] text-3xl font-serif font-bold flex items-center justify-center mb-4 shadow-md border-2 border-[#79B948]">
+      <div class="w-16 h-16 rounded-full bg-[#003822] text-[#79B948] text-2xl font-serif font-bold flex items-center justify-center mb-3 shadow-md border-2 border-[#79B948]">
         🌿
       </div>
-      <span class="text-[#FF2E93] text-xs font-bold uppercase tracking-widest mb-2">Take the Green Step</span>
-      <h2 class="text-2xl sm:text-4xl font-serif font-bold text-[#003822] mb-3">Handcrafted Eco-Friendly Essentials</h2>
+      <span class="text-[#FF2E93] text-[11px] font-bold uppercase tracking-widest mb-2">Take the Green Step</span>
+      <h2 class="text-2xl sm:text-4xl font-serif font-bold text-[#003822] mb-3 leading-tight">Handcrafted Eco-Friendly Essentials</h2>
       <p class="text-xs sm:text-sm text-gray-600 mb-6 max-w-xl">Sustainable neem wood combs, organic bamboo toothbrushes, and corporate eco hampers crafted in Tamil Nadu.</p>
-      <a href="#products" class="bg-[#79B948] hover:bg-[#68A33C] text-white px-8 py-3 rounded-md text-xs font-bold uppercase tracking-wider shadow-sm transition">Shop Now</a>
+      <a href="#products" class="bg-[#79B948] hover:bg-[#68A33C] text-white px-7 py-3 rounded-md text-xs font-bold uppercase tracking-wider shadow-sm transition">Shop Now</a>
     </div>
   </section>
 
-  <!-- Products Section -->
-  <section id="products" class="max-w-7xl mx-auto px-4 py-14">
-    <div class="text-center mb-10">
+  <!-- Products Section (Working Images & Proper Alignment) -->
+  <section id="products" class="max-w-7xl mx-auto px-4 py-12">
+    <div class="text-center mb-8">
       <h3 class="text-xl font-bold text-[#333333] tracking-wide">Our Trending Products</h3>
       <div class="w-12 h-0.5 bg-[#333333] mx-auto mt-2"></div>
     </div>
@@ -75,8 +76,8 @@
       <!-- Product 1 -->
       <div class="bg-[#F8F9FA] rounded-md p-4 border border-gray-100 flex flex-col justify-between">
         <div>
-          <div class="h-64 rounded-md mb-4 flex items-center justify-center bg-[#F0F4F1] border border-gray-200 text-5xl">
-            🪴
+          <div class="h-60 rounded-md mb-4 overflow-hidden bg-white border border-gray-100">
+            <img src="https://images.unsplash.com/photo-1590159763121-7c9fd312190d?w=600&auto=format&fit=crop" alt="Neem Comb" class="w-full h-full object-cover">
           </div>
           <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider">DAILY RITUALS</span>
           <h4 class="font-semibold text-sm text-[#333333] mt-1 mb-2">Handle grip neem wooden comb</h4>
@@ -96,8 +97,8 @@
       <!-- Product 2 -->
       <div class="bg-[#F8F9FA] rounded-md p-4 border border-gray-100 flex flex-col justify-between">
         <div>
-          <div class="h-64 rounded-md mb-4 flex items-center justify-center bg-[#F0F4F1] border border-gray-200 text-5xl">
-            🪥
+          <div class="h-60 rounded-md mb-4 overflow-hidden bg-white border border-gray-100">
+            <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=600&auto=format&fit=crop" alt="Bamboo Toothbrush" class="w-full h-full object-cover">
           </div>
           <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider">ORAL CARE</span>
           <h4 class="font-semibold text-sm text-[#333333] mt-1 mb-2">Bamboo Toothbrush</h4>
@@ -117,8 +118,8 @@
       <!-- Product 3 -->
       <div class="bg-[#F8F9FA] rounded-md p-4 border border-gray-100 flex flex-col justify-between">
         <div>
-          <div class="h-64 rounded-md mb-4 flex items-center justify-center bg-[#F0F4F1] border border-gray-200 text-5xl">
-            🎁
+          <div class="h-60 rounded-md mb-4 overflow-hidden bg-white border border-gray-100">
+            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&auto=format&fit=crop" alt="Signature Kit" class="w-full h-full object-cover">
           </div>
           <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider">COMBO PACK</span>
           <h4 class="font-semibold text-sm text-[#333333] mt-1 mb-2">Aura Traditions Signature Kit</h4>
