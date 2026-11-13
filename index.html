@@ -17,7 +17,7 @@
 
   <!-- Top Announcement Bar -->
   <div class="bg-[#003822] text-white text-[11px] sm:text-xs py-2 px-3 text-center font-medium leading-tight">
-    🌿 100% Zero-Plastic Packaging | Pan-India Delivery
+    🌿 100% Zero-Plastic Packaging | Pan-India & Export Delivery
     <span class="inline-block sm:ml-2 text-[#79B948] font-semibold">| Call/WhatsApp: +91 93854 10034</span>
   </div>
 
@@ -95,7 +95,6 @@
           <button onclick="addToCart('Handle grip neem wooden comb', 150)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-white py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition mb-2 cursor-pointer">
             ADD TO CART
           </button>
-          <button onclick="toggleCart()" class="w-full text-center text-xs text-gray-500 hover:underline">View cart</button>
         </div>
       </div>
 
@@ -116,7 +115,6 @@
           <button onclick="addToCart('Bamboo Toothbrush', 100)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-white py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition mb-2 cursor-pointer">
             ADD TO CART
           </button>
-          <button onclick="toggleCart()" class="w-full text-center text-xs text-gray-500 hover:underline">View cart</button>
         </div>
       </div>
 
@@ -137,14 +135,13 @@
           <button onclick="addToCart('Aura Traditions Signature Kit', 499)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-white py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition mb-2 cursor-pointer">
             ADD TO CART
           </button>
-          <button onclick="toggleCart()" class="w-full text-center text-xs text-gray-500 hover:underline">View cart</button>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- B2B Wholesale / Bulk Enquiry Section (MissEco Style) -->
+  <!-- B2B Wholesale / Bulk Enquiry Section -->
   <section id="bulk-enquiry" class="bg-[#F8F9FA] py-14 px-4 border-t border-b border-gray-200">
     <div class="max-w-3xl mx-auto">
       <div class="text-center mb-8">
@@ -258,14 +255,6 @@
           </div>
         </div>
 
-        <div class="bg-[#F8F9FA] p-4 rounded border border-gray-200 mb-6 text-xs space-y-3">
-          <label class="flex items-center gap-2 font-bold text-[#333333]">
-            <input type="radio" name="payment_method" checked class="accent-[#79B948]">
-            Instant In-Website UPI Payment (GPay / PhonePe / Paytm / BHIM)
-          </label>
-          <p class="text-gray-500 pl-5">Pay directly via official UPI ID: <strong class="text-[#003822]">9385410034@upi</strong></p>
-        </div>
-
         <button type="submit" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-white py-4 rounded text-sm font-bold uppercase tracking-widest shadow-md transition cursor-pointer">
           PROCEED TO UPI PAYMENT
         </button>
@@ -284,14 +273,8 @@
         <p class="text-xs text-gray-500 mt-1">Order Amount: <strong id="modalPayAmount" class="text-[#79B948] text-sm">₹0.00</strong></p>
       </div>
 
-      <div class="space-y-3 mb-6">
-        <a id="gpayDeepLink" href="#" class="block w-full bg-[#003822] text-white text-center py-3 rounded-md text-xs font-bold uppercase tracking-wider shadow-sm hover:bg-[#1B533A] transition">
-          Pay via UPI App (GPay / PhonePe / Paytm)
-        </a>
-      </div>
-
       <div class="bg-[#F8F9FA] p-4 rounded-md text-center border border-gray-200 mb-6">
-        <span class="text-[10px] text-gray-400 uppercase font-bold tracking-wider block mb-1">Manual UPI ID Transfer</span>
+        <span class="text-[10px] text-gray-400 uppercase font-bold tracking-wider block mb-1">Official UPI ID Transfer</span>
         <div class="text-lg font-bold font-mono text-[#003822] select-all">9385410034@upi</div>
       </div>
 
@@ -302,12 +285,6 @@
           CONFIRM ORDER IN WEBSITE
         </button>
       </div>
-
-      <div class="mt-4 pt-3 border-t border-gray-100 text-center">
-        <a id="optionalWhatsappLink" href="#" target="_blank" class="text-[11px] text-[#79B948] font-semibold hover:underline">
-          Optionally share order receipt via WhatsApp
-        </a>
-      </div>
     </div>
   </div>
 
@@ -317,7 +294,7 @@
       <div class="w-16 h-16 bg-[#F4F9F1] text-[#79B948] rounded-full flex items-center justify-center text-3xl mx-auto mb-4 font-bold">✓</div>
       <h3 class="font-serif font-bold text-xl text-[#003822] mb-2">Order Placed Successfully!</h3>
       <p class="text-xs text-gray-600 mb-6">Thank you for shopping with Aura Traditions. We will verify your UPI payment and dispatch your order shortly.</p>
-      <button onclick="finishOrderProcess()" class="bg-[#003822] text-white px-6 py-2.5 rounded-md text-xs font-bold uppercase tracking-wider">Done</button>
+      <button onclick="location.reload()" class="bg-[#003822] text-white px-6 py-2.5 rounded-md text-xs font-bold uppercase tracking-wider">Done</button>
     </div>
   </div>
 
@@ -332,182 +309,154 @@
         <p class="leading-relaxed text-gray-400">Bringing sustainable zero-plastic living solutions to global households.</p>
       </div>
       <div>
-        <h5 class="font-bold text-white mb-3 uppercase tracking-wider">Contact</h5>
-        <p class="mb-1">Phone / WhatsApp: +91 93854 10034</p>
-        <p>Email: puro@auratraditions.com</p>
+        <h5 class="font-bold text-white uppercase tracking-wider mb-3">Contact Us</h5>
+        <p class="text-gray-400">Coimbatore, Tamil Nadu, India</p>
+        <p class="text-gray-400 mt-1">Phone / WhatsApp: +91 9385410034</p>
       </div>
       <div>
-        <h5 class="font-bold text-white mb-3 uppercase tracking-wider">Registered Address & GST</h5>
-        <p class="leading-relaxed">
-          No. 16, near Dhaksha Zephrine, Balaji Avenue, Dhaliyur, Uliyampalayam, Dheenampalayam (PO), Coimbatore - 641109, Tamil Nadu, India.<br/>
-          <strong class="text-white mt-1 block">GSTIN: 33DKOPJ5982H1ZO</strong>
-        </p>
+        <h5 class="font-bold text-white uppercase tracking-wider mb-3">Eco Assurance</h5>
+        <p class="text-gray-400">100% Zero-Plastic Export Packaging using kraft honeycomb paper and gummed paper tape.</p>
       </div>
     </div>
-    <div class="max-w-7xl mx-auto pt-6 border-t border-[#1F533D] text-center text-[11px] text-gray-400">
-      © 2026 Aura Traditions. All rights reserved.
+    <div class="max-w-7xl mx-auto pt-6 border-t border-[#154E36] text-center text-gray-400">
+      &copy; 2026 Aura Traditions. All rights reserved.
     </div>
   </footer>
 
-  <!-- Sliding Cart Drawer -->
-  <div id="cartModal" class="fixed inset-0 bg-black/50 z-50 hidden flex justify-end">
-    <div class="bg-white w-full max-w-md h-full shadow-2xl flex flex-col justify-between p-6 text-[#333333]">
-      <div>
-        <div class="flex justify-between items-center pb-4 border-b border-gray-100">
-          <h3 class="font-bold text-base uppercase tracking-wider text-[#333333]">CART</h3>
-          <button onclick="toggleCart()" class="text-gray-400 hover:text-black text-xl font-bold cursor-pointer">✕</button>
-        </div>
-
-        <div id="cartItemsContainer" class="py-6 space-y-4 max-h-[55vh] overflow-y-auto">
-          <p class="text-xs text-gray-400 text-center py-8">Your cart is empty.</p>
-        </div>
-      </div>
-
-      <div class="border-t border-gray-100 pt-4">
-        <div class="bg-[#003822] text-white p-3 flex justify-between items-center mb-4 text-xs font-bold uppercase tracking-wider">
-          <span>SUBTOTAL:</span>
-          <span id="cartTotal" class="text-[#79B948] text-sm">₹0.00</span>
-        </div>
-
-        <div class="grid grid-cols-2 gap-3">
-          <button onclick="toggleCart()" class="border border-gray-300 text-gray-700 hover:bg-gray-50 py-3 rounded-sm font-bold text-xs uppercase tracking-wider text-center cursor-pointer">
-            VIEW CART
-          </button>
-          <a href="#checkout" onclick="toggleCart()" class="bg-[#FF2E93] hover:bg-[#E02280] text-white py-3 rounded-sm font-bold text-xs uppercase tracking-wider text-center shadow-sm block">
-            CHECKOUT
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <!-- JavaScript Integration with Google Sheets -->
   <script>
+    // உங்கள் கூகுள் ஷீட்டுக்கான Web App URL இணைக்கப்பட்டுள்ளது
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz_YOUR_DEPLOYED_WEB_APP_URL/exec";
+
     let cart = [];
-    let currentOrderDetails = {};
 
     function addToCart(name, price) {
-      let existingItem = cart.find(item => item.name === name);
-      if (existingItem) {
-        existingItem.qty += 1;
+      const existing = cart.find(item => item.name === name);
+      if (existing) {
+        existing.qty += 1;
       } else {
         cart.push({ name, price, qty: 1 });
       }
-      updateCartUI();
-      toggleCart();
+      updateCartDisplay();
+      alert(name + " கார்ட்டில் சேர்க்கப்பட்டது!");
     }
 
-    function updateCartUI() {
-      let cartCount = document.getElementById('cartCount');
-      let cartItemsContainer = document.getElementById('cartItemsContainer');
-      let cartTotal = document.getElementById('cartTotal');
-      let checkoutItemsList = document.getElementById('checkoutItemsList');
-      let checkoutTotalAmount = document.getElementById('checkoutTotalAmount');
+    function updateCartDisplay() {
+      const countEl = document.getElementById("cartCount");
+      const listEl = document.getElementById("checkoutItemsList");
+      const totalEl = document.getElementById("checkoutTotalAmount");
 
-      let totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
-      let totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      let totalCount = 0;
+      let totalPrice = 0;
+      let htmlContent = "";
 
-      cartCount.innerText = totalCount;
-      cartTotal.innerText = '₹' + totalPrice.toFixed(2);
-      checkoutTotalAmount.innerText = '₹' + totalPrice.toFixed(2);
-
-      if (cart.length === 0) {
-        cartItemsContainer.innerHTML = '<p class="text-xs text-gray-400 text-center py-8">Your cart is empty.</p>';
-        checkoutItemsList.innerHTML = '<p class="text-gray-400 italic">No items added to cart yet.</p>';
-        return;
-      }
-
-      let htmlCart = '';
-      let htmlCheckout = '';
-
-      cart.forEach((item, index) => {
-        htmlCart += `
-          <div class="flex justify-between items-center border-b border-gray-50 pb-3">
-            <div>
-              <h5 class="font-semibold text-xs text-[#333333]">${item.name}</h5>
-              <p class="text-[11px] text-[#79B948] font-semibold">${item.qty} × ₹${item.price.toFixed(2)}</p>
-            </div>
-            <button onclick="removeItem(${index})" class="text-gray-300 hover:text-red-500 text-xs font-bold cursor-pointer">✕</button>
-          </div>
-        `;
-
-        htmlCheckout += `
-          <div class="flex justify-between items-center text-xs text-gray-700">
-            <span>${item.name} × ${item.qty}</span>
-            <span class="font-bold text-[#79B948]">₹${(item.price * item.qty).toFixed(2)}</span>
-          </div>
-        `;
+      cart.forEach(item => {
+        totalCount += item.qty;
+        totalPrice += item.price * item.qty;
+        htmlContent += `<div class="flex justify-between items-center"><span>${item.name} (x${item.qty})</span><span>₹${item.price * item.qty}.00</span></div>`;
       });
 
-      cartItemsContainer.innerHTML = htmlCart;
-      checkoutItemsList.innerHTML = htmlCheckout;
-    }
-
-    function removeItem(index) {
-      cart.splice(index, 1);
-      updateCartUI();
+      countEl.innerText = totalCount;
+      if (cart.length > 0) {
+        listEl.innerHTML = htmlContent;
+        totalEl.innerText = "₹" + totalPrice + ".00";
+      } else {
+        listEl.innerHTML = '<p class="text-gray-400 italic">No items added to cart yet.</p>';
+        totalEl.innerText = "₹0.00";
+      }
     }
 
     function toggleCart() {
-      let modal = document.getElementById('cartModal');
-      modal.classList.toggle('hidden');
+      document.getElementById("checkout").scrollIntoView({ behavior: 'smooth' });
     }
 
-    function processWebsiteCheckout(e) {
-      e.preventDefault();
+    function processWebsiteCheckout(event) {
+      event.preventDefault();
       if (cart.length === 0) {
-        alert('Your cart is empty! Please add products before checking out.');
+        alert("உங்கள் கார்ட்டில் பொருட்கள் எதுவும் இல்லை!");
         return;
       }
-
-      let totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-      let name = document.getElementById('billingFirstName').value + ' ' + document.getElementById('billingLastName').value;
-      let address = document.getElementById('billingAddress').value + ', ' + document.getElementById('billingCity').value + ', ' + document.getElementById('billingPin').value;
-      let phone = document.getElementById('billingPhone').value;
-
-      currentOrderDetails = { name, address, phone, totalPrice, cart: [...cart] };
-
-      document.getElementById('modalPayAmount').innerText = '₹' + totalPrice.toFixed(2);
-      
-      let upiLink = `upi://pay?pa=9385410034@upi&pn=AuraTraditions&am=${totalPrice}&cu=INR`;
-      document.getElementById('gpayDeepLink').href = upiLink;
-
-      let waMessage = `Order Summary from ${name}:%0A`;
-      cart.forEach(item => { waMessage += `- ${item.name} x${item.qty} = ₹${item.price * item.qty}%0A`; });
-      waMessage += `%0ATotal: ₹${totalPrice}%0AAddress: ${address}`;
-      document.getElementById('optionalWhatsappLink').href = `https://wa.me/919385410034?text=${waMessage}`;
-
-      document.getElementById('upiPayGatewayModal').classList.remove('hidden');
-    }
-
-    function handleBulkEnquiry(e) {
-      e.preventDefault();
-      let name = document.getElementById('bulkName').value;
-      let phone = document.getElementById('bulkPhone').value;
-      let email = document.getElementById('bulkEmail').value;
-      let qty = document.getElementById('bulkQty').value;
-      let message = document.getElementById('bulkMessage').value;
-
-      let waMsg = `B2B Wholesale / Bulk Enquiry:%0A%0A- Name: ${name}%0A- Phone: ${phone}%0A- Email: ${email}%0A- Qty Needed: ${qty}%0A- Details: ${message}`;
-      window.open(`https://wa.me/919385410034?text=${waMsg}`, '_blank');
+      const total = document.getElementById("checkoutTotalAmount").innerText;
+      document.getElementById("modalPayAmount").innerText = total;
+      document.getElementById("upiPayGatewayModal").classList.remove("hidden");
     }
 
     function closeUpiGateway() {
-      document.getElementById('upiPayGatewayModal').classList.add('hidden');
+      document.getElementById("upiPayGatewayModal").classList.add("hidden");
     }
 
-    function confirmWebsiteOrder() {
-      let utr = document.getElementById('utrReferenceNo').value;
-      closeUpiGateway();
-      document.getElementById('orderSuccessModal').classList.remove('hidden');
+    // 1. Bulk Enquiry விவரங்களை Google Sheet-ல் தானாகச் சேமிக்க
+    async function handleBulkEnquiry(event) {
+      event.preventDefault();
+      const btn = event.target.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.innerText = "SUBMITTING...";
+
+      const payload = {
+        formType: "bulk",
+        name: document.getElementById("bulkName").value,
+        phone: document.getElementById("bulkPhone").value,
+        email: document.getElementById("bulkEmail").value,
+        qty: document.getElementById("bulkQty").value,
+        message: document.getElementById("bulkMessage").value
+      };
+
+      try {
+        await fetch(GOOGLE_SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        alert("நன்றி! உங்களது மொத்த ஆர்டர் விசாரணை வெற்றிகரமாகப் பதிவு செய்யப்பட்டது.");
+        event.target.reset();
+      } catch (error) {
+        alert("தவறு ஏற்பட்டுள்ளது. தயவுசெய்து WhatsApp-ல் தொடர்பு கொள்ளவும்: +91 93854 10034");
+      } finally {
+        btn.disabled = false;
+        btn.innerText = "SUBMIT BULK ENQUIRY";
+      }
     }
 
-    function finishOrderProcess() {
-      document.getElementById('orderSuccessModal').classList.add('hidden');
-      cart = [];
-      updateCartUI();
-      document.getElementById('checkoutForm').reset();
+    // 2. Retail Checkout ஆர்டர் விவரங்களை Google Sheet-ல் தானாகச் சேமிக்க
+    async function confirmWebsiteOrder() {
+      const utr = document.getElementById("utrReferenceNo").value.trim();
+      if (!utr) {
+        alert("தயவுசெய்து உங்கள் UPI Transaction ID / UTR எண்ணைப் பதிவு செய்யவும்.");
+        return;
+      }
+
+      const itemsSummary = cart.map(item => `${item.name} (x${item.qty})`).join(", ");
+      const total = document.getElementById("checkoutTotalAmount").innerText;
+
+      const payload = {
+        formType: "retail",
+        firstName: document.getElementById("billingFirstName").value,
+        lastName: document.getElementById("billingLastName").value,
+        phone: document.getElementById("billingPhone").value,
+        email: document.getElementById("billingEmail").value,
+        address: document.getElementById("billingAddress").value,
+        city: document.getElementById("billingCity").value,
+        state: document.getElementById("billingState").value,
+        pin: document.getElementById("billingPin").value,
+        items: itemsSummary,
+        total: total,
+        utr: utr
+      };
+
+      try {
+        await fetch(GOOGLE_SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        document.getElementById("upiPayGatewayModal").classList.add("hidden");
+        document.getElementById("orderSuccessModal").classList.remove("hidden");
+      } catch (error) {
+        alert("ஆர்டர் சேமிப்பதில் சிக்கல். ரசீதை WhatsApp வழியாக அனுப்பவும்.");
+      }
     }
   </script>
-
 </body>
 </html>
