@@ -150,7 +150,7 @@
         <div>
           <div class="flex items-center gap-2 mb-3 text-sm">
             <span class="text-gray-400 line-through text-xs">₹240.00</span>
-            <span class="font-bold text-[#79B948]">₹150.00</span>
+            <span class="font-bold text-[#79B948]">₹140.00</span>
           </div>
           <button onclick="addToCart('Tail Neem Styling Comb', 140)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-white py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition mb-2 cursor-pointer">
             ADD TO CART
@@ -338,104 +338,4 @@
         <p class="text-gray-400">100% Zero-Plastic Export Packaging using kraft honeycomb paper and gummed paper tape.</p>
       </div>
     </div>
-    <div class="max-w-7xl mx-auto pt-6 border-t border-[#154E36] text-center text-gray-400">
-      &copy; 2026 Aura Traditions. All rights reserved.
-    </div>
-  </footer>
-
-  <!-- Complete JavaScript Functionality -->
-  <script>
-    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz_YOUR_DEPLOYED_WEB_APP_URL/exec";
-    let cart = [];
-
-    function addToCart(name, price) {
-      const existing = cart.find(item => item.name === name);
-      if (existing) {
-        existing.qty += 1;
-      } else {
-        cart.push({ name, price, qty: 1 });
-      }
-      updateCartDisplay();
-      alert(name + " கார்ட்டில் சேர்க்கப்பட்டது!");
-    }
-
-    function removeFromCart(index) {
-      cart.splice(index, 1);
-      updateCartDisplay();
-    }
-
-    function updateCartDisplay() {
-      const countEl = document.getElementById("cartCount");
-      const listEl = document.getElementById("checkoutItemsList");
-      const totalEl = document.getElementById("checkoutTotalAmount");
-
-      let totalCount = 0;
-      let totalPrice = 0;
-
-      if (cart.length === 0) {
-        listEl.innerHTML = '<p class="text-gray-400 italic">No items added to cart yet.</p>';
-      } else {
-        listEl.innerHTML = cart.map((item, idx) => {
-          const itemTotal = item.price * item.qty;
-          totalCount += item.qty;
-          totalPrice += itemTotal;
-          return `
-            <div class="flex justify-between items-center">
-              <div>
-                <span class="font-semibold text-[#333333]">${item.name}</span>
-                <span class="text-gray-500 ml-1">× ${item.qty}</span>
-                <button type="button" onclick="removeFromCart(${idx})" class="text-red-500 text-[10px] ml-2 underline">Remove</button>
-              </div>
-              <span class="font-semibold">₹${itemTotal.toFixed(2)}</span>
-            </div>
-          `;
-        }).join('');
-      }
-
-      countEl.textContent = totalCount;
-      totalEl.textContent = "₹" + totalPrice.toFixed(2);
-    }
-
-    function processWebsiteCheckout(event) {
-      event.preventDefault();
-      if (cart.length === 0) {
-        alert("தயவுசெய்து முதலில் பொருட்களை கார்ட்டில் சேர்க்கவும்.");
-        return;
-      }
-      const totalText = document.getElementById("checkoutTotalAmount").textContent;
-      document.getElementById("modalPayAmount").textContent = totalText;
-      document.getElementById("upiPayGatewayModal").classList.remove("hidden");
-    }
-
-    function closeUpiGateway() {
-      document.getElementById("upiPayGatewayModal").classList.add("hidden");
-    }
-
-    function confirmWebsiteOrder() {
-      const utr = document.getElementById("utrReferenceNo").value.trim();
-      if (!utr) {
-        alert("தயவுசெய்து UPI Transaction ID / UTR எண்ணை உள்ளிடவும்.");
-        return;
-      }
-      closeUpiGateway();
-      document.getElementById("orderSuccessModal").classList.remove("hidden");
-      cart = [];
-      updateCartDisplay();
-      document.getElementById("checkoutForm").reset();
-    }
-
-    function handleBulkEnquiry(event) {
-      event.preventDefault();
-      const name = document.getElementById("bulkName").value;
-      const phone = document.getElementById("bulkPhone").value;
-      const qty = document.getElementById("bulkQty").value;
-      const msg = document.getElementById("bulkMessage").value;
-
-      const whatsappText = `Hello Aura Traditions, I have a Bulk Enquiry:%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Quantity:* ${qty}%0A*Details:* ${msg}`;
-      window.open(`https://wa.me/919385410034?text=${whatsappText}`, '_blank');
-      event.target.reset();
-    }
-  </script>
-
-</body>
-</html>
+    <div class="max-w-7xl mx-auto pt-6 border-t border-[#154E36] text-center
