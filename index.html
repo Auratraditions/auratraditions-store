@@ -338,4 +338,130 @@
         <p class="text-gray-400">100% Zero-Plastic Export Packaging using kraft honeycomb paper and gummed paper tape.</p>
       </div>
     </div>
-    <div class="max-w-7xl mx-auto pt-6 border-t border-[#154E36] text-center
+    <div class="max-w-7xl mx-auto pt-6 border-t border-[#154E36] text-center">
+      <p class="text-gray-400">&copy; 2026 Aura Traditions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cart and Checkout JavaScript Logic with Zoho Webhook Integration -->
+  <script>
+    let cart = [];
+
+    function addToCart(name, price) {
+      const existing = cart.find(item => item.name === name);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ name, price, qty: 1 });
+      }
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const cartCount = document.getElementById('cartCount');
+      const checkoutItemsList = document.getElementById('checkoutItemsList');
+      const checkoutTotalAmount = document.getElementById('checkoutTotalAmount');
+
+      let totalQty = 0;
+      let totalAmount = 0;
+
+      if (cart.length === 0) {
+        checkoutItemsList.innerHTML = '<p class="text-gray-400 italic">No items added to cart yet.</p>';
+      } else {
+        checkoutItemsList.innerHTML = '';
+        cart.forEach(item => {
+          totalQty += item.qty;
+          totalAmount += item.price * item.qty;
+          checkoutItemsList.innerHTML += `
+            <div class="flex justify-between items-center">
+              <span>${item.name} x ${item.qty}</span>
+              <span class="font-semibold">₹${item.price * item.qty}.00</span>
+            </div>
+          `;
+        });
+      }
+
+      cartCount.innerText = totalQty;
+      checkoutTotalAmount.innerText = `₹${totalAmount}.00`;
+    }
+
+    let pendingOrderData = null;
+
+    function processWebsiteCheckout(event) {
+      event.preventDefault();
+      if (cart.length === 0) {
+        alert('Please add items to cart before checkout.');
+        return;
+      }
+
+      const firstName = document.getElementById('billingFirstName').value;
+      const lastName = document.getElementById('billingLastName').value;
+      const address = document.getElementById('billingAddress').value;
+      const city = document.getElementById('billingCity').value;
+      const state = document.getElementById('billingState').value;
+      const pin = document.getElementById('billingPin').value;
+      const phone = document.getElementById('billingPhone').value;
+      const email = document.getElementById('billingEmail').value;
+
+      const totalAmount = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+      pendingOrderData = {
+        firstName,
+        lastName,
+        address,
+        city,
+        state,
+        pin,
+        phone,
+        email,
+        items: cart,
+        totalAmount,
+        date: new Date().toISOString()
+      };
+
+      document.getElementById('modalPayAmount').innerText = `₹${totalAmount}.00`;
+      document.getElementById('upiPayGatewayModal').classList.remove('hidden');
+    }
+
+    function closeUpiGateway() {
+      document.getElementById('upiPayGatewayModal').classList.add('hidden');
+    }
+
+    function confirmWebsiteOrder() {
+      const utrNo = document.getElementById('utrReferenceNo').value;
+      if (!utrNo) {
+        alert('Please enter your UPI Transaction ID / UTR No.');
+        return;
+      }
+
+      pendingOrderData.utrNumber = utrNo;
+
+      // ZOHO FLOW WEBHOOK URL INTEGRATION
+      const zohoWebhookUrl = "https://flow.zoho.in/60096186672/flow/webhook/incoming?zapikey=1001.b478eabe86127f21a5b89def6bdda7d9.8c1eaeae2916e421c4f0c9b58bfcd2c7&isdebug=false";
+
+      fetch(zohoWebhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(pendingOrderData)
+      })
+      .then(response => {
+        console.log('Order sent to Zoho Flow successfully');
+      })
+      .catch(error => {
+        console.error('Error sending to Zoho Flow:', error);
+      });
+
+      closeUpiGateway();
+      document.getElementById('orderSuccessModal').classList.remove('hidden');
+    }
+
+    function handleBulkEnquiry(event) {
+      event.preventDefault();
+      alert('Thank you for your bulk enquiry! Our team will contact you shortly via WhatsApp/Email.');
+      event.target.reset();
+    }
+  </script>
+</body>
+</html>
