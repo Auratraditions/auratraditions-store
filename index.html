@@ -45,10 +45,10 @@
       </nav>
 
       <!-- Cart Icon Button -->
-      <button onclick="toggleCart()" class="relative flex items-center justify-center p-1 cursor-pointer">
+      <a href="#checkout" class="relative flex items-center justify-center p-1 cursor-pointer">
         <span class="text-xl">🛍️</span>
-        <span id="cartCount" class="bg-[#79B948] text-white font-bold text-[10px] px-1.5 py-0.2 rounded-sm ml-1">0</span>
-      </button>
+        <span id="cartCount" class="bg-[#79B948] text-white font-bold text-[10px] px-1.5 py-0.5 rounded-sm ml-1">0</span>
+      </a>
     </div>
   </header>
 
@@ -76,23 +76,23 @@
       <div class="w-12 h-0.5 bg-[#333333] mx-auto mt-2"></div>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       
       <!-- Product 1 -->
       <div class="bg-[#F8F9FA] rounded-md p-4 border border-gray-100 flex flex-col justify-between">
         <div>
-          <div class="h-60 rounded-md mb-4 overflow-hidden bg-white border border-gray-100">
-            <img src="https://images.unsplash.com/photo-1590159763121-7c9fd312190d?w=600&auto=format&fit=crop" alt="Neem Comb" class="w-full h-full object-cover">
+          <div class="h-64 rounded-md mb-4 overflow-hidden bg-white border border-gray-100">
+            <img src="1792774419825.png" alt="Handle grip neem wooden comb" class="w-full h-full object-contain">
           </div>
           <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider">DAILY RITUALS</span>
-          <h4 class="font-semibold text-sm text-[#333333] mt-1 mb-2">Handle grip neem wooden comb</h4>
+          <h4 class="font-semibold text-sm text-[#333333] mt-1 mb-2">Handle Grip Neem Wooden Comb</h4>
         </div>
         <div>
           <div class="flex items-center gap-2 mb-3 text-sm">
             <span class="text-gray-400 line-through text-xs">₹250.00</span>
             <span class="font-bold text-[#79B948]">₹150.00</span>
           </div>
-          <button onclick="addToCart('Handle grip neem wooden comb', 150)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-white py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition mb-2 cursor-pointer">
+          <button onclick="addToCart('Handle Grip Neem Wooden Comb', 150)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-white py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition mb-2 cursor-pointer">
             ADD TO CART
           </button>
         </div>
@@ -101,8 +101,8 @@
       <!-- Product 2 -->
       <div class="bg-[#F8F9FA] rounded-md p-4 border border-gray-100 flex flex-col justify-between">
         <div>
-          <div class="h-60 rounded-md mb-4 overflow-hidden bg-white border border-gray-100">
-            <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=600&auto=format&fit=crop" alt="Bamboo Toothbrush" class="w-full h-full object-cover">
+          <div class="h-64 rounded-md mb-4 overflow-hidden bg-white border border-gray-100">
+            <img src="7T2BLD2I3rUBGtH4Ljjh9mLQVw.jpg" alt="Bamboo Toothbrush" class="w-full h-full object-cover">
           </div>
           <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider">ORAL CARE</span>
           <h4 class="font-semibold text-sm text-[#333333] mt-1 mb-2">Bamboo Toothbrush</h4>
@@ -121,18 +121,38 @@
       <!-- Product 3 -->
       <div class="bg-[#F8F9FA] rounded-md p-4 border border-gray-100 flex flex-col justify-between">
         <div>
-          <div class="h-60 rounded-md mb-4 overflow-hidden bg-white border border-gray-100">
-            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&auto=format&fit=crop" alt="Signature Kit" class="w-full h-full object-cover">
+          <div class="h-64 rounded-md mb-4 overflow-hidden bg-white border border-gray-100">
+            <img src="1792774406213.png" alt="Classic Wide-Tooth Neem Comb" class="w-full h-full object-contain">
           </div>
-          <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider">COMBO PACK</span>
-          <h4 class="font-semibold text-sm text-[#333333] mt-1 mb-2">Aura Traditions Signature Kit</h4>
+          <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider">HAIR CARE</span>
+          <h4 class="font-semibold text-sm text-[#333333] mt-1 mb-2">Classic Wide-Tooth Neem Comb</h4>
         </div>
         <div>
           <div class="flex items-center gap-2 mb-3 text-sm">
-            <span class="text-gray-400 line-through text-xs">₹699.00</span>
-            <span class="font-bold text-[#79B948]">₹499.00</span>
+            <span class="text-gray-400 line-through text-xs">₹220.00</span>
+            <span class="font-bold text-[#79B948]">₹130.00</span>
           </div>
-          <button onclick="addToCart('Aura Traditions Signature Kit', 499)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-white py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition mb-2 cursor-pointer">
+          <button onclick="addToCart('Classic Wide-Tooth Neem Comb', 130)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-white py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition mb-2 cursor-pointer">
+            ADD TO CART
+          </button>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="bg-[#F8F9FA] rounded-md p-4 border border-gray-100 flex flex-col justify-between">
+        <div>
+          <div class="h-64 rounded-md mb-4 overflow-hidden bg-white border border-gray-100">
+            <img src="1792774431394%20(1).png" alt="Tail Neem Styling Comb" class="w-full h-full object-cover">
+          </div>
+          <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider">STYLING ESSENTIALS</span>
+          <h4 class="font-semibold text-sm text-[#333333] mt-1 mb-2">Tail Neem Styling Comb</h4>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 mb-3 text-sm">
+            <span class="text-gray-400 line-through text-xs">₹240.00</span>
+            <span class="font-bold text-[#79B948]">₹140.00</span>
+          </div>
+          <button onclick="addToCart('Tail Neem Styling Comb', 140)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-white py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition mb-2 cursor-pointer">
             ADD TO CART
           </button>
         </div>
@@ -323,11 +343,9 @@
     </div>
   </footer>
 
-  <!-- JavaScript Integration with Google Sheets -->
+  <!-- Complete JavaScript Functionality -->
   <script>
-    // உங்கள் கூகுள் ஷீட்டுக்கான Web App URL இணைக்கப்பட்டுள்ளது
     const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz_YOUR_DEPLOYED_WEB_APP_URL/exec";
-
     let cart = [];
 
     function addToCart(name, price) {
@@ -341,6 +359,11 @@
       alert(name + " கார்ட்டில் சேர்க்கப்பட்டது!");
     }
 
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      updateCartDisplay();
+    }
+
     function updateCartDisplay() {
       const countEl = document.getElementById("cartCount");
       const listEl = document.getElementById("checkoutItemsList");
@@ -348,36 +371,39 @@
 
       let totalCount = 0;
       let totalPrice = 0;
-      let htmlContent = "";
 
-      cart.forEach(item => {
-        totalCount += item.qty;
-        totalPrice += item.price * item.qty;
-        htmlContent += `<div class="flex justify-between items-center"><span>${item.name} (x${item.qty})</span><span>₹${item.price * item.qty}.00</span></div>`;
-      });
-
-      countEl.innerText = totalCount;
-      if (cart.length > 0) {
-        listEl.innerHTML = htmlContent;
-        totalEl.innerText = "₹" + totalPrice + ".00";
-      } else {
+      if (cart.length === 0) {
         listEl.innerHTML = '<p class="text-gray-400 italic">No items added to cart yet.</p>';
-        totalEl.innerText = "₹0.00";
+      } else {
+        listEl.innerHTML = cart.map((item, idx) => {
+          const itemTotal = item.price * item.qty;
+          totalCount += item.qty;
+          totalPrice += itemTotal;
+          return `
+            <div class="flex justify-between items-center">
+              <div>
+                <span class="font-semibold text-[#333333]">${item.name}</span>
+                <span class="text-gray-500 ml-1">× ${item.qty}</span>
+                <button type="button" onclick="removeFromCart(${idx})" class="text-red-500 text-[10px] ml-2 underline">Remove</button>
+              </div>
+              <span class="font-semibold">₹${itemTotal.toFixed(2)}</span>
+            </div>
+          `;
+        }).join('');
       }
-    }
 
-    function toggleCart() {
-      document.getElementById("checkout").scrollIntoView({ behavior: 'smooth' });
+      countEl.textContent = totalCount;
+      totalEl.textContent = "₹" + totalPrice.toFixed(2);
     }
 
     function processWebsiteCheckout(event) {
       event.preventDefault();
       if (cart.length === 0) {
-        alert("உங்கள் கார்ட்டில் பொருட்கள் எதுவும் இல்லை!");
+        alert("தயவுசெய்து முதலில் பொருட்களை கார்ட்டில் சேர்க்கவும்.");
         return;
       }
-      const total = document.getElementById("checkoutTotalAmount").innerText;
-      document.getElementById("modalPayAmount").innerText = total;
+      const totalText = document.getElementById("checkoutTotalAmount").textContent;
+      document.getElementById("modalPayAmount").textContent = totalText;
       document.getElementById("upiPayGatewayModal").classList.remove("hidden");
     }
 
@@ -385,78 +411,31 @@
       document.getElementById("upiPayGatewayModal").classList.add("hidden");
     }
 
-    // 1. Bulk Enquiry விவரங்களை Google Sheet-ல் தானாகச் சேமிக்க
-    async function handleBulkEnquiry(event) {
-      event.preventDefault();
-      const btn = event.target.querySelector('button[type="submit"]');
-      btn.disabled = true;
-      btn.innerText = "SUBMITTING...";
-
-      const payload = {
-        formType: "bulk",
-        name: document.getElementById("bulkName").value,
-        phone: document.getElementById("bulkPhone").value,
-        email: document.getElementById("bulkEmail").value,
-        qty: document.getElementById("bulkQty").value,
-        message: document.getElementById("bulkMessage").value
-      };
-
-      try {
-        await fetch(GOOGLE_SCRIPT_URL, {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload)
-        });
-        alert("நன்றி! உங்களது மொத்த ஆர்டர் விசாரணை வெற்றிகரமாகப் பதிவு செய்யப்பட்டது.");
-        event.target.reset();
-      } catch (error) {
-        alert("தவறு ஏற்பட்டுள்ளது. தயவுசெய்து WhatsApp-ல் தொடர்பு கொள்ளவும்: +91 93854 10034");
-      } finally {
-        btn.disabled = false;
-        btn.innerText = "SUBMIT BULK ENQUIRY";
-      }
-    }
-
-    // 2. Retail Checkout ஆர்டர் விவரங்களை Google Sheet-ல் தானாகச் சேமிக்க
-    async function confirmWebsiteOrder() {
+    function confirmWebsiteOrder() {
       const utr = document.getElementById("utrReferenceNo").value.trim();
       if (!utr) {
-        alert("தயவுசெய்து உங்கள் UPI Transaction ID / UTR எண்ணைப் பதிவு செய்யவும்.");
+        alert("தயவுசெய்து UPI Transaction ID / UTR எண்ணை உள்ளிடவும்.");
         return;
       }
+      closeUpiGateway();
+      document.getElementById("orderSuccessModal").classList.remove("hidden");
+      cart = [];
+      updateCartDisplay();
+      document.getElementById("checkoutForm").reset();
+    }
 
-      const itemsSummary = cart.map(item => `${item.name} (x${item.qty})`).join(", ");
-      const total = document.getElementById("checkoutTotalAmount").innerText;
+    function handleBulkEnquiry(event) {
+      event.preventDefault();
+      const name = document.getElementById("bulkName").value;
+      const phone = document.getElementById("bulkPhone").value;
+      const qty = document.getElementById("bulkQty").value;
+      const msg = document.getElementById("bulkMessage").value;
 
-      const payload = {
-        formType: "retail",
-        firstName: document.getElementById("billingFirstName").value,
-        lastName: document.getElementById("billingLastName").value,
-        phone: document.getElementById("billingPhone").value,
-        email: document.getElementById("billingEmail").value,
-        address: document.getElementById("billingAddress").value,
-        city: document.getElementById("billingCity").value,
-        state: document.getElementById("billingState").value,
-        pin: document.getElementById("billingPin").value,
-        items: itemsSummary,
-        total: total,
-        utr: utr
-      };
-
-      try {
-        await fetch(GOOGLE_SCRIPT_URL, {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload)
-        });
-        document.getElementById("upiPayGatewayModal").classList.add("hidden");
-        document.getElementById("orderSuccessModal").classList.remove("hidden");
-      } catch (error) {
-        alert("ஆர்டர் சேமிப்பதில் சிக்கல். ரசீதை WhatsApp வழியாக அனுப்பவும்.");
-      }
+      const whatsappText = `Hello Aura Traditions, I have a Bulk Enquiry:%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Quantity:* ${qty}%0A*Details:* ${msg}`;
+      window.open(`https://wa.me/919385410034?text=${whatsappText}`, '_blank');
+      event.target.reset();
     }
   </script>
+
 </body>
 </html>
