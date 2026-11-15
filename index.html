@@ -76,8 +76,37 @@
       <div class="w-12 h-0.5 bg-[#333333] mx-auto mt-2"></div>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       
+      <!-- Signature Kit Combo (New Addition) -->
+      <div class="bg-[#F8F9FA] rounded-md p-4 border border-gray-200 flex flex-col justify-between shadow-sm">
+        <div>
+          <div class="h-64 rounded-md mb-4 overflow-hidden bg-white border border-gray-100 flex items-center justify-center">
+            <img src="1794767848815.png" alt="Signature Kit Combo" class="w-full h-full object-contain">
+          </div>
+          <span class="text-[10px] uppercase font-bold text-[#79B948] tracking-wider">SPECIAL COMBO KIT</span>
+          <h4 class="font-semibold text-sm text-[#333333] mt-1 mb-2">Aura Traditions Signature Kit (2 Bamboo Brushes + 1 Neem Comb)</h4>
+          
+          <!-- Comb Selection Dropdown -->
+          <div class="mb-3 text-xs">
+            <label class="block text-gray-600 font-medium mb-1">Select Comb Type:</label>
+            <select id="signatureCombSelect" class="w-full p-2 bg-white border border-gray-200 rounded text-xs focus:outline-none focus:border-[#79B948]">
+              <option value="Handle Grip Neem Comb">Handle Grip Neem Comb</option>
+              <option value="Classic Wide-Tooth Neem Comb">Classic Wide-Tooth Neem Comb</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 mb-3 text-sm">
+            <span class="text-gray-400 line-through text-xs">₹600.00</span>
+            <span class="font-bold text-[#79B948] text-base">₹499.00</span>
+          </div>
+          <button onclick="addSignatureKitToCart()" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-white py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition mb-2 cursor-pointer">
+            ADD TO CART
+          </button>
+        </div>
+      </div>
+
       <!-- Product 1 -->
       <div class="bg-[#F8F9FA] rounded-md p-4 border border-gray-100 flex flex-col justify-between">
         <div>
@@ -353,6 +382,20 @@
         existing.qty += 1;
       } else {
         cart.push({ name, price, qty: 1 });
+      }
+      updateCartUI();
+    }
+
+    function addSignatureKitToCart() {
+      const selectedComb = document.getElementById('signatureCombSelect').value;
+      const itemName = `Signature Kit (2 Bamboo Brushes + 1 ${selectedComb})`;
+      const price = 499;
+
+      const existing = cart.find(item => item.name === itemName);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ name: itemName, price, qty: 1 });
       }
       updateCartUI();
     }
