@@ -13,177 +13,200 @@
     .font-serif { font-family: 'Playfair Display', serif; }
   </style>
 </head>
-<body class="min-h-screen bg-[#FFFFFF] text-[#333333] antialiased">
+<body class="min-h-screen bg-[#FDFBF7] text-[#333333] antialiased">
 
   <!-- Top Announcement Bar -->
-  <div class="bg-[#003822] text-white text-[11px] sm:text-xs py-2 px-3 text-center font-medium leading-tight">
+  <div class="bg-[#003822] text-white text-[11px] sm:text-xs py-2.5 px-3 text-center font-medium leading-tight shadow-sm">
     🌿 100% Zero-Plastic Packaging | Pan-India & Export Delivery
     <span class="inline-block sm:ml-2 text-[#79B948] font-semibold">| Call/WhatsApp: +91 93854 10034</span>
   </div>
 
   <!-- Header / Navigation -->
-  <header class="sticky top-0 z-40 bg-[#003822] text-white shadow-md">
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-xs">
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
       
       <!-- Brand Logo & Title -->
-      <div class="flex items-center gap-2.5">
-        <div class="w-9 h-9 rounded-full bg-[#79B948] text-[#003822] font-serif font-bold text-base flex items-center justify-center shadow-sm shrink-0">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-[#003822] text-[#79B948] font-serif font-bold text-lg flex items-center justify-center shadow-inner shrink-0 border border-[#79B948]">
           AT
         </div>
         <div>
-          <h1 class="text-base sm:text-lg font-serif font-bold text-white tracking-wide leading-tight">Aura Traditions</h1>
-          <p class="text-[8px] sm:text-[9px] uppercase tracking-widest text-[#79B948] font-medium">Natural Elegance</p>
+          <h1 class="text-base sm:text-xl font-serif font-bold text-[#003822] tracking-wide leading-tight">Aura Traditions</h1>
+          <p class="text-[9px] uppercase tracking-widest text-[#79B948] font-bold">Natural Elegance</p>
         </div>
       </div>
       
-      <nav class="hidden md:flex items-center gap-6 text-xs uppercase tracking-wider font-semibold text-gray-200">
-        <a href="#home" class="hover:text-[#79B948] transition">Home</a>
-        <a href="#products" class="hover:text-[#79B948] transition">Shop</a>
-        <a href="#bulk-enquiry" class="text-[#79B948] hover:underline transition">Bulk Enquiry</a>
-        <a href="#checkout" class="hover:text-[#79B948] transition">Checkout</a>
-        <a href="#contact" class="hover:text-[#79B948] transition">Contact</a>
+      <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-wider font-semibold text-gray-600">
+        <a href="#home" class="hover:text-[#003822] transition">Home</a>
+        <a href="#products" class="text-[#003822] font-bold hover:underline transition">Shop</a>
+        <a href="#bulk-enquiry" class="hover:text-[#003822] transition">B2B Bulk Enquiry</a>
+        <a href="#checkout" class="hover:text-[#003822] transition">Checkout</a>
+        <a href="#contact" class="hover:text-[#003822] transition">Contact</a>
       </nav>
 
       <!-- Cart Icon Button -->
-      <a href="#checkout" class="relative flex items-center justify-center p-1 cursor-pointer">
+      <a href="#checkout" class="relative flex items-center justify-center p-2 bg-[#F4F9F1] rounded-full text-[#003822] hover:bg-[#E8F3E0] transition cursor-pointer">
         <span class="text-xl">🛍️</span>
-        <span id="cartCount" class="bg-[#79B948] text-white font-bold text-[10px] px-1.5 py-0.5 rounded-sm ml-1">0</span>
+        <span id="cartCount" class="absolute -top-1 -right-1 bg-[#FF2E93] text-white font-bold text-[10px] w-5 h-5 flex items-center justify-center rounded-full shadow-sm">0</span>
       </a>
     </div>
   </header>
 
   <!-- Hero Section Banner -->
-  <section id="home" class="bg-[#FFF5F7] py-12 px-4 text-center border-b border-gray-100">
-    <div class="max-w-4xl mx-auto flex flex-col items-center">
-      <div class="w-16 h-16 rounded-full bg-[#003822] text-[#79B948] text-2xl font-serif font-bold flex items-center justify-center mb-3 shadow-md border-2 border-[#79B948]">
+  <section id="home" class="bg-[#003822] text-white py-16 px-4 text-center relative overflow-hidden">
+    <!-- Decorative background element -->
+    <div class="absolute -top-24 -left-24 w-96 h-96 bg-[#79B948]/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-[#FF2E93]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto flex flex-col items-center relative z-10">
+      <div class="w-16 h-16 rounded-full bg-[#79B948] text-[#003822] text-2xl font-serif font-bold flex items-center justify-center mb-4 shadow-lg">
         🌿
       </div>
-      <span class="text-[#FF2E93] text-[11px] font-bold uppercase tracking-widest mb-2">Take the Green Step</span>
-      <h2 class="text-2xl sm:text-4xl font-serif font-bold text-[#003822] mb-3 leading-tight">Handcrafted Eco-Friendly Essentials</h2>
-      <p class="text-xs sm:text-sm text-gray-600 mb-6 max-w-xl">Sustainable neem wood combs, organic bamboo toothbrushes, and corporate eco hampers crafted in Tamil Nadu.</p>
+      <span class="bg-[#79B948]/20 text-[#79B948] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3 border border-[#79B948]/30">Take the Green Step</span>
+      <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mb-4 leading-tight">Handcrafted Eco-Friendly Essentials</h2>
+      <p class="text-sm sm:text-base text-gray-300 mb-8 max-w-xl leading-relaxed">Sustainable neem wood combs, organic bamboo toothbrushes, and corporate eco hampers crafted with precision in Tamil Nadu.</p>
       
-      <div class="flex flex-wrap justify-center gap-3">
-        <a href="#products" class="bg-[#79B948] hover:bg-[#68A33C] text-white px-7 py-3 rounded-md text-xs font-bold uppercase tracking-wider shadow-sm transition">Shop Retail</a>
-        <a href="#bulk-enquiry" class="bg-[#003822] hover:bg-[#154E36] text-white px-7 py-3 rounded-md text-xs font-bold uppercase tracking-wider shadow-sm transition">B2B Bulk Enquiry</a>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#products" class="bg-[#79B948] hover:bg-[#68A33C] text-[#003822] px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5">Explore Products</a>
+        <a href="#bulk-enquiry" class="bg-transparent hover:bg-white/10 text-white border-2 border-white/30 hover:border-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition">B2B Bulk Enquiry</a>
       </div>
     </div>
   </section>
 
   <!-- Products Section -->
-  <section id="products" class="max-w-7xl mx-auto px-4 py-12">
-    <div class="text-center mb-8">
-      <h3 class="text-xl font-bold text-[#333333] tracking-wide">Our Trending Products</h3>
-      <div class="w-12 h-0.5 bg-[#333333] mx-auto mt-2"></div>
+  <section id="products" class="max-w-7xl mx-auto px-4 py-16">
+    <div class="text-center mb-12">
+      <span class="text-[#79B948] text-xs font-bold uppercase tracking-widest">Our Collection</span>
+      <h3 class="text-3xl font-serif font-bold text-[#003822] mt-1 tracking-wide">Trending Sustainable Products</h3>
+      <div class="w-16 h-1 bg-[#79B948] mx-auto mt-3 rounded-full"></div>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       
       <!-- Signature Kit Combo -->
-      <div class="bg-[#F8F9FA] rounded-md p-4 border border-gray-200 flex flex-col justify-between shadow-sm">
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group">
         <div>
-          <!-- Image container with optimized height and perfect fit -->
-          <div class="h-48 rounded-md mb-4 bg-white border border-gray-100 flex items-center justify-center p-2 overflow-hidden">
-            <img src="1794767848815.png" alt="Signature Kit Combo" class="object-contain max-h-full mx-auto">
+          <!-- Perfectly sized image container with elegant padding -->
+          <div class="h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:scale-[1.02] transition duration-500">
+            <span class="absolute top-3 left-3 bg-[#FF2E93] text-white text-[9px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">Save ₹101</span>
+            <img src="1794767848815.png" alt="Signature Kit Combo" class="object-contain max-h-full drop-shadow-md">
           </div>
-          <span class="text-[10px] uppercase font-bold text-[#79B948] tracking-wider">SPECIAL COMBO KIT</span>
-          <h4 class="font-semibold text-sm text-[#333333] mt-1 mb-2">Aura Traditions Signature Kit (2 Bamboo Brushes + 1 Neem Comb)</h4>
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-[10px] uppercase font-bold text-[#79B948] tracking-widest bg-[#F4F9F1] px-2 py-0.5 rounded">Special Combo Kit</span>
+          </div>
+          <h4 class="font-bold text-base text-[#003822] leading-snug">Aura Traditions Signature Kit</h4>
+          <p class="text-xs text-gray-500 mt-1 mb-3 leading-relaxed">Complete daily care: Includes 2 organic bamboo toothbrushes and 1 premium handcrafted neem wood comb of your choice.</p>
           
           <!-- Comb Selection Dropdown -->
-          <div class="mb-3 text-xs">
-            <label class="block text-gray-600 font-medium mb-1">Select Comb Type:</label>
-            <select id="signatureCombSelect" class="w-full p-2 bg-white border border-gray-200 rounded text-xs focus:outline-none focus:border-[#79B948]">
+          <div class="mb-4 p-3 bg-[#F9F8F6] rounded-xl border border-gray-200/60 text-xs">
+            <label class="block text-[#003822] font-bold mb-1.5">Select Your Preferred Comb:</label>
+            <select id="signatureCombSelect" class="w-full p-2.5 bg-white border border-gray-300 rounded-lg text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#79B948] focus:border-[#79B948]">
               <option value="Handle Grip Neem Comb">Handle Grip Neem Comb</option>
               <option value="Classic Wide-Tooth Neem Comb">Classic Wide-Tooth Neem Comb</option>
             </select>
           </div>
         </div>
         <div>
-          <div class="flex items-center gap-2 mb-3 text-sm">
-            <span class="text-gray-400 line-through text-xs">₹600.00</span>
-            <span class="font-bold text-[#79B948] text-base">₹499.00</span>
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-gray-400 line-through text-sm font-medium">₹600.00</span>
+            <span class="font-extrabold text-[#79B948] text-2xl font-serif">₹499.00</span>
+            <span class="text-[10px] text-gray-400 font-medium ml-auto">Incl. of all taxes</span>
           </div>
-          <button onclick="addSignatureKitToCart()" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-white py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition mb-2 cursor-pointer">
-            ADD TO CART
+          <button onclick="addSignatureKitToCart()" class="w-full bg-[#003822] hover:bg-[#154E36] text-white py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition cursor-pointer flex items-center justify-center gap-2">
+            <span>Add to Cart</span>
+            <span>+</span>
           </button>
         </div>
       </div>
 
       <!-- Product 1: Handle Grip Neem Wooden Comb -->
-      <div class="bg-[#F8F9FA] rounded-md p-4 border border-gray-100 flex flex-col justify-between">
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group">
         <div>
-          <div class="h-48 rounded-md mb-4 bg-white border border-gray-100 flex items-center justify-center p-2 overflow-hidden">
-            <img src="Handle%20Grip%20Neem%20Wooden%20Comb.png" alt="Handle grip neem wooden comb" class="object-contain max-h-full mx-auto">
+          <div class="h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:scale-[1.02] transition duration-500">
+            <img src="Handle%20Grip%20Neem%20Wooden%20Comb.png" alt="Handle grip neem wooden comb" class="object-contain max-h-full drop-shadow-md">
           </div>
-          <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider">DAILY RITUALS</span>
-          <h4 class="font-semibold text-sm text-[#333333] mt-1 mb-2">Handle Grip Neem Wooden Comb</h4>
+          <span class="text-[10px] uppercase font-bold text-gray-400 tracking-widest block mb-1">Daily Rituals</span>
+          <h4 class="font-bold text-base text-[#003822] leading-snug">Handle Grip Neem Wooden Comb</h4>
+          <p class="text-xs text-gray-500 mt-1 mb-4 leading-relaxed">Handcrafted from pure herbal neem wood. Ergonomic handle design ensures comfortable grip while gently stimulating scalp acupoints.</p>
         </div>
         <div>
-          <div class="flex items-center gap-2 mb-3 text-sm">
-            <span class="text-gray-400 line-through text-xs">₹250.00</span>
-            <span class="font-bold text-[#79B948]">₹150.00</span>
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-gray-400 line-through text-sm font-medium">₹250.00</span>
+            <span class="font-extrabold text-[#003822] text-2xl font-serif">₹150.00</span>
+            <span class="text-[10px] text-gray-400 font-medium ml-auto">Incl. of all taxes</span>
           </div>
-          <button onclick="addToCart('Handle Grip Neem Wooden Comb', 150)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-white py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition mb-2 cursor-pointer">
-            ADD TO CART
+          <button onclick="addToCart('Handle Grip Neem Wooden Comb', 150)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition cursor-pointer flex items-center justify-center gap-2">
+            <span>Add to Cart</span>
+            <span>+</span>
           </button>
         </div>
       </div>
 
       <!-- Product 2: Bamboo Toothbrush -->
-      <div class="bg-[#F8F9FA] rounded-md p-4 border border-gray-100 flex flex-col justify-between">
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group">
         <div>
-          <div class="h-48 rounded-md mb-4 bg-white border border-gray-100 flex items-center justify-center p-2 overflow-hidden">
-            <img src="Bamboo%20Brushes.png" alt="Bamboo Toothbrush" class="object-contain max-h-full mx-auto">
+          <div class="h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:scale-[1.02] transition duration-500">
+            <img src="Bamboo%20Brushes.png" alt="Bamboo Toothbrush" class="object-contain max-h-full drop-shadow-md">
           </div>
-          <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider">ORAL CARE</span>
-          <h4 class="font-semibold text-sm text-[#333333] mt-1 mb-2">Bamboo Toothbrush</h4>
+          <span class="text-[10px] uppercase font-bold text-gray-400 tracking-widest block mb-1">Oral Care</span>
+          <h4 class="font-bold text-base text-[#003822] leading-snug">Organic Bamboo Toothbrush</h4>
+          <p class="text-xs text-gray-500 mt-1 mb-4 leading-relaxed">Biodegradable natural bamboo handle paired with soft, BPA-free charcoal infused bristles for gentle yet effective plaque removal.</p>
         </div>
         <div>
-          <div class="flex items-center gap-2 mb-3 text-sm">
-            <span class="text-gray-400 line-through text-xs">₹180.00</span>
-            <span class="font-bold text-[#79B948]">₹100.00</span>
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-gray-400 line-through text-sm font-medium">₹180.00</span>
+            <span class="font-extrabold text-[#003822] text-2xl font-serif">₹100.00</span>
+            <span class="text-[10px] text-gray-400 font-medium ml-auto">Incl. of all taxes</span>
           </div>
-          <button onclick="addToCart('Bamboo Toothbrush', 100)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-white py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition mb-2 cursor-pointer">
-            ADD TO CART
+          <button onclick="addToCart('Bamboo Toothbrush', 100)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition cursor-pointer flex items-center justify-center gap-2">
+            <span>Add to Cart</span>
+            <span>+</span>
           </button>
         </div>
       </div>
 
       <!-- Product 3: Classic Wide-Tooth Neem Comb -->
-      <div class="bg-[#F8F9FA] rounded-md p-4 border border-gray-100 flex flex-col justify-between">
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group">
         <div>
-          <div class="h-48 rounded-md mb-4 bg-white border border-gray-100 flex items-center justify-center p-2 overflow-hidden">
-            <img src="1792774406213.png" alt="Classic Wide-Tooth Neem Comb" class="object-contain max-h-full mx-auto">
+          <div class="h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:scale-[1.02] transition duration-500">
+            <img src="1792774406213.png" alt="Classic Wide-Tooth Neem Comb" class="object-contain max-h-full drop-shadow-md">
           </div>
-          <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider">HAIR CARE</span>
-          <h4 class="font-semibold text-sm text-[#333333] mt-1 mb-2">Classic Wide-Tooth Neem Comb</h4>
+          <span class="text-[10px] uppercase font-bold text-gray-400 tracking-widest block mb-1">Hair Care</span>
+          <h4 class="font-bold text-base text-[#003822] leading-snug">Classic Wide-Tooth Neem Comb</h4>
+          <p class="text-xs text-gray-500 mt-1 mb-4 leading-relaxed">Perfect for detangling wet or dry hair without breakage. Wide spacing helps distribute natural scalp oils evenly.</p>
         </div>
         <div>
-          <div class="flex items-center gap-2 mb-3 text-sm">
-            <span class="text-gray-400 line-through text-xs">₹240.00</span>
-            <span class="font-bold text-[#79B948]">₹150.00</span>
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-gray-400 line-through text-sm font-medium">₹240.00</span>
+            <span class="font-extrabold text-[#003822] text-2xl font-serif">₹150.00</span>
+            <span class="text-[10px] text-gray-400 font-medium ml-auto">Incl. of all taxes</span>
           </div>
-          <button onclick="addToCart('Classic Wide-Tooth Neem Comb', 150)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-white py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition mb-2 cursor-pointer">
-            ADD TO CART
+          <button onclick="addToCart('Classic Wide-Tooth Neem Comb', 150)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition cursor-pointer flex items-center justify-center gap-2">
+            <span>Add to Cart</span>
+            <span>+</span>
           </button>
         </div>
       </div>
 
       <!-- Product 4: Tail Neem Styling Comb -->
-      <div class="bg-[#F8F9FA] rounded-md p-4 border border-gray-100 flex flex-col justify-between">
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group">
         <div>
-          <div class="h-48 rounded-md mb-4 bg-white border border-gray-100 flex items-center justify-center p-2 overflow-hidden">
-            <img src="1792774431394%20(1).png" alt="Tail Neem Styling Comb" class="object-contain max-h-full mx-auto">
+          <div class="h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:scale-[1.02] transition duration-500">
+            <img src="1792774431394%20(1).png" alt="Tail Neem Styling Comb" class="object-contain max-h-full drop-shadow-md">
           </div>
-          <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider">STYLING ESSENTIALS</span>
-          <h4 class="font-semibold text-sm text-[#333333] mt-1 mb-2">Tail Neem Styling Comb</h4>
+          <span class="text-[10px] uppercase font-bold text-gray-400 tracking-widest block mb-1">Styling Essentials</span>
+          <h4 class="font-bold text-base text-[#003822] leading-snug">Tail Neem Styling Comb</h4>
+          <p class="text-xs text-gray-500 mt-1 mb-4 leading-relaxed">Designed for precision parting, sectioning, and intricate hairstyling. Smooth neem teeth prevent static and protect sensitive scalp.</p>
         </div>
         <div>
-          <div class="flex items-center gap-2 mb-3 text-sm">
-            <span class="text-gray-400 line-through text-xs">₹240.00</span>
-            <span class="font-bold text-[#79B948]">₹140.00</span>
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-gray-400 line-through text-sm font-medium">₹240.00</span>
+            <span class="font-extrabold text-[#003822] text-2xl font-serif">₹140.00</span>
+            <span class="text-[10px] text-gray-400 font-medium ml-auto">Incl. of all taxes</span>
           </div>
-          <button onclick="addToCart('Tail Neem Styling Comb', 140)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-white py-2.5 rounded-sm text-xs font-bold uppercase tracking-wider transition mb-2 cursor-pointer">
-            ADD TO CART
+          <button onclick="addToCart('Tail Neem Styling Comb', 140)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition cursor-pointer flex items-center justify-center gap-2">
+            <span>Add to Cart</span>
+            <span>+</span>
           </button>
         </div>
       </div>
@@ -192,190 +215,221 @@
   </section>
 
   <!-- B2B Wholesale / Bulk Enquiry Section -->
-  <section id="bulk-enquiry" class="bg-[#F8F9FA] py-14 px-4 border-t border-b border-gray-200">
-    <div class="max-w-3xl mx-auto">
-      <div class="text-center mb-8">
-        <span class="text-[#79B948] text-xs font-bold uppercase tracking-widest">Corporate Gifting & Wholesale</span>
-        <h3 class="text-2xl font-serif font-bold text-[#003822] mt-1">Bulk & Wholesale Enquiry</h3>
-        <p class="text-xs sm:text-sm text-gray-600 mt-2">Looking for custom branding, corporate gifting hampers, or wholesale pricing? Fill out the form below.</p>
+  <section id="bulk-enquiry" class="bg-[#F4F9F1] py-20 px-4 border-t border-b border-[#E3EFE5]">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-gray-100">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="bg-[#003822] text-[#79B948] text-[10px] font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full">Corporate Gifting & Wholesale</span>
+          <h3 class="text-3xl font-serif font-bold text-[#003822] mt-3">Bulk & Custom Branding Enquiry</h3>
+          <p class="text-xs sm:text-sm text-gray-600 mt-3 leading-relaxed">Looking for eco-friendly corporate gift hampers, bulk product supplies, or private label manufacturing? Partner with us.</p>
+        </div>
+
+        <form onsubmit="handleBulkEnquiry(event)" class="space-y-6 text-xs">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block font-bold text-[#003822] mb-2">Your / Company Name <span class="text-[#FF2E93]">*</span></label>
+              <input type="text" id="bulkName" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] transition font-medium text-sm">
+            </div>
+            <div>
+              <label class="block font-bold text-[#003822] mb-2">Phone Number / WhatsApp <span class="text-[#FF2E93]">*</span></label>
+              <input type="tel" id="bulkPhone" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] transition font-medium text-sm">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block font-bold text-[#003822] mb-2">Email Address <span class="text-[#FF2E93]">*</span></label>
+              <input type="email" id="bulkEmail" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] transition font-medium text-sm">
+            </div>
+            <div>
+              <label class="block font-bold text-[#003822] mb-2">Estimated Quantity Required <span class="text-[#FF2E93]">*</span></label>
+              <input type="text" id="bulkQty" placeholder="e.g. 100 hamper boxes / 500 pcs" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] transition font-medium text-sm">
+            </div>
+          </div>
+
+          <div>
+            <label class="block font-bold text-[#003822] mb-2">Specific Requirements / Customisation Details</label>
+            <textarea id="bulkMessage" rows="4" placeholder="Tell us about your event date, budget range, or branding requirements." class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] transition font-medium text-sm leading-relaxed"></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-[#003822] hover:bg-[#154E36] text-white py-4 rounded-xl text-xs font-bold uppercase tracking-widest transition shadow-lg hover:shadow-xl cursor-pointer">
+            SUBMIT BULK ENQUIRY VIA WHATSAPP
+          </button>
+        </form>
       </div>
-
-      <form onsubmit="handleBulkEnquiry(event)" class="bg-white p-6 rounded-md shadow-sm border border-gray-200 space-y-4 text-xs">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block font-semibold text-gray-700 mb-1">Your / Company Name <span class="text-red-500">*</span></label>
-            <input type="text" id="bulkName" required class="w-full p-2.5 bg-[#F8F9FA] border border-gray-200 rounded focus:outline-none focus:border-[#79B948]">
-          </div>
-          <div>
-            <label class="block font-semibold text-gray-700 mb-1">Phone Number / WhatsApp <span class="text-red-500">*</span></label>
-            <input type="tel" id="bulkPhone" required class="w-full p-2.5 bg-[#F8F9FA] border border-gray-200 rounded focus:outline-none focus:border-[#79B948]">
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block font-semibold text-gray-700 mb-1">Email Address <span class="text-red-500">*</span></label>
-            <input type="email" id="bulkEmail" required class="w-full p-2.5 bg-[#F8F9FA] border border-gray-200 rounded focus:outline-none focus:border-[#79B948]">
-          </div>
-          <div>
-            <label class="block font-semibold text-gray-700 mb-1">Estimated Quantity <span class="text-red-500">*</span></label>
-            <input type="text" id="bulkQty" placeholder="e.g. 100 sets / 500 pcs" required class="w-full p-2.5 bg-[#F8F9FA] border border-gray-200 rounded focus:outline-none focus:border-[#79B948]">
-          </div>
-        </div>
-
-        <div>
-          <label class="block font-semibold text-gray-700 mb-1">Requirements / Product Details</label>
-          <textarea id="bulkMessage" rows="3" placeholder="Tell us about your specific products or custom branding requirements." class="w-full p-2.5 bg-[#F8F9FA] border border-gray-200 rounded focus:outline-none focus:border-[#79B948]"></textarea>
-        </div>
-
-        <button type="submit" class="w-full bg-[#003822] hover:bg-[#154E36] text-white py-3.5 rounded text-xs font-bold uppercase tracking-widest transition shadow-sm cursor-pointer">
-          SUBMIT BULK ENQUIRY
-        </button>
-      </form>
     </div>
   </section>
 
   <!-- Checkout Section -->
-  <section id="checkout" class="max-w-4xl mx-auto px-4 py-12 border-t border-gray-200">
-    <h2 class="text-xl font-bold text-[#333333] mb-6 uppercase tracking-wide">Checkout</h2>
+  <section id="checkout" class="max-w-4xl mx-auto px-4 py-16">
+    <div class="mb-8 border-b border-gray-200 pb-4">
+      <h2 class="text-2xl font-bold text-[#003822] uppercase tracking-wide font-serif">Secure Retail Checkout</h2>
+      <p class="text-xs text-gray-500 mt-1">Provide your delivery details below to finalize your order.</p>
+    </div>
 
-    <form id="checkoutForm" onsubmit="processWebsiteCheckout(event)" class="space-y-6">
-      <div>
-        <h3 class="text-sm font-bold uppercase tracking-wider text-[#333333] mb-4 border-b pb-2">BILLING DETAILS</h3>
+    <form id="checkoutForm" onsubmit="processWebsiteCheckout(event)" class="space-y-8">
+      <div class="bg-white p-6 sm:p-8 rounded-3xl border border-gray-100 shadow-sm space-y-6">
+        <h3 class="text-sm font-bold uppercase tracking-wider text-[#003822] border-b pb-3 flex items-center gap-2">
+          <span class="w-6 h-6 rounded-full bg-[#79B948] text-[#003822] flex items-center justify-center text-xs">1</span>
+          <span>Billing & Shipping Address</span>
+        </h3>
         
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs">
           <div>
-            <label class="block text-gray-700 font-semibold mb-1">First name <span class="text-red-500">*</span></label>
-            <input type="text" id="billingFirstName" required class="w-full p-2.5 bg-[#F8F9FA] border border-gray-200 rounded focus:outline-none focus:border-[#79B948]">
+            <label class="block text-gray-700 font-bold mb-2">First name <span class="text-[#FF2E93]">*</span></label>
+            <input type="text" id="billingFirstName" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] text-sm font-medium">
           </div>
           <div>
-            <label class="block text-gray-700 font-semibold mb-1">Last name <span class="text-red-500">*</span></label>
-            <input type="text" id="billingLastName" required class="w-full p-2.5 bg-[#F8F9FA] border border-gray-200 rounded focus:outline-none focus:border-[#79B948]">
-          </div>
-        </div>
-
-        <div class="mt-4 text-xs">
-          <label class="block text-gray-700 font-semibold mb-1">Street address <span class="text-red-500">*</span></label>
-          <input type="text" id="billingAddress" placeholder="House number and street name" required class="w-full p-2.5 bg-[#F8F9FA] border border-gray-200 rounded focus:outline-none focus:border-[#79B948]">
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4 text-xs">
-          <div>
-            <label class="block text-gray-700 font-semibold mb-1">Town / City <span class="text-red-500">*</span></label>
-            <input type="text" id="billingCity" required class="w-full p-2.5 bg-[#F8F9FA] border border-gray-200 rounded focus:outline-none focus:border-[#79B948]">
-          </div>
-          <div>
-            <label class="block text-gray-700 font-semibold mb-1">State <span class="text-red-500">*</span></label>
-            <input type="text" id="billingState" value="Tamil Nadu" required class="w-full p-2.5 bg-[#F8F9FA] border border-gray-200 rounded focus:outline-none focus:border-[#79B948]">
-          </div>
-          <div>
-            <label class="block text-gray-700 font-semibold mb-1">PIN Code <span class="text-red-500">*</span></label>
-            <input type="text" id="billingPin" required class="w-full p-2.5 bg-[#F8F9FA] border border-gray-200 rounded focus:outline-none focus:border-[#79B948]">
+            <label class="block text-gray-700 font-bold mb-2">Last name <span class="text-[#FF2E93]">*</span></label>
+            <input type="text" id="billingLastName" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] text-sm font-medium">
           </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 text-xs">
+        <div class="text-xs">
+          <label class="block text-gray-700 font-bold mb-2">Street address <span class="text-[#FF2E93]">*</span></label>
+          <input type="text" id="billingAddress" placeholder="House number and street name" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] text-sm font-medium">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs">
           <div>
-            <label class="block text-gray-700 font-semibold mb-1">Phone Number <span class="text-red-500">*</span></label>
-            <input type="tel" id="billingPhone" required class="w-full p-2.5 bg-[#F8F9FA] border border-gray-200 rounded focus:outline-none focus:border-[#79B948]">
+            <label class="block text-gray-700 font-bold mb-2">Town / City <span class="text-[#FF2E93]">*</span></label>
+            <input type="text" id="billingCity" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] text-sm font-medium">
           </div>
           <div>
-            <label class="block text-gray-700 font-semibold mb-1">Email address <span class="text-red-500">*</span></label>
-            <input type="email" id="billingEmail" required class="w-full p-2.5 bg-[#F8F9FA] border border-gray-200 rounded focus:outline-none focus:border-[#79B948]">
+            <label class="block text-gray-700 font-bold mb-2">State <span class="text-[#FF2E93]">*</span></label>
+            <input type="text" id="billingState" value="Tamil Nadu" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] text-sm font-medium">
+          </div>
+          <div>
+            <label class="block text-gray-700 font-bold mb-2">PIN Code <span class="text-[#FF2E93]">*</span></label>
+            <input type="text" id="billingPin" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] text-sm font-medium">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs">
+          <div>
+            <label class="block text-gray-700 font-bold mb-2">Phone Number <span class="text-[#FF2E93]">*</span></label>
+            <input type="tel" id="billingPhone" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] text-sm font-medium">
+          </div>
+          <div>
+            <label class="block text-gray-700 font-bold mb-2">Email address <span class="text-[#FF2E93]">*</span></label>
+            <input type="email" id="billingEmail" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] text-sm font-medium">
           </div>
         </div>
       </div>
 
-      <div class="pt-6">
-        <h3 class="text-sm font-bold uppercase tracking-wider text-[#333333] mb-4 border-b pb-2">YOUR ORDER SUMMARY</h3>
+      <div class="bg-white p-6 sm:p-8 rounded-3xl border border-gray-100 shadow-sm space-y-6">
+        <h3 class="text-sm font-bold uppercase tracking-wider text-[#003822] border-b pb-3 flex items-center gap-2">
+          <span class="w-6 h-6 rounded-full bg-[#79B948] text-[#003822] flex items-center justify-center text-xs">2</span>
+          <span>Order Summary</span>
+        </h3>
 
-        <div class="bg-[#F8F9FA] rounded border border-gray-100 p-4 mb-6">
-          <div class="flex justify-between font-bold text-xs uppercase text-gray-500 border-b pb-2 mb-3">
-            <span>PRODUCT</span>
-            <span>SUBTOTAL</span>
+        <div class="bg-[#F8F7F4] rounded-2xl p-6 border border-gray-200/60">
+          <div class="flex justify-between font-bold text-xs uppercase tracking-widest text-gray-700 border-b border-gray-200 pb-3 mb-4">
+            <span>Product</span>
+            <span>Subtotal</span>
           </div>
 
-          <div id="checkoutItemsList" class="space-y-3 text-xs border-b pb-3">
+          <div id="checkoutItemsList" class="space-y-4 text-xs border-b border-gray-200 pb-4 font-medium">
             <p class="text-gray-400 italic">No items added to cart yet.</p>
           </div>
 
-          <div class="flex justify-between items-center pt-3 font-bold text-sm">
-            <span>Total Payable</span>
-            <span id="checkoutTotalAmount" class="text-[#79B948] text-base">₹0.00</span>
+          <div class="flex justify-between items-center pt-4 font-bold text-base text-[#003822]">
+            <span>Total Payable Amount</span>
+            <span id="checkoutTotalAmount" class="text-[#79B948] text-2xl font-serif">₹0.00</span>
           </div>
         </div>
 
-        <button type="submit" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-white py-4 rounded text-sm font-bold uppercase tracking-widest shadow-md transition cursor-pointer">
-          PROCEED TO UPI PAYMENT
+        <button type="submit" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-4 rounded-xl text-sm font-extrabold uppercase tracking-widest shadow-lg hover:shadow-xl transition cursor-pointer flex items-center justify-center gap-3">
+          <span>PROCEED TO UPI PAYMENT</span>
+          <span>🔒</span>
         </button>
       </div>
     </form>
   </section>
 
   <!-- UPI Payment Gateway Modal -->
-  <div id="upiPayGatewayModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-xl p-6 max-w-md w-full text-[#333333] shadow-2xl relative">
-      <button onclick="closeUpiGateway()" class="absolute top-4 right-4 text-gray-400 hover:text-black text-xl font-bold cursor-pointer">✕</button>
+  <div id="upiPayGatewayModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full text-[#333333] shadow-2xl relative animate-in fade-in zoom-in duration-200">
+      <button onclick="closeUpiGateway()" class="absolute top-5 right-5 text-gray-400 hover:text-black w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-base font-bold cursor-pointer transition">✕</button>
       
       <div class="text-center mb-6">
-        <span class="text-[10px] font-bold uppercase tracking-widest text-[#79B948] bg-[#F4F9F1] px-3 py-1 rounded-full">Secure Payment Gateway</span>
-        <h3 class="font-serif font-bold text-xl text-[#003822] mt-2">Complete Your UPI Payment</h3>
-        <p class="text-xs text-gray-500 mt-1">Order Amount: <strong id="modalPayAmount" class="text-[#79B948] text-sm">₹0.00</strong></p>
+        <span class="bg-[#F4F9F1] text-[#79B948] text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full border border-[#79B948]/30">Secure Payment Gateway</span>
+        <h3 class="font-serif font-bold text-2xl text-[#003822] mt-3">Complete UPI Transfer</h3>
+        <p class="text-xs text-gray-500 mt-1">Please pay from any UPI app (GPay, PhonePe, Paytm)</p>
       </div>
 
-      <div class="bg-[#F8F9FA] p-4 rounded-md text-center border border-gray-200 mb-6">
-        <span class="text-[10px] text-gray-400 uppercase font-bold tracking-wider block mb-1">Official UPI ID Transfer</span>
-        <div class="text-lg font-bold font-mono text-[#003822] select-all">9385410034@upi</div>
+      <div class="bg-[#F8F7F4] p-6 rounded-2xl text-center border border-gray-200 shadow-inner mb-6">
+        <span class="text-[10px] text-gray-400 uppercase font-extrabold tracking-widest block mb-2">Scan & Pay Amount</span>
+        <div id="modalPayAmount" class="text-4xl font-black text-[#003822] font-serif mb-4">₹0.00</div>
+        
+        <div class="inline-block bg-white px-5 py-3 rounded-xl border border-gray-200 shadow-xs">
+          <span class="text-[9px] text-gray-400 uppercase font-bold tracking-wider block mb-1">Official UPI ID</span>
+          <div class="text-base font-extrabold font-mono text-[#003822] select-all bg-[#F4F9F1] px-3 py-1.5 rounded-lg border border-[#79B948]/20">9385410034@upi</div>
+        </div>
       </div>
 
-      <div class="space-y-3 text-xs border-t border-gray-100 pt-4">
-        <label class="block font-semibold text-gray-700">Enter UPI Transaction ID / UTR No (after payment):</label>
-        <input type="text" id="utrReferenceNo" placeholder="e.g. 430982348123" class="w-full p-2.5 bg-[#F8F9FA] border border-gray-200 rounded focus:outline-none focus:border-[#79B948]">
-        <button onclick="confirmWebsiteOrder()" class="w-full bg-[#79B948] text-white py-3 rounded-md font-bold uppercase text-xs tracking-wider cursor-pointer shadow-sm">
-          CONFIRM ORDER IN WEBSITE
+      <div class="space-y-4 text-xs border-t border-gray-100 pt-6">
+        <div>
+          <label class="block font-bold text-[#003822] mb-2">Enter 12-Digit UPI Transaction ID / UTR No <span class="text-[#FF2E93]">*</span></label>
+          <input type="text" id="utrReferenceNo" placeholder="ex. 430982348123" class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] text-sm font-mono font-bold text-center tracking-widest">
+        </div>
+        <button onclick="confirmWebsiteOrder()" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-4 rounded-xl font-extrabold uppercase text-xs tracking-widest cursor-pointer shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2">
+          <span>VERIFY & CONFIRM ORDER</span>
+          <span>✓</span>
         </button>
       </div>
     </div>
   </div>
 
   <!-- Order Success Modal -->
-  <div id="orderSuccessModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-xl p-8 max-w-sm w-full text-center shadow-2xl">
-      <div class="w-16 h-16 bg-[#F4F9F1] text-[#79B948] rounded-full flex items-center justify-center text-3xl mx-auto mb-4 font-bold">✓</div>
-      <h3 class="font-serif font-bold text-xl text-[#003822] mb-2">Order Placed Successfully!</h3>
-      <p class="text-xs text-gray-600 mb-6">Thank you for shopping with Aura Traditions. We will verify your UPI payment and dispatch your order shortly.</p>
-      <button onclick="location.reload()" class="bg-[#003822] text-white px-6 py-2.5 rounded-md text-xs font-bold uppercase tracking-wider">Done</button>
+  <div id="orderSuccessModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl p-8 max-w-sm w-full text-center shadow-2xl relative animate-in fade-in zoom-in duration-200">
+      <div class="w-20 h-20 bg-[#F4F9F1] text-[#79B948] rounded-full flex items-center justify-center text-4xl mx-auto mb-6 shadow-inner border-2 border-[#79B948]">✓</div>
+      <h3 class="font-serif font-bold text-2xl text-[#003822] mb-2">Order Placed Successfully!</h3>
+      <p class="text-xs text-gray-600 mb-8 leading-relaxed">Thank you for choosing Aura Traditions. Our team has received your payment details and will dispatch your eco-friendly shipment shortly.</p>
+      <button onclick="location.reload()" class="w-full bg-[#003822] hover:bg-[#154E36] text-white py-4 rounded-xl text-xs font-bold uppercase tracking-widest shadow-lg transition cursor-pointer">Back to Store</button>
     </div>
   </div>
 
   <!-- Footer -->
-  <footer id="contact" class="bg-[#003822] text-gray-300 py-12 px-4 border-t border-[#1F533D] text-xs">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+  <footer id="contact" class="bg-[#003822] text-gray-400 pt-20 pb-12 px-4 border-t border-[#1F533D] text-xs leading-relaxed">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
       <div>
-        <div class="flex items-center gap-3 mb-3">
-          <div class="w-8 h-8 rounded-full bg-[#79B948] text-[#003822] font-bold flex items-center justify-center">AT</div>
-          <h4 class="font-serif font-bold text-sm text-white">Aura Traditions</h4>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-full bg-[#79B948] text-[#003822] font-bold flex items-center justify-center text-sm">AT</div>
+          <h4 class="font-serif font-bold text-lg text-white">Aura Traditions</h4>
         </div>
-        <p class="leading-relaxed text-gray-400">Bringing sustainable zero-plastic living solutions to global households.</p>
+        <p class="text-gray-300 mb-4 leading-relaxed">Bringing premium, sustainable, 100% zero-plastic living solutions directly from the artisan craftsmen of Tamil Nadu to global households.</p>
+        <div class="flex gap-3 text-base">
+          <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">🌿</span>
+          <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">✨</span>
+          <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">📦</span>
+        </div>
       </div>
       <div>
-        <h5 class="font-bold text-white uppercase tracking-wider mb-3">Contact & Support</h5>
-        <p class="text-gray-400">No. 16, Near Dhaksha Zephrine, Balaji Avenue, Dhaliyur, Uliyampalayam, Dheenampalayam (PO), Coimbatore 641109, Tamil Nadu, India</p>
-        <p class="text-gray-400 mt-2">Phone / WhatsApp: +91 9385410034</p>
-        <p class="text-gray-400 mt-1">Email: puro@auratraditions.com</p>
-        <p class="text-gray-400 mt-1">Website: www.auratraditions.com</p>
+        <h5 class="font-bold text-white uppercase tracking-wider mb-4 pb-2 border-b border-white/10">Registered Headquarters</h5>
+        <p class="text-gray-300">No. 16, Near Dhaksha Zephrine, Balaji Avenue, Dhaliyur, Uliyampalayam, Dheenampalayam (PO), Coimbatore 641109, Tamil Nadu, India</p>
+        <div class="mt-4 space-y-2">
+          <p class="flex items-center gap-2"><span class="text-[#79B948]">📞</span> <span>Phone / WhatsApp: +91 9385410034</span></p>
+          <p class="flex items-center gap-2"><span class="text-[#79B948]">✉️</span> <span>Email: puro@auratraditions.com</span></p>
+          <p class="flex items-center gap-2"><span class="text-[#79B948]">🌐</span> <span>Web: www.auratraditions.com</span></p>
+        </div>
       </div>
       <div>
-        <h5 class="font-bold text-white uppercase tracking-wider mb-3">Eco Assurance</h5>
-        <p class="text-gray-400">100% Zero-Plastic Export Packaging using kraft honeycomb paper and gummed paper tape.</p>
+        <h5 class="font-bold text-white uppercase tracking-wider mb-4 pb-2 border-b border-white/10">Eco-Pack Assurance</h5>
+        <div class="bg-white/5 p-5 rounded-2xl border border-white/10 mb-4">
+          <h6 class="text-white font-bold mb-1 text-sm">100% Plastic-Free Guarantee</h6>
+          <p class="text-gray-300 text-[11px] leading-relaxed">Every single order is strictly packed using reinforced kraft honeycomb paper and activated gummed paper tape. Zero plastic adhesive tapes used.</p>
+        </div>
+        <span class="inline-block bg-[#79B948]/20 text-[#79B948] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-[#79B948]/30">Verified Eco-Exporter</span>
       </div>
     </div>
-    <div class="max-w-7xl mx-auto pt-6 border-t border-[#154E36] text-center text-gray-400">
-      <p>&copy; 2026 Aura Traditions. All rights reserved.</p>
+    <div class="max-w-7xl mx-auto pt-8 border-t border-white/10 text-center text-gray-500 text-[11px]">
+      <p>&copy; 2026 Aura Traditions. All rights reserved. Handcrafted with sustainability.</p>
     </div>
   </footer>
 
-  <!-- JavaScript for Cart and Checkout Logic -->
+  <!-- JavaScript Logic -->
   <script>
     let cart = [];
 
@@ -387,6 +441,7 @@
         cart.push({ name, price, qty: 1 });
       }
       updateCartUI();
+      triggerCartFeedback();
     }
 
     function addSignatureKitToCart() {
@@ -401,6 +456,15 @@
         cart.push({ name: itemName, price, qty: 1 });
       }
       updateCartUI();
+      triggerCartFeedback();
+    }
+
+    function triggerCartFeedback() {
+      const icon = document.querySelector('a[href="#checkout"]');
+      icon.classList.add('ring-4', 'ring-[#79B948]/50', 'scale-110');
+      setTimeout(() => {
+        icon.classList.remove('ring-4', 'ring-[#79B948]/50', 'scale-110');
+      }, 300);
     }
 
     function updateCartUI() {
@@ -412,7 +476,7 @@
       const totalAmountEl = document.getElementById('checkoutTotalAmount');
       
       if (cart.length === 0) {
-        itemsList.innerHTML = '<p class="text-gray-400 italic">No items added to cart yet.</p>';
+        itemsList.innerHTML = '<p class="text-gray-400 italic py-2">No items added to cart yet.</p>';
         totalAmountEl.textContent = '₹0.00';
         return;
       }
@@ -422,9 +486,9 @@
       cart.forEach(item => {
         let sub = item.price * item.qty;
         total += sub;
-        html += `<div class="flex justify-between items-center">
-          <span>${item.name} x ${item.qty}</span>
-          <span class="font-semibold">₹${sub.toFixed(2)}</span>
+        html += `<div class="flex justify-between items-center py-1">
+          <span class="text-[#003822] font-bold">${item.name} <span class="text-gray-400 font-normal">x${item.qty}</span></span>
+          <span class="font-extrabold text-sm font-serif">₹${sub.toFixed(2)}</span>
         </div>`;
       });
       itemsList.innerHTML = html;
@@ -448,8 +512,8 @@
 
     async function confirmWebsiteOrder() {
       const utr = document.getElementById('utrReferenceNo').value.trim();
-      if (!utr) {
-        alert('Please enter your UPI Transaction ID / UTR Number.');
+      if (!utr || utr.length < 6) {
+        alert('Please enter a valid 12-digit UPI Transaction ID / UTR Number.');
         return;
       }
 
