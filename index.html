@@ -54,7 +54,6 @@
 
   <!-- Hero Section Banner -->
   <section id="home" class="bg-[#003822] text-white py-16 px-4 text-center relative overflow-hidden">
-    <!-- Decorative background element -->
     <div class="absolute -top-24 -left-24 w-96 h-96 bg-[#79B948]/10 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-[#FF2E93]/10 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -78,15 +77,15 @@
     <div class="text-center mb-12">
       <span class="text-[#79B948] text-xs font-bold uppercase tracking-widest">Our Collection</span>
       <h3 class="text-3xl font-serif font-bold text-[#003822] mt-1 tracking-wide">Trending Sustainable Products</h3>
+      <p class="text-xs text-gray-500 mt-2">Click on any product card to view detailed specifications, benefits, and ingredients.</p>
       <div class="w-16 h-1 bg-[#79B948] mx-auto mt-3 rounded-full"></div>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       
       <!-- Signature Kit Combo -->
-      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group">
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group cursor-pointer" onclick="openProductModal('Signature Kit Combo')">
         <div>
-          <!-- Perfectly sized image container with elegant padding -->
           <div class="h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:scale-[1.02] transition duration-500">
             <span class="absolute top-3 left-3 bg-[#FF2E93] text-white text-[9px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">Save ₹101</span>
             <img src="1794767848815.png" alt="Signature Kit Combo" class="object-contain max-h-full drop-shadow-md">
@@ -98,7 +97,7 @@
           <p class="text-xs text-gray-500 mt-1 mb-3 leading-relaxed">Complete daily care: Includes 2 organic bamboo toothbrushes and 1 premium handcrafted neem wood comb of your choice.</p>
           
           <!-- Comb Selection Dropdown -->
-          <div class="mb-4 p-3 bg-[#F9F8F6] rounded-xl border border-gray-200/60 text-xs">
+          <div class="mb-4 p-3 bg-[#F9F8F6] rounded-xl border border-gray-200/60 text-xs" onclick="event.stopPropagation()">
             <label class="block text-[#003822] font-bold mb-1.5">Select Your Preferred Comb:</label>
             <select id="signatureCombSelect" class="w-full p-2.5 bg-white border border-gray-300 rounded-lg text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#79B948] focus:border-[#79B948]">
               <option value="Handle Grip Neem Comb">Handle Grip Neem Comb</option>
@@ -106,7 +105,7 @@
             </select>
           </div>
         </div>
-        <div>
+        <div onclick="event.stopPropagation()">
           <div class="flex items-center gap-3 mb-4">
             <span class="text-gray-400 line-through text-sm font-medium">₹600.00</span>
             <span class="font-extrabold text-[#79B948] text-2xl font-serif">₹499.00</span>
@@ -120,7 +119,7 @@
       </div>
 
       <!-- Product 1: Handle Grip Neem Wooden Comb -->
-      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group">
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group cursor-pointer" onclick="openProductModal('Handle Grip Neem Wooden Comb')">
         <div>
           <div class="h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:scale-[1.02] transition duration-500">
             <img src="Handle%20Grip%20Neem%20Wooden%20Comb.png" alt="Handle grip neem wooden comb" class="object-contain max-h-full drop-shadow-md">
@@ -129,7 +128,7 @@
           <h4 class="font-bold text-base text-[#003822] leading-snug">Handle Grip Neem Wooden Comb</h4>
           <p class="text-xs text-gray-500 mt-1 mb-4 leading-relaxed">Handcrafted from pure herbal neem wood. Ergonomic handle design ensures comfortable grip while gently stimulating scalp acupoints.</p>
         </div>
-        <div>
+        <div onclick="event.stopPropagation()">
           <div class="flex items-center gap-3 mb-4">
             <span class="text-gray-400 line-through text-sm font-medium">₹250.00</span>
             <span class="font-extrabold text-[#003822] text-2xl font-serif">₹150.00</span>
@@ -143,7 +142,7 @@
       </div>
 
       <!-- Product 2: Bamboo Toothbrush -->
-      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group">
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group cursor-pointer" onclick="openProductModal('Bamboo Toothbrush')">
         <div>
           <div class="h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:scale-[1.02] transition duration-500">
             <img src="Bamboo%20Brushes.png" alt="Bamboo Toothbrush" class="object-contain max-h-full drop-shadow-md">
@@ -152,7 +151,7 @@
           <h4 class="font-bold text-base text-[#003822] leading-snug">Organic Bamboo Toothbrush</h4>
           <p class="text-xs text-gray-500 mt-1 mb-4 leading-relaxed">Biodegradable natural bamboo handle paired with soft, BPA-free charcoal infused bristles for gentle yet effective plaque removal.</p>
         </div>
-        <div>
+        <div onclick="event.stopPropagation()">
           <div class="flex items-center gap-3 mb-4">
             <span class="text-gray-400 line-through text-sm font-medium">₹180.00</span>
             <span class="font-extrabold text-[#003822] text-2xl font-serif">₹100.00</span>
@@ -166,7 +165,7 @@
       </div>
 
       <!-- Product 3: Classic Wide-Tooth Neem Comb -->
-      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group">
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group cursor-pointer" onclick="openProductModal('Classic Wide-Tooth Neem Comb')">
         <div>
           <div class="h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:scale-[1.02] transition duration-500">
             <img src="1792774406213.png" alt="Classic Wide-Tooth Neem Comb" class="object-contain max-h-full drop-shadow-md">
@@ -175,7 +174,7 @@
           <h4 class="font-bold text-base text-[#003822] leading-snug">Classic Wide-Tooth Neem Comb</h4>
           <p class="text-xs text-gray-500 mt-1 mb-4 leading-relaxed">Perfect for detangling wet or dry hair without breakage. Wide spacing helps distribute natural scalp oils evenly.</p>
         </div>
-        <div>
+        <div onclick="event.stopPropagation()">
           <div class="flex items-center gap-3 mb-4">
             <span class="text-gray-400 line-through text-sm font-medium">₹240.00</span>
             <span class="font-extrabold text-[#003822] text-2xl font-serif">₹150.00</span>
@@ -189,7 +188,7 @@
       </div>
 
       <!-- Product 4: Tail Neem Styling Comb -->
-      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group">
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group cursor-pointer" onclick="openProductModal('Tail Neem Styling Comb')">
         <div>
           <div class="h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:scale-[1.02] transition duration-500">
             <img src="1792774431394%20(1).png" alt="Tail Neem Styling Comb" class="object-contain max-h-full drop-shadow-md">
@@ -198,7 +197,7 @@
           <h4 class="font-bold text-base text-[#003822] leading-snug">Tail Neem Styling Comb</h4>
           <p class="text-xs text-gray-500 mt-1 mb-4 leading-relaxed">Designed for precision parting, sectioning, and intricate hairstyling. Smooth neem teeth prevent static and protect sensitive scalp.</p>
         </div>
-        <div>
+        <div onclick="event.stopPropagation()">
           <div class="flex items-center gap-3 mb-4">
             <span class="text-gray-400 line-through text-sm font-medium">₹240.00</span>
             <span class="font-extrabold text-[#003822] text-2xl font-serif">₹140.00</span>
@@ -213,6 +212,71 @@
 
     </div>
   </section>
+
+  <!-- Product Details Modal (Popup) -->
+  <div id="productModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-white rounded-3xl max-w-2xl w-full text-[#333333] shadow-2xl relative animate-in fade-in zoom-in duration-200 my-8">
+      <button onclick="closeProductModal()" class="absolute top-5 right-5 text-gray-400 hover:text-black w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-lg font-bold cursor-pointer transition z-10">✕</button>
+      
+      <div class="p-6 sm:p-10">
+        <div class="flex flex-col sm:flex-row gap-8 items-center mb-8">
+          <div id="modalProductImageContainer" class="w-full sm:w-1/2 h-64 rounded-2xl bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-4">
+            <img id="modalProductImage" src="" alt="" class="object-contain max-h-full drop-shadow-md">
+          </div>
+          <div class="w-full sm:w-1/2">
+            <span id="modalProductCategory" class="text-[10px] uppercase font-extrabold tracking-widest text-[#79B948] bg-[#F4F9F1] px-3 py-1 rounded-full inline-block mb-3">CATEGORY</span>
+            <h3 id="modalProductTitle" class="font-serif font-bold text-2xl text-[#003822] leading-tight mb-2">Product Title</h3>
+            <div class="flex items-baseline gap-3 mb-6">
+              <span id="modalProductOriginalPrice" class="text-gray-400 line-through text-sm font-medium">₹000</span>
+              <span id="modalProductPrice" class="font-extrabold text-[#003822] text-3xl font-serif">₹000</span>
+            </div>
+            <div id="modalActionArea">
+              <!-- Dynamic add to cart button injected here -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Detailed Description & Specifications Tabs imitation -->
+        <div class="border-t border-gray-100 pt-8 space-y-6">
+          <div>
+            <h4 class="font-serif font-bold text-lg text-[#003822] mb-3 flex items-center gap-2">
+              <span>📖</span>
+              <span>Detailed Product Description</span>
+            </h4>
+            <p id="modalProductDescriptionLong" class="text-xs sm:text-sm text-gray-600 leading-relaxed">Detailed description will appear here.</p>
+          </div>
+
+          <div class="bg-[#F8F7F4] p-6 rounded-2xl border border-gray-200/60">
+            <h4 class="font-serif font-bold text-base text-[#003822] mb-4 flex items-center gap-2">
+              <span>✨</span>
+              <span>Key Features & Benefits</span>
+            </h4>
+            <ul id="modalProductFeatures" class="space-y-2 text-xs sm:text-sm text-700">
+              <!-- Features injected dynamically -->
+            </ul>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 text-center">
+            <div class="p-4 rounded-xl bg-white border border-gray-100 shadow-xs">
+              <span class="block text-xl mb-1">🌿</span>
+              <span class="font-extrabold text-xs text-[#003822] block">100% Natural Organic</span>
+              <span class="text-[10px] text-gray-400">Chemical & Plastic Free</span>
+            </div>
+            <div class="p-4 rounded-xl bg-white border border-gray-100 shadow-xs">
+              <span class="block text-xl mb-1">🪵</span>
+              <span class="font-extrabold text-xs text-[#003822] block">Authentic Herbal Wood</span>
+              <span class="text-[10px] text-gray-400">Handcrafted in Tamil Nadu</span>
+            </div>
+            <div class="p-4 rounded-xl bg-white border border-gray-100 shadow-xs">
+              <span class="block text-xl mb-1">📦</span>
+              <span class="font-extrabold text-xs text-[#003822] block">Zero-Plastic Eco Pack</span>
+              <span class="text-[10px] text-gray-400">Safe & Sustainable Delivery</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- B2B Wholesale / Bulk Enquiry Section -->
   <section id="bulk-enquiry" class="bg-[#F4F9F1] py-20 px-4 border-t border-b border-[#E3EFE5]">
@@ -433,6 +497,126 @@
   <script>
     let cart = [];
 
+    // Product Database for Details Modal
+    const productDatabase = {
+      "Signature Kit Combo": {
+        title: "Aura Traditions Signature Kit",
+        category: "Special Combo Kit",
+        price: 499,
+        originalPrice: 600,
+        image: "1794767848815.png",
+        description: "Complete eco-friendly daily care: Includes 2 organic bamboo toothbrushes and 1 premium handcrafted neem wood comb of your choice. A perfect starter kit for sustainable living.",
+        features: [
+          "Pack includes: 2 Ergonomic Bamboo Toothbrushes + 1 Handcrafted Neem Wood Comb",
+          "100% biodegradable bamboo handles naturally antimicrobial",
+          "Neem wood comb stimulates scalp acupoints and reduces hair fall",
+          "Zero plastic packaging, shipped safely with kraft paper tape"
+        ]
+      },
+      "Handle Grip Neem Wooden Comb": {
+        title: "Handle Grip Neem Wooden Comb",
+        category: "Daily Rituals",
+        price: 150,
+        originalPrice: 250,
+        image: "Handle%20Grip%20Neem%20Wooden%20Comb.png",
+        description: "Handcrafted from pure herbal neem wood. Ergonomic handle design ensures comfortable grip while gently stimulating scalp acupoints to promote healthy hair growth.",
+        features: [
+          "100% pure herbal neem wood construction",
+          "Ergonomic handle ensures smooth, comfortable detangling",
+          "Natural medicinal properties help reduce dandruff and scalp irritation",
+          "Static-free combing prevents hair breakage"
+        ]
+      },
+      "Bamboo Toothbrush": {
+        title: "Organic Bamboo Toothbrush",
+        category: "Oral Care",
+        price: 100,
+        originalPrice: 180,
+        image: "Bamboo%20Brushes.png",
+        description: "Biodegradable natural bamboo handle paired with soft, BPA-free charcoal infused bristles for gentle yet effective plaque removal.",
+        features: [
+          "Completely compostable natural bamboo handle",
+          "Soft charcoal-infused bristles gentle on sensitive gums",
+          "Naturally antibacterial and naturally water-resistant",
+          "Packaged in recyclable craft paper box"
+        ]
+      },
+      "Classic Wide-Tooth Neem Comb": {
+        title: "Classic Wide-Tooth Neem Comb",
+        category: "Hair Care",
+        price: 150,
+        originalPrice: 240,
+        image: "1792774406213.png",
+        description: "Perfect for detangling wet or dry hair without breakage. Wide spacing helps distribute natural scalp oils evenly from root to tip.",
+        features: [
+          "Wide-tooth design prevents hair breakage during detangling",
+          "Distributes natural conditioning oils evenly",
+          "Handcrafted smooth round tips protect sensitive scalp",
+          "Eco-friendly alternative to plastic combs"
+        ]
+      },
+      "Tail Neem Styling Comb": {
+        title: "Tail Neem Styling Comb",
+        category: "Styling Essentials",
+        price: 140,
+        originalPrice: 240,
+        image: "1792774431394%20(1).png",
+        description: "Designed for precision parting, sectioning, and intricate hairstyling. Smooth neem teeth prevent static and protect sensitive scalp.",
+        features: [
+          "Precision tail design for easy hair sectioning",
+          "Static-free material prevents frizz",
+          "Crafted from antibacterial herbal neem wood",
+          "Ideal for professional styling and daily updos"
+        ]
+      }
+    };
+
+    function openProductModal(productKey) {
+      const product = productDatabase[productKey];
+      if (!product) return;
+
+      document.getElementById('modalProductTitle').textContent = product.title;
+      document.getElementById('modalProductCategory').textContent = product.category;
+      document.getElementById('modalProductOriginalPrice').textContent = '₹' + product.originalPrice.toFixed(2);
+      document.getElementById('modalProductPrice').textContent = '₹' + product.price.toFixed(2);
+      document.getElementById('modalProductImage').src = product.image;
+      document.getElementById('modalProductImage').alt = product.title;
+      document.getElementById('modalProductDescriptionLong').textContent = product.description;
+
+      const featuresList = document.getElementById('modalProductFeatures');
+      featuresList.innerHTML = product.features.map(f => `<li class="flex items-start gap-2"><span class="text-[#79B948] font-bold">•</span><span>${f}</span></li>`).join('');
+
+      const actionArea = document.getElementById('modalActionArea');
+      if (productKey === 'Signature Kit Combo') {
+        actionArea.innerHTML = `
+          <div class="mb-4">
+            <label class="block text-[#003822] font-bold text-xs mb-1">Select Comb Type:</label>
+            <select id="modalSignatureCombSelect" class="w-full p-2.5 bg-[#F8F7F4] border border-gray-300 rounded-xl text-xs font-medium">
+              <option value="Handle Grip Neem Comb">Handle Grip Neem Comb</option>
+              <option value="Classic Wide-Tooth Neem Comb">Classic Wide-Tooth Neem Comb</option>
+            </select>
+          </div>
+          <button onclick="addModalSignatureKitToCart()" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-4 rounded-xl text-xs font-extrabold uppercase tracking-widest shadow-md transition cursor-pointer">
+            ADD TO CART
+          </button>
+        `;
+      } else {
+        actionArea.innerHTML = `
+          <button onclick="addToCart('${productKey}', ${product.price}); closeProductModal();" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-4 rounded-xl text-xs font-extrabold uppercase tracking-widest shadow-md transition cursor-pointer">
+            ADD TO CART
+          </button>
+        `;
+      }
+
+      document.getElementById('productModal').classList.remove('hidden');
+      document.getElementById('productModal').classList.add('flex');
+    }
+
+    function closeProductModal() {
+      document.getElementById('productModal').classList.remove('flex');
+      document.getElementById('productModal').classList.add('hidden');
+    }
+
     function addToCart(name, price) {
       const existing = cart.find(item => item.name === name);
       if (existing) {
@@ -457,6 +641,22 @@
       }
       updateCartUI();
       triggerCartFeedback();
+    }
+
+    function addModalSignatureKitToCart() {
+      const selectedComb = document.getElementById('modalSignatureCombSelect').value;
+      const itemName = `Signature Kit (2 Bamboo Brushes + 1 ${selectedComb})`;
+      const price = 499;
+
+      const existing = cart.find(item => item.name === itemName);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ name: itemName, price, qty: 1 });
+      }
+      updateCartUI();
+      triggerCartFeedback();
+      closeProductModal();
     }
 
     function triggerCartFeedback() {
@@ -558,4 +758,4 @@
     }
   </script>
 </body>
-</html> 
+</html>
