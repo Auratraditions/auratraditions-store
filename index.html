@@ -1,283 +1,787 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura Traditions | Natural Elegance & Eco-Friendly Essentials</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Montserrat', sans-serif; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aura Traditions | Natural Elegance</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Montserrat', sans-serif; }
+    .font-serif { font-family: 'Playfair Display', serif; }
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
 </head>
-<body class="bg-white text-neutral-800 antialiased">
+<body class="min-h-screen bg-[#FDFBF7] text-[#333333] antialiased">
 
-    <!-- Header / Navbar -->
-    <header class="sticky top-0 z-50 bg-white border-b border-neutral-200 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-2.5">
-                <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-emerald-800 shrink-0 bg-neutral-100 flex items-center justify-center">
-                    <img src="https://images.unsplash.com/photo-1608248597359-f53835f479d2?auto=format&fit=crop&w=150&q=80" alt="Aura Traditions Logo" class="w-full h-full object-cover">
-                </div>
-                <span class="text-lg font-bold tracking-tight text-emerald-900 truncate">Aura Traditions</span>
-            </div>
-            <nav class="hidden md:flex items-center gap-6 font-semibold text-xs uppercase text-neutral-600">
-                <a href="#home" class="hover:text-emerald-800 transition">Home</a>
-                <a href="#shop" class="hover:text-emerald-800 transition">Shop</a>
-                <a href="#bulk-enquiry" class="hover:text-emerald-800 transition">B2B Enquiry</a>
-                <a href="#checkout" class="hover:text-emerald-800 transition">Checkout</a>
-                <a href="#contact" class="hover:text-emerald-800 transition">Contact</a>
-            </nav>
-            <div class="flex items-center">
-                <span class="text-xs font-bold bg-emerald-100 text-emerald-800 px-3 py-1.5 rounded-full flex items-center gap-1">
-                    <span>🛒</span> Cart (0)
-                </span>
-            </div>
+  <!-- Top Announcement Bar -->
+  <div class="bg-[#003822] text-white text-[11px] sm:text-xs py-2.5 px-3 text-center font-medium leading-tight shadow-sm">
+    🌿 100% Zero-Plastic Packaging | Pan-India & Export Delivery
+    <span class="inline-block sm:ml-2 text-[#79B948] font-semibold">| Call/WhatsApp: +91 93854 10034</span>
+  </div>
+
+  <!-- Header / Navigation with Logo -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      
+      <!-- Brand Logo & Title -->
+      <a href="#home" class="flex items-center gap-3 group">
+        <img src="AURA Traditions Logo1.jpg" alt="Aura Traditions Logo" class="w-11 h-11 object-cover rounded-full shadow-md border border-[#79B948]">
+        <div>
+          <h1 class="text-base sm:text-xl font-serif font-bold text-[#003822] tracking-wide leading-tight group-hover:text-[#79B948] transition">Aura Traditions</h1>
+          <p class="text-[9px] uppercase tracking-widest text-[#79B948] font-bold">Natural Elegance</p>
         </div>
-    </header>
+      </a>
+      
+      <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-wider font-semibold text-gray-600">
+        <a href="#home" class="hover:text-[#003822] transition">Home</a>
+        <a href="#products" class="text-[#003822] font-bold hover:underline transition">Shop</a>
+        <a href="#bulk-enquiry" class="hover:text-[#003822] transition">B2B Bulk Enquiry</a>
+        <a href="#checkout" class="hover:text-[#003822] transition">Checkout</a>
+        <a href="#contact" class="hover:text-[#003822] transition">Contact</a>
+      </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative bg-emerald-950 text-white py-16 px-4 text-center">
-        <div class="max-w-3xl mx-auto">
-            <span class="inline-block bg-emerald-800 text-emerald-200 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-4">
-                100% Zero-Plastic Packaging | Pan-India Delivery
-            </span>
-            <h1 class="text-3xl sm:text-5xl font-bold mb-4 tracking-tight">Handcrafted Eco-Friendly Essentials</h1>
-            <p class="text-emerald-200 text-sm sm:text-base mb-8 max-w-2xl mx-auto leading-relaxed">
-                Sustainable neem wood combs, organic bamboo toothbrushes, and corporate eco hampers crafted with precision in Tamil Nadu.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#shop" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase px-6 py-3 rounded-xl transition shadow-md">Explore Products</a>
-                <a href="#bulk-enquiry" class="bg-transparent border border-emerald-500 text-emerald-200 hover:bg-emerald-900 font-bold text-xs uppercase px-6 py-3 rounded-xl transition">B2B Bulk Enquiry</a>
-            </div>
+      <!-- Cart Icon Button -->
+      <a href="#checkout" class="relative flex items-center justify-center p-2.5 bg-[#F4F9F1] rounded-full text-[#003822] hover:bg-[#E8F3E0] transition cursor-pointer">
+        <span class="text-xl">🛍️</span>
+        <span id="cartCount" class="absolute -top-1 -right-1 bg-[#FF2E93] text-white font-bold text-[10px] w-5 h-5 flex items-center justify-center rounded-full shadow-sm">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Misseco Style Horizontal Product Image Scroller (Below Header) -->
+  <section class="bg-white border-b border-gray-100 py-4 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center gap-4 overflow-x-auto no-scrollbar py-2">
+        
+        <div onclick="openProductModal('Signature Kit Combo')" class="flex items-center gap-3 bg-[#F8F7F4] border border-gray-200/60 px-4 py-2.5 rounded-2xl shrink-0 cursor-pointer hover:border-[#79B948] transition shadow-xs">
+          <img src="1794767848815.png" alt="Signature Kit" class="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-xs">
+          <div>
+            <h5 class="text-xs font-bold text-[#003822]">Signature Kit Combo</h5>
+            <span class="text-[11px] font-extrabold text-[#79B948]">₹499.00</span>
+          </div>
         </div>
-    </section>
 
-    <!-- Shop / Products Section -->
-    <section id="shop" class="max-w-7xl mx-auto px-4 py-16">
-        <div class="text-center mb-12">
-            <span class="text-emerald-800 text-xs font-bold uppercase tracking-widest">Our Collection</span>
-            <h2 class="text-2xl sm:text-4xl font-bold text-neutral-900 mt-1">Trending Sustainable Products</h2>
-            <p class="text-neutral-500 text-xs sm:text-sm mt-2">High quality, eco-conscious daily essentials crafted for your hair & skin care.</p>
+        <div onclick="openProductModal('Handle Grip Neem Wooden Comb')" class="flex items-center gap-3 bg-[#F8F7F4] border border-gray-200/60 px-4 py-2.5 rounded-2xl shrink-0 cursor-pointer hover:border-[#79B948] transition shadow-xs">
+          <img src="Handle%20Grip%20Neem%20Wooden%20Comb.png" alt="Neem Comb" class="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-xs">
+          <div>
+            <h5 class="text-xs font-bold text-[#003822]">Handle Grip Neem Comb</h5>
+            <span class="text-[11px] font-extrabold text-[#79B948]">₹150.00</span>
+          </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            <!-- Product 1: Signature Kit -->
-            <div class="border border-neutral-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition bg-white flex flex-col justify-between">
-                <div>
-                    <div class="relative bg-neutral-50 h-56 p-4 flex items-center justify-center overflow-hidden">
-                        <span class="absolute top-3 left-3 bg-rose-600 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase z-10">Sale</span>
-                        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=500&q=80" alt="Aura Traditions Signature Kit" class="max-h-full max-w-full object-contain">
-                    </div>
-                    <div class="p-5">
-                        <span class="text-[10px] text-neutral-400 uppercase font-bold tracking-wider">Special Combo Kit</span>
-                        <h3 class="font-bold text-neutral-900 text-base mt-0.5 leading-snug">Aura Traditions Signature Kit</h3>
-                        <div class="flex items-baseline gap-2 mt-3">
-                            <span class="text-neutral-400 line-through text-xs font-medium">₹600.00</span>
-                            <span class="text-emerald-800 font-bold text-lg">₹499.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-5 pt-0">
-                    <button class="w-full bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-xs py-3 rounded-xl transition uppercase tracking-wider">Add to Cart</button>
-                </div>
-            </div>
-
-            <!-- Product 2: Neem Comb -->
-            <div class="border border-neutral-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition bg-white flex flex-col justify-between">
-                <div>
-                    <div class="relative bg-neutral-50 h-56 p-4 flex items-center justify-center overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1590246814883-57c5e694d86c?auto=format&fit=crop&w=500&q=80" alt="Handle Grip Neem Wood Comb" class="max-h-full max-w-full object-contain">
-                    </div>
-                    <div class="p-5">
-                        <span class="text-[10px] text-neutral-400 uppercase font-bold tracking-wider">Daily Rituals</span>
-                        <h3 class="font-bold text-neutral-900 text-base mt-0.5 leading-snug">Handle Grip Neem Wood Comb</h3>
-                        <div class="flex items-baseline gap-2 mt-3">
-                            <span class="text-neutral-400 line-through text-xs font-medium">₹250.00</span>
-                            <span class="text-emerald-800 font-bold text-lg">₹150.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-5 pt-0">
-                    <button class="w-full bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-xs py-3 rounded-xl transition uppercase tracking-wider">Add to Cart</button>
-                </div>
-            </div>
-
-            <!-- Product 3: Bamboo Toothbrush -->
-            <div class="border border-neutral-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition bg-white flex flex-col justify-between">
-                <div>
-                    <div class="relative bg-neutral-50 h-56 p-4 flex items-center justify-center overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=500&q=80" alt="Organic Bamboo Toothbrush" class="max-h-full max-w-full object-contain">
-                    </div>
-                    <div class="p-5">
-                        <span class="text-[10px] text-neutral-400 uppercase font-bold tracking-wider">Oral Care</span>
-                        <h3 class="font-bold text-neutral-900 text-base mt-0.5 leading-snug">Organic Bamboo Toothbrush</h3>
-                        <div class="flex items-baseline gap-2 mt-3">
-                            <span class="text-neutral-400 line-through text-xs font-medium">₹180.00</span>
-                            <span class="text-emerald-800 font-bold text-lg">₹100.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-5 pt-0">
-                    <button class="w-full bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-xs py-3 rounded-xl transition uppercase tracking-wider">Add to Cart</button>
-                </div>
-            </div>
-
-            <!-- Product 4: Wide-Tooth Neem Comb -->
-            <div class="border border-neutral-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition bg-white flex flex-col justify-between">
-                <div>
-                    <div class="relative bg-neutral-50 h-56 p-4 flex items-center justify-center overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1626241325708-3011382bc682?auto=format&fit=crop&w=500&q=80" alt="Classic Wide-Tooth Neem Comb" class="max-h-full max-w-full object-contain">
-                    </div>
-                    <div class="p-5">
-                        <span class="text-[10px] text-neutral-400 uppercase font-bold tracking-wider">Hair Care</span>
-                        <h3 class="font-bold text-neutral-900 text-base mt-0.5 leading-snug">Classic Wide-Tooth Neem Comb</h3>
-                        <div class="flex items-baseline gap-2 mt-3">
-                            <span class="text-neutral-400 line-through text-xs font-medium">₹240.00</span>
-                            <span class="text-emerald-800 font-bold text-lg">₹150.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-5 pt-0">
-                    <button class="w-full bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-xs py-3 rounded-xl transition uppercase tracking-wider">Add to Cart</button>
-                </div>
-            </div>
-
+        <div onclick="openProductModal('Bamboo Toothbrush')" class="flex items-center gap-3 bg-[#F8F7F4] border border-gray-200/60 px-4 py-2.5 rounded-2xl shrink-0 cursor-pointer hover:border-[#79B948] transition shadow-xs">
+          <img src="Bamboo%20Brushes.png" alt="Bamboo Toothbrush" class="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-xs">
+          <div>
+            <h5 class="text-xs font-bold text-[#003822]">Bamboo Toothbrush</h5>
+            <span class="text-[11px] font-extrabold text-[#79B948]">₹100.00</span>
+          </div>
         </div>
-    </section>
 
-    <!-- B2B Bulk Enquiry Section -->
-    <section id="bulk-enquiry" class="bg-neutral-50 py-16 border-t border-neutral-200">
-        <div class="max-w-3xl mx-auto px-4">
-            <div class="text-center mb-10">
-                <span class="text-emerald-800 text-xs font-bold uppercase tracking-widest">Corporate Gifting & Wholesale</span>
-                <h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 mt-1">Bulk & Custom Branding Enquiry</h2>
-            </div>
-            <form class="bg-white p-6 sm:p-8 rounded-2xl border border-neutral-200 shadow-sm space-y-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-[10px] font-bold uppercase text-neutral-600 mb-1">Your / Company Name *</label>
-                        <input type="text" required class="w-full border border-neutral-300 rounded-xl p-3 text-xs focus:ring-2 focus:ring-emerald-800 focus:outline-none">
-                    </div>
-                    <div>
-                        <label class="block text-[10px] font-bold uppercase text-neutral-600 mb-1">Phone Number / WhatsApp *</label>
-                        <input type="tel" required class="w-full border border-neutral-300 rounded-xl p-3 text-xs focus:ring-2 focus:ring-emerald-800 focus:outline-none">
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-[10px] font-bold uppercase text-neutral-600 mb-1">Email Address *</label>
-                    <input type="email" required class="w-full border border-neutral-300 rounded-xl p-3 text-xs focus:ring-2 focus:ring-emerald-800 focus:outline-none">
-                </div>
-                <div>
-                    <label class="block text-[10px] font-bold uppercase text-neutral-600 mb-1">Estimated Quantity *</label>
-                    <input type="text" placeholder="e.g. 100 hamper boxes" required class="w-full border border-neutral-300 rounded-xl p-3 text-xs focus:ring-2 focus:ring-emerald-800 focus:outline-none">
-                </div>
-                <div>
-                    <label class="block text-[10px] font-bold uppercase text-neutral-600 mb-1">Requirements / Customisation Details</label>
-                    <textarea rows="3" class="w-full border border-neutral-300 rounded-xl p-3 text-xs focus:ring-2 focus:ring-emerald-800 focus:outline-none"></textarea>
-                </div>
-                <button type="submit" class="w-full bg-emerald-950 hover:bg-emerald-900 text-white font-bold text-xs py-4 rounded-xl uppercase tracking-wider transition">Submit Bulk Enquiry via WhatsApp</button>
-            </form>
+        <div onclick="openProductModal('Classic Wide-Tooth Neem Comb')" class="flex items-center gap-3 bg-[#F8F7F4] border border-gray-200/60 px-4 py-2.5 rounded-2xl shrink-0 cursor-pointer hover:border-[#79B948] transition shadow-xs">
+          <img src="1792774406213.png" alt="Wide Tooth Comb" class="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-xs">
+          <div>
+            <h5 class="text-xs font-bold text-[#003822]">Wide-Tooth Neem Comb</h5>
+            <span class="text-[11px] font-extrabold text-[#79B948]">₹150.00</span>
+          </div>
         </div>
-    </section>
 
-    <!-- Secure Retail Checkout Section -->
-    <section id="checkout" class="py-16 bg-white border-t border-neutral-200">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-10">
-                <h2 class="text-2xl sm:text-3xl font-bold text-neutral-900">Secure Retail Checkout</h2>
-                <p class="text-neutral-500 text-xs sm:text-sm mt-1">Provide your delivery details to finalize your order.</p>
-            </div>
-            <div class="bg-neutral-50 p-6 sm:p-8 rounded-2xl border border-neutral-200 space-y-8">
-                <div>
-                    <h3 class="font-bold text-sm uppercase tracking-wider text-neutral-800 mb-4 border-b pb-2 flex items-center gap-2">
-                        <span>1</span> Billing & Shipping Address
-                    </h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                        <input type="text" placeholder="First name *" required class="border border-neutral-300 rounded-xl p-3 bg-white">
-                        <input type="text" placeholder="Last name *" required class="border border-neutral-300 rounded-xl p-3 bg-white">
-                        <input type="text" placeholder="Street address *" required class="sm:col-span-2 border border-neutral-300 rounded-xl p-3 bg-white">
-                        <input type="text" placeholder="Town / City *" required class="border border-neutral-300 rounded-xl p-3 bg-white">
-                        <input type="text" value="Tamil Nadu" required class="border border-neutral-300 rounded-xl p-3 bg-white font-medium">
-                        <input type="text" placeholder="PIN Code *" required class="border border-neutral-300 rounded-xl p-3 bg-white">
-                        <input type="tel" placeholder="Phone Number *" required class="border border-neutral-300 rounded-xl p-3 bg-white">
-                        <input type="email" placeholder="Email address *" required class="border border-neutral-300 rounded-xl p-3 bg-white">
-                    </div>
-                </div>
-                <div>
-                    <h3 class="font-bold text-sm uppercase tracking-wider text-neutral-800 mb-4 border-b pb-2 flex items-center gap-2">
-                        <span>2</span> Order Summary
-                    </h3>
-                    <div class="bg-white border border-neutral-200 rounded-xl p-4 text-xs space-y-3">
-                        <div class="flex justify-between font-bold text-neutral-500 uppercase pb-2 border-b">
-                            <span>Product</span>
-                            <span>Subtotal</span>
-                        </div>
-                        <div class="text-center text-neutral-400 py-4 italic">No items added to cart yet.</div>
-                        <div class="flex justify-between items-center pt-3 border-t font-bold text-sm text-neutral-900">
-                            <span>Total Payable Amount</span>
-                            <span class="text-emerald-800 text-base">₹0.00</span>
-                        </div>
-                    </div>
-                </div>
-                <button class="w-full bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-xs py-4 rounded-xl uppercase tracking-widest shadow-md transition flex items-center justify-center gap-2">
-                    <span>Proceed to UPI Pay</span> <span>🔒</span>
-                </button>
-            </div>
+        <div onclick="openProductModal('Tail Neem Styling Comb')" class="flex items-center gap-3 bg-[#F8F7F4] border border-gray-200/60 px-4 py-2.5 rounded-2xl shrink-0 cursor-pointer hover:border-[#79B948] transition shadow-xs">
+          <img src="1792774431394%20(1).png" alt="Tail Comb" class="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-xs">
+          <div>
+            <h5 class="text-xs font-bold text-[#003822]">Tail Neem Styling Comb</h5>
+            <span class="text-[11px] font-extrabold text-[#79B948]">₹140.00</span>
+          </div>
         </div>
-    </section>
 
-    <!-- Multi-Footers (Misseco Style Stacked for Mobile) -->
-    <footer id="contact" class="bg-neutral-900 text-neutral-400 pt-16 pb-12 border-t border-neutral-800 text-xs">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            
-            <!-- Column 1 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Section Banner -->
+  <section id="home" class="bg-[#003822] text-white py-16 px-4 text-center relative overflow-hidden">
+    <div class="absolute -top-24 -left-24 w-96 h-96 bg-[#79B948]/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-[#FF2E93]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto flex flex-col items-center relative z-10">
+      <div class="w-16 h-16 rounded-full bg-[#79B948] text-[#003822] text-2xl font-serif font-bold flex items-center justify-center mb-4 shadow-lg overflow-hidden border-2 border-white">
+        <img src="AURA Traditions Logo1.jpg" alt="Logo" class="w-full h-full object-cover">
+      </div>
+      <span class="bg-[#79B948]/20 text-[#79B948] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3 border border-[#79B948]/30">Take the Green Step</span>
+      <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mb-4 leading-tight">Handcrafted Eco-Friendly Essentials</h2>
+      <p class="text-sm sm:text-base text-gray-300 mb-8 max-w-xl leading-relaxed">Sustainable neem wood combs, organic bamboo toothbrushes, and corporate eco hampers crafted with precision in Tamil Nadu.</p>
+      
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#products" class="bg-[#79B948] hover:bg-[#68A33C] text-[#003822] px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5">Explore Products</a>
+        <a href="#bulk-enquiry" class="bg-transparent hover:bg-white/10 text-white border-2 border-white/30 hover:border-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition">B2B Bulk Enquiry</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="max-w-7xl mx-auto px-4 py-16">
+    <div class="text-center mb-12">
+      <span class="text-[#79B948] text-xs font-bold uppercase tracking-widest">Our Collection</span>
+      <h3 class="text-3xl font-serif font-bold text-[#003822] mt-1 tracking-wide">Trending Sustainable Products</h3>
+      <p class="text-xs text-gray-500 mt-2">Click on any product card to view detailed specifications, benefits, and ingredients.</p>
+      <div class="w-16 h-1 bg-[#79B948] mx-auto mt-3 rounded-full"></div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Signature Kit Combo -->
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group cursor-pointer" onclick="openProductModal('Signature Kit Combo')">
+        <div>
+          <div class="h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:scale-[1.02] transition duration-500">
+            <span class="absolute top-3 left-3 bg-[#FF2E93] text-white text-[9px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">Save ₹101</span>
+            <img src="1794767848815.png" alt="Signature Kit Combo" class="object-contain max-h-full drop-shadow-md">
+          </div>
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-[10px] uppercase font-bold text-[#79B948] tracking-widest bg-[#F4F9F1] px-2 py-0.5 rounded">Special Combo Kit</span>
+          </div>
+          <h4 class="font-bold text-base text-[#003822] leading-snug">Aura Traditions Signature Kit</h4>
+          <p class="text-xs text-gray-500 mt-1 mb-3 leading-relaxed">Complete daily care: Includes 2 organic bamboo toothbrushes and 1 premium handcrafted neem wood comb of your choice.</p>
+          
+          <div class="mb-4 p-3 bg-[#F9F8F6] rounded-xl border border-gray-200/60 text-xs" onclick="event.stopPropagation()">
+            <label class="block text-[#003822] font-bold mb-1.5">Select Your Preferred Comb:</label>
+            <select id="signatureCombSelect" class="w-full p-2.5 bg-white border border-gray-300 rounded-lg text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#79B948]">
+              <option value="Handle Grip Neem Comb">Handle Grip Neem Comb</option>
+              <option value="Classic Wide-Tooth Neem Comb">Classic Wide-Tooth Neem Comb</option>
+            </select>
+          </div>
+        </div>
+        <div onclick="event.stopPropagation()">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-gray-400 line-through text-sm font-medium">₹600.00</span>
+            <span class="font-extrabold text-[#79B948] text-2xl font-serif">₹499.00</span>
+            <span class="text-[10px] text-gray-400 font-medium ml-auto">Incl. of all taxes</span>
+          </div>
+          <button onclick="addSignatureKitToCart()" class="w-full bg-[#003822] hover:bg-[#154E36] text-white py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md transition cursor-pointer flex items-center justify-center gap-2">
+            <span>Add to Cart</span>
+            <span>+</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Product 1: Handle Grip Neem Wooden Comb -->
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group cursor-pointer" onclick="openProductModal('Handle Grip Neem Wooden Comb')">
+        <div>
+          <div class="h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:scale-[1.02] transition duration-500">
+            <img src="Handle%20Grip%20Neem%20Wooden%20Comb.png" alt="Handle grip neem wooden comb" class="object-contain max-h-full drop-shadow-md">
+          </div>
+          <span class="text-[10px] uppercase font-bold text-gray-400 tracking-widest block mb-1">Daily Rituals</span>
+          <h4 class="font-bold text-base text-[#003822] leading-snug">Handle Grip Neem Wooden Comb</h4>
+          <p class="text-xs text-gray-500 mt-1 mb-4 leading-relaxed">Handcrafted from pure herbal neem wood. Ergonomic handle design ensures comfortable grip while gently stimulating scalp acupoints.</p>
+        </div>
+        <div onclick="event.stopPropagation()">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-gray-400 line-through text-sm font-medium">₹250.00</span>
+            <span class="font-extrabold text-[#003822] text-2xl font-serif">₹150.00</span>
+            <span class="text-[10px] text-gray-400 font-medium ml-auto">Incl. of all taxes</span>
+          </div>
+          <button onclick="addToCart('Handle Grip Neem Wooden Comb', 150)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md transition cursor-pointer flex items-center justify-center gap-2">
+            <span>Add to Cart</span>
+            <span>+</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Product 2: Bamboo Toothbrush -->
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group cursor-pointer" onclick="openProductModal('Bamboo Toothbrush')">
+        <div>
+          <div class="h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:scale-[1.02] transition duration-500">
+            <img src="Bamboo%20Brushes.png" alt="Bamboo Toothbrush" class="object-contain max-h-full drop-shadow-md">
+          </div>
+          <span class="text-[10px] uppercase font-bold text-gray-400 tracking-widest block mb-1">Oral Care</span>
+          <h4 class="font-bold text-base text-[#003822] leading-snug">Organic Bamboo Toothbrush</h4>
+          <p class="text-xs text-gray-500 mt-1 mb-4 leading-relaxed">Biodegradable natural bamboo handle paired with soft, BPA-free charcoal infused bristles for gentle yet effective plaque removal.</p>
+        </div>
+        <div onclick="event.stopPropagation()">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-gray-400 line-through text-sm font-medium">₹180.00</span>
+            <span class="font-extrabold text-[#003822] text-2xl font-serif">₹100.00</span>
+            <span class="text-[10px] text-gray-400 font-medium ml-auto">Incl. of all taxes</span>
+          </div>
+          <button onclick="addToCart('Bamboo Toothbrush', 100)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md transition cursor-pointer flex items-center justify-center gap-2">
+            <span>Add to Cart</span>
+            <span>+</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Product 3: Classic Wide-Tooth Neem Comb -->
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group cursor-pointer" onclick="openProductModal('Classic Wide-Tooth Neem Comb')">
+        <div>
+          <div class="h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:scale-[1.02] transition duration-500">
+            <img src="1792774406213.png" alt="Classic Wide-Tooth Neem Comb" class="object-contain max-h-full drop-shadow-md">
+          </div>
+          <span class="text-[10px] uppercase font-bold text-gray-400 tracking-widest block mb-1">Hair Care</span>
+          <h4 class="font-bold text-base text-[#003822] leading-snug">Classic Wide-Tooth Neem Comb</h4>
+          <p class="text-xs text-gray-500 mt-1 mb-4 leading-relaxed">Perfect for detangling wet or dry hair without breakage. Wide spacing helps distribute natural scalp oils evenly.</p>
+        </div>
+        <div onclick="event.stopPropagation()">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-gray-400 line-through text-sm font-medium">₹240.00</span>
+            <span class="font-extrabold text-[#003822] text-2xl font-serif">₹150.00</span>
+            <span class="text-[10px] text-gray-400 font-medium ml-auto">Incl. of all taxes</span>
+          </div>
+          <button onclick="addToCart('Classic Wide-Tooth Neem Comb', 150)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md transition cursor-pointer flex items-center justify-center gap-2">
+            <span>Add to Cart</span>
+            <span>+</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Product 4: Tail Neem Styling Comb -->
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group cursor-pointer" onclick="openProductModal('Tail Neem Styling Comb')">
+        <div>
+          <div class="h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:scale-[1.02] transition duration-500">
+            <img src="1792774431394%20(1).png" alt="Tail Neem Styling Comb" class="object-contain max-h-full drop-shadow-md">
+          </div>
+          <span class="text-[10px] uppercase font-bold text-gray-400 tracking-widest block mb-1">Styling Essentials</span>
+          <h4 class="font-bold text-base text-[#003822] leading-snug">Tail Neem Styling Comb</h4>
+          <p class="text-xs text-gray-500 mt-1 mb-4 leading-relaxed">Designed for precision parting, sectioning, and intricate hairstyling. Smooth neem teeth prevent static and protect sensitive scalp.</p>
+        </div>
+        <div onclick="event.stopPropagation()">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-gray-400 line-through text-sm font-medium">₹240.00</span>
+            <span class="font-extrabold text-[#003822] text-2xl font-serif">₹140.00</span>
+            <span class="text-[10px] text-gray-400 font-medium ml-auto">Incl. of all taxes</span>
+          </div>
+          <button onclick="addToCart('Tail Neem Styling Comb', 140)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md transition cursor-pointer flex items-center justify-center gap-2">
+            <span>Add to Cart</span>
+            <span>+</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Product Details Modal (Popup) -->
+  <div id="productModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-white rounded-3xl max-w-2xl w-full text-[#333333] shadow-2xl relative animate-in fade-in zoom-in duration-200 my-8">
+      <button onclick="closeProductModal()" class="absolute top-5 right-5 text-gray-400 hover:text-black w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-lg font-bold cursor-pointer transition z-10">✕</button>
+      
+      <div class="p-6 sm:p-10">
+        <div class="flex flex-col sm:flex-row gap-8 items-center mb-8">
+          <div id="modalProductImageContainer" class="w-full sm:w-1/2 h-64 rounded-2xl bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-4">
+            <img id="modalProductImage" src="" alt="" class="object-contain max-h-full drop-shadow-md">
+          </div>
+          <div class="w-full sm:w-1/2">
+            <span id="modalProductCategory" class="text-[10px] uppercase font-extrabold tracking-widest text-[#79B948] bg-[#F4F9F1] px-3 py-1 rounded-full inline-block mb-3">CATEGORY</span>
+            <h3 id="modalProductTitle" class="font-serif font-bold text-2xl text-[#003822] leading-tight mb-2">Product Title</h3>
+            <div class="flex items-baseline gap-3 mb-6">
+              <span id="modalProductOriginalPrice" class="text-gray-400 line-through text-sm font-medium">₹000</span>
+              <span id="modalProductPrice" class="font-extrabold text-[#003822] text-3xl font-serif">₹000</span>
+            </div>
+            <div id="modalActionArea"></div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-100 pt-8 space-y-6">
+          <div>
+            <h4 class="font-serif font-bold text-lg text-[#003822] mb-3 flex items-center gap-2">
+              <span>📖</span>
+              <span>Detailed Product Description</span>
+            </h4>
+            <p id="modalProductDescriptionLong" class="text-xs sm:text-sm text-gray-600 leading-relaxed">Detailed description will appear here.</p>
+          </div>
+
+          <div class="bg-[#F8F7F4] p-6 rounded-2xl border border-gray-200/60">
+            <h4 class="font-serif font-bold text-base text-[#003822] mb-4 flex items-center gap-2">
+              <span>✨</span>
+              <span>Key Features & Benefits</span>
+            </h4>
+            <ul id="modalProductFeatures" class="space-y-2 text-xs sm:text-sm text-gray-700"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- B2B Wholesale / Bulk Enquiry Section -->
+  <section id="bulk-enquiry" class="bg-[#F4F9F1] py-20 px-4 border-t border-b border-[#E3EFE5]">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-gray-100">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="bg-[#003822] text-[#79B948] text-[10px] font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full">Corporate Gifting & Wholesale</span>
+          <h3 class="text-3xl font-serif font-bold text-[#003822] mt-3">Bulk & Custom Branding Enquiry</h3>
+          <p class="text-xs sm:text-sm text-gray-600 mt-3 leading-relaxed">Looking for eco-friendly corporate gift hampers, bulk product supplies, or private label manufacturing? Partner with us.</p>
+        </div>
+
+        <form onsubmit="handleBulkEnquiry(event)" class="space-y-6 text-xs">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
-                <div class="flex items-center gap-3 mb-4">
-                    <img src="https://images.unsplash.com/photo-1608248597359-f53835f479d2?auto=format&fit=crop&w=150&q=80" alt="Logo" class="w-10 h-10 rounded-full object-cover border border-emerald-700">
-                    <span class="text-base font-bold text-white">Aura Traditions</span>
-                </div>
-                <p class="leading-relaxed mb-4">Bringing premium, sustainable, 100% zero-plastic living solutions directly from the artisan craftsmen of Tamil Nadu to global households.</p>
-                <div class="flex gap-2 text-emerald-400 font-medium">
-                    <span>🌱 Eco-Friendly</span>
-                    <span>🤝 Artisans</span>
-                    <span>📦 Export</span>
-                </div>
+              <label class="block font-bold text-[#003822] mb-2">Your / Company Name <span class="text-[#FF2E93]">*</span></label>
+              <input type="text" id="bulkName" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] font-medium text-sm">
             </div>
-
-            <!-- Column 2 -->
             <div>
-                <h4 class="text-white font-bold uppercase tracking-wider mb-3">Registered Headquarters</h4>
-                <p class="leading-relaxed mb-3">No. 16, Near Dhaksha Zephrine, Balaji Avenue, Dhaliyur, Uliyampalayam, Dheenampalayam (PO), Coimbatore 641109, Tamil Nadu, India</p>
-                <p class="mb-1">📞 Phone: <span class="text-white">+91 93854 10034</span></p>
-                <p>✉️ Email: <span class="text-white">puro@auratraditions.com</span></p>
+              <label class="block font-bold text-[#003822] mb-2">Phone Number / WhatsApp <span class="text-[#FF2E93]">*</span></label>
+              <input type="tel" id="bulkPhone" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] font-medium text-sm">
             </div>
+          </div>
 
-            <!-- Column 3 -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
-                <h4 class="text-white font-bold uppercase tracking-wider mb-3">Eco-Pass Assurance</h4>
-                <div class="bg-neutral-800 p-4 rounded-xl border border-neutral-700">
-                    <p class="font-bold text-emerald-400 mb-1">100% Zero-Plastic Packaging</p>
-                    <p class="leading-relaxed">Every single order is strictly packed using reinforced kraft paper and gummed paper tape.</p>
-                </div>
+              <label class="block font-bold text-[#003822] mb-2">Email Address <span class="text-[#FF2E93]">*</span></label>
+              <input type="email" id="bulkEmail" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] font-medium text-sm">
             </div>
-
-            <!-- Column 4 -->
             <div>
-                <h4 class="text-white font-bold uppercase tracking-wider mb-3">Stay in the Loop</h4>
-                <p class="mb-3">Subscribe for special offers and updates.</p>
-                <form class="space-y-2">
-                    <input type="email" placeholder="Your email address" required class="w-full bg-neutral-800 border border-neutral-700 rounded-xl p-3 text-white placeholder-neutral-500 focus:outline-none">
-                    <button type="submit" class="w-full bg-emerald-800 hover:bg-emerald-900 text-white font-bold py-3 rounded-xl uppercase tracking-wider transition">Sign Up</button>
-                </form>
+              <label class="block font-bold text-[#003822] mb-2">Estimated Quantity Required <span class="text-[#FF2E93]">*</span></label>
+              <input type="text" id="bulkQty" placeholder="e.g. 100 hamper boxes / 500 pcs" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] font-medium text-sm">
             </div>
+          </div>
 
+          <div>
+            <label class="block font-bold text-[#003822] mb-2">Specific Requirements / Customisation Details</label>
+            <textarea id="bulkMessage" rows="4" placeholder="Tell us about your event date, budget range, or branding requirements." class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] font-medium text-sm leading-relaxed"></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-[#003822] hover:bg-[#154E36] text-white py-4 rounded-xl text-xs font-bold uppercase tracking-widest transition shadow-lg cursor-pointer">
+            SUBMIT BULK ENQUIRY VIA WHATSAPP
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Checkout Section -->
+  <section id="checkout" class="max-w-4xl mx-auto px-4 py-16">
+    <div class="mb-8 border-b border-gray-200 pb-4">
+      <h2 class="text-2xl font-bold text-[#003822] uppercase tracking-wide font-serif">Secure Retail Checkout</h2>
+      <p class="text-xs text-gray-500 mt-1">Provide your delivery details below to finalize your order.</p>
+    </div>
+
+    <form id="checkoutForm" onsubmit="processWebsiteCheckout(event)" class="space-y-8">
+      <div class="bg-white p-6 sm:p-8 rounded-3xl border border-gray-100 shadow-sm space-y-6">
+        <h3 class="text-sm font-bold uppercase tracking-wider text-[#003822] border-b pb-3 flex items-center gap-2">
+          <span class="w-6 h-6 rounded-full bg-[#79B948] text-[#003822] flex items-center justify-center text-xs">1</span>
+          <span>Billing & Shipping Address</span>
+        </h3>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs">
+          <div>
+            <label class="block text-gray-700 font-bold mb-2">First name <span class="text-[#FF2E93]">*</span></label>
+            <input type="text" id="billingFirstName" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] text-sm font-medium">
+          </div>
+          <div>
+            <label class="block text-gray-700 font-bold mb-2">Last name <span class="text-[#FF2E93]">*</span></label>
+            <input type="text" id="billingLastName" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] text-sm font-medium">
+          </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 pt-8 border-t border-neutral-800 text-center text-neutral-600">
-            &copy; 2026 Aura Traditions. All rights reserved.
-        </div>
-    </footer>
 
+        <div class="text-xs">
+          <label class="block text-gray-700 font-bold mb-2">Street address <span class="text-[#FF2E93]">*</span></label>
+          <input type="text" id="billingAddress" placeholder="House number and street name" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] text-sm font-medium">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs">
+          <div>
+            <label class="block text-gray-700 font-bold mb-2">Town / City <span class="text-[#FF2E93]">*</span></label>
+            <input type="text" id="billingCity" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] text-sm font-medium">
+          </div>
+          <div>
+            <label class="block text-gray-700 font-bold mb-2">State <span class="text-[#FF2E93]">*</span></label>
+            <input type="text" id="billingState" value="Tamil Nadu" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] text-sm font-medium">
+          </div>
+          <div>
+            <label class="block text-gray-700 font-bold mb-2">PIN Code <span class="text-[#FF2E93]">*</span></label>
+            <input type="text" id="billingPin" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] text-sm font-medium">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs">
+          <div>
+            <label class="block text-gray-700 font-bold mb-2">Phone Number <span class="text-[#FF2E93]">*</span></label>
+            <input type="tel" id="billingPhone" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] text-sm font-medium">
+          </div>
+          <div>
+            <label class="block text-gray-700 font-bold mb-2">Email address <span class="text-[#FF2E93]">*</span></label>
+            <input type="email" id="billingEmail" required class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] text-sm font-medium">
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 sm:p-8 rounded-3xl border border-gray-100 shadow-sm space-y-6">
+        <h3 class="text-sm font-bold uppercase tracking-wider text-[#003822] border-b pb-3 flex items-center gap-2">
+          <span class="w-6 h-6 rounded-full bg-[#79B948] text-[#003822] flex items-center justify-center text-xs">2</span>
+          <span>Order Summary</span>
+        </h3>
+
+        <div class="bg-[#F8F7F4] rounded-2xl p-6 border border-gray-200/60">
+          <div class="flex justify-between font-bold text-xs uppercase tracking-widest text-gray-700 border-b border-gray-200 pb-3 mb-4">
+            <span>Product</span>
+            <span>Subtotal</span>
+          </div>
+
+          <div id="checkoutItemsList" class="space-y-4 text-xs border-b border-gray-200 pb-4 font-medium">
+            <p class="text-gray-400 italic">No items added to cart yet.</p>
+          </div>
+
+          <div class="flex justify-between items-center pt-4 font-bold text-base text-[#003822]">
+            <span>Total Payable Amount</span>
+            <span id="checkoutTotalAmount" class="text-[#79B948] text-2xl font-serif">₹0.00</span>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-4 rounded-xl text-sm font-extrabold uppercase tracking-widest shadow-lg transition cursor-pointer flex items-center justify-center gap-3">
+          <span>PROCEED TO UPI PAYMENT</span>
+          <span>🔒</span>
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <!-- UPI Payment Gateway Modal -->
+  <div id="upiPayGatewayModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full text-[#333333] shadow-2xl relative">
+      <button onclick="closeUpiGateway()" class="absolute top-5 right-5 text-gray-400 hover:text-black w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-base font-bold cursor-pointer">✕</button>
+      
+      <div class="text-center mb-6">
+        <span class="bg-[#F4F9F1] text-[#79B948] text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full border border-[#79B948]/30">Secure Payment Gateway</span>
+        <h3 class="font-serif font-bold text-2xl text-[#003822] mt-3">Complete UPI Transfer</h3>
+        <p class="text-xs text-gray-500 mt-1">Please pay from any UPI app (GPay, PhonePe, Paytm)</p>
+      </div>
+
+      <div class="bg-[#F8F7F4] p-6 rounded-2xl text-center border border-gray-200 shadow-inner mb-6">
+        <span class="text-[10px] text-gray-400 uppercase font-extrabold tracking-widest block mb-2">Scan & Pay Amount</span>
+        <div id="modalPayAmount" class="text-4xl font-black text-[#003822] font-serif mb-4">₹0.00</div>
+        
+        <div class="inline-block bg-white px-5 py-3 rounded-xl border border-gray-200 shadow-xs">
+          <span class="text-[9px] text-gray-400 uppercase font-bold tracking-wider block mb-1">Official UPI ID</span>
+          <div class="text-base font-extrabold font-mono text-[#003822] select-all bg-[#F4F9F1] px-3 py-1.5 rounded-lg border border-[#79B948]/20">9385410034@upi</div>
+        </div>
+      </div>
+
+      <div class="space-y-4 text-xs border-t border-gray-100 pt-6">
+        <div>
+          <label class="block font-bold text-[#003822] mb-2">Enter 12-Digit UPI Transaction ID / UTR No <span class="text-[#FF2E93]">*</span></label>
+          <input type="text" id="utrReferenceNo" placeholder="ex. 430982348123" class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] text-sm font-mono font-bold text-center tracking-widest">
+        </div>
+        <button onclick="confirmWebsiteOrder()" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-4 rounded-xl font-extrabold uppercase text-xs tracking-widest cursor-pointer shadow-lg transition flex items-center justify-center gap-2">
+          <span>VERIFY & CONFIRM ORDER</span>
+          <span>✓</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order Success Modal -->
+  <div id="orderSuccessModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl p-8 max-w-sm w-full text-center shadow-2xl relative">
+      <div class="w-20 h-20 bg-[#F4F9F1] text-[#79B948] rounded-full flex items-center justify-center text-4xl mx-auto mb-6 shadow-inner border-2 border-[#79B948]">✓</div>
+      <h3 class="font-serif font-bold text-2xl text-[#003822] mb-2">Order Placed Successfully!</h3>
+      <p class="text-xs text-gray-600 mb-8 leading-relaxed">Thank you for choosing Aura Traditions. Our team has received your payment details and will dispatch your eco-friendly shipment shortly.</p>
+      <button onclick="location.reload()" class="w-full bg-[#003822] hover:bg-[#154E36] text-white py-4 rounded-xl text-xs font-bold uppercase tracking-widest shadow-lg transition cursor-pointer">Back to Store</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-[#003822] text-gray-400 pt-20 pb-12 px-4 border-t border-[#1F533D] text-xs leading-relaxed">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <img src="AURA Traditions Logo1.jpg" alt="Logo" class="w-10 h-10 object-cover rounded-full border border-[#79B948]">
+          <h4 class="font-serif font-bold text-lg text-white">Aura Traditions</h4>
+        </div>
+        <p class="text-gray-300 mb-4 leading-relaxed">Bringing premium, sustainable, 100% zero-plastic living solutions directly from the artisan craftsmen of Tamil Nadu to global households.</p>
+        <div class="flex gap-3 text-base">
+          <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">🌿</span>
+          <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">✨</span>
+          <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">📦</span>
+        </div>
+      </div>
+      <div>
+        <h5 class="font-bold text-white uppercase tracking-wider mb-4 pb-2 border-b border-white/10">Registered Headquarters</h5>
+        <p class="text-gray-300">No. 16, Near Dhaksha Zephrine, Balaji Avenue, Dhaliyur, Uliyampalayam, Dheenampalayam (PO), Coimbatore 641109, Tamil Nadu, India</p>
+        <div class="mt-4 space-y-2">
+          <p class="flex items-center gap-2"><span class="text-[#79B948]">📞</span> <span>Phone / WhatsApp: +91 9385410034</span></p>
+          <p class="flex items-center gap-2"><span class="text-[#79B948]">✉️</span> <span>Email: puro@auratraditions.com</span></p>
+          <p class="flex items-center gap-2"><span class="text-[#79B948]">🌐</span> <span>Web: www.auratraditions.com</span></p>
+        </div>
+      </div>
+      <div>
+        <h5 class="font-bold text-white uppercase tracking-wider mb-4 pb-2 border-b border-white/10">Eco-Pack Assurance</h5>
+        <div class="bg-white/5 p-5 rounded-2xl border border-white/10 mb-4">
+          <h6 class="text-white font-bold mb-1 text-sm">100% Plastic-Free Guarantee</h6>
+          <p class="text-gray-300 text-[11px] leading-relaxed">Every single order is strictly packed using reinforced kraft honeycomb paper and activated gummed paper tape. Zero plastic adhesive tapes used.</p>
+        </div>
+        <span class="inline-block bg-[#79B948]/20 text-[#79B948] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-[#79B948]/30">Verified Eco-Exporter</span>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto pt-8 border-t border-white/10 text-center text-gray-500 text-[11px]">
+      <p>&copy; 2026 Aura Traditions. All rights reserved. Handcrafted with sustainability.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript Logic -->
+  <script>
+    let cart = [];
+
+    const productDatabase = {
+      "Signature Kit Combo": {
+        title: "Aura Traditions Signature Kit",
+        category: "Special Combo Kit",
+        price: 499,
+        originalPrice: 600,
+        image: "1794767848815.png",
+        description: "Complete eco-friendly daily care: Includes 2 organic bamboo toothbrushes and 1 premium handcrafted neem wood comb of your choice. A perfect starter kit for sustainable living.",
+        features: [
+          "Pack includes: 2 Ergonomic Bamboo Toothbrushes + 1 Handcrafted Neem Wood Comb",
+          "100% biodegradable bamboo handles naturally antimicrobial",
+          "Neem wood comb stimulates scalp acupoints and reduces hair fall",
+          "Zero plastic packaging, shipped safely with kraft paper tape"
+        ]
+      },
+      "Handle Grip Neem Wooden Comb": {
+        title: "Handle Grip Neem Wooden Comb",
+        category: "Daily Rituals",
+        price: 150,
+        originalPrice: 250,
+        image: "Handle%20Grip%20Neem%20Wooden%20Comb.png",
+        description: "Handcrafted from pure herbal neem wood. Ergonomic handle design ensures comfortable grip while gently stimulating scalp acupoints to promote healthy hair growth.",
+        features: [
+          "100% pure herbal neem wood construction",
+          "Ergonomic handle ensures smooth, comfortable detangling",
+          "Natural medicinal properties help reduce dandruff and scalp irritation",
+          "Static-free combing prevents hair breakage"
+        ]
+      },
+      "Bamboo Toothbrush": {
+        title: "Organic Bamboo Toothbrush",
+        category: "Oral Care",
+        price: 100,
+        originalPrice: 180,
+        image: "Bamboo%20Brushes.png",
+        description: "Biodegradable natural bamboo handle paired with soft, BPA-free charcoal infused bristles for gentle yet effective plaque removal.",
+        features: [
+          "Completely compostable natural bamboo handle",
+          "Soft charcoal-infused bristles gentle on sensitive gums",
+          "Naturally antibacterial and naturally water-resistant",
+          "Packaged in recyclable craft paper box"
+        ]
+      },
+      "Classic Wide-Tooth Neem Comb": {
+        title: "Classic Wide-Tooth Neem Comb",
+        category: "Hair Care",
+        price: 150,
+        originalPrice: 240,
+        image: "1792774406213.png",
+        description: "Perfect for detangling wet or dry hair without breakage. Wide spacing helps distribute natural scalp oils evenly from root to tip.",
+        features: [
+          "Wide-tooth design prevents hair breakage during detangling",
+          "Distributes natural conditioning oils evenly",
+          "Handcrafted smooth round tips protect sensitive scalp",
+          "Eco-friendly alternative to plastic combs"
+        ]
+      },
+      "Tail Neem Styling Comb": {
+        title: "Tail Neem Styling Comb",
+        category: "Styling Essentials",
+        price: 140,
+        originalPrice: 240,
+        image: "1792774431394%20(1).png",
+        description: "Designed for precision parting, sectioning, and intricate hairstyling. Smooth neem teeth prevent static and protect sensitive scalp.",
+        features: [
+          "Precision tail design for easy hair sectioning",
+          "Static-free material prevents frizz",
+          "Crafted from antibacterial herbal neem wood",
+          "Ideal for professional styling and daily updos"
+        ]
+      }
+    };
+
+    function openProductModal(productKey) {
+      const product = productDatabase[productKey];
+      if (!product) return;
+
+      document.getElementById('modalProductTitle').textContent = product.title;
+      document.getElementById('modalProductCategory').textContent = product.category;
+      document.getElementById('modalProductOriginalPrice').textContent = '₹' + product.originalPrice.toFixed(2);
+      document.getElementById('modalProductPrice').textContent = '₹' + product.price.toFixed(2);
+      document.getElementById('modalProductImage').src = product.image;
+      document.getElementById('modalProductImage').alt = product.title;
+      document.getElementById('modalProductDescriptionLong').textContent = product.description;
+
+      const featuresList = document.getElementById('modalProductFeatures');
+      featuresList.innerHTML = product.features.map(f => `<li class="flex items-start gap-2"><span class="text-[#79B948] font-bold">•</span><span>${f}</span></li>`).join('');
+
+      const actionArea = document.getElementById('modalActionArea');
+      if (productKey === 'Signature Kit Combo') {
+        actionArea.innerHTML = `
+          <div class="mb-4">
+            <label class="block text-[#003822] font-bold text-xs mb-1">Select Comb Type:</label>
+            <select id="modalSignatureCombSelect" class="w-full p-2.5 bg-[#F8F7F4] border border-gray-300 rounded-xl text-xs font-medium">
+              <option value="Handle Grip Neem Comb">Handle Grip Neem Comb</option>
+              <option value="Classic Wide-Tooth Neem Comb">Classic Wide-Tooth Neem Comb</option>
+            </select>
+          </div>
+          <button onclick="addModalSignatureKitToCart()" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-4 rounded-xl text-xs font-extrabold uppercase tracking-widest shadow-md transition cursor-pointer">
+            ADD TO CART
+          </button>
+        `;
+      } else {
+        actionArea.innerHTML = `
+          <button onclick="addToCart('${productKey}', ${product.price}); closeProductModal();" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-4 rounded-xl text-xs font-extrabold uppercase tracking-widest shadow-md transition cursor-pointer">
+            ADD TO CART
+          </button>
+        `;
+      }
+
+      document.getElementById('productModal').classList.remove('hidden');
+      document.getElementById('productModal').classList.add('flex');
+    }
+
+    function closeProductModal() {
+      document.getElementById('productModal').classList.remove('flex');
+      document.getElementById('productModal').classList.add('hidden');
+    }
+
+    function addToCart(name, price) {
+      const existing = cart.find(item => item.name === name);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ name, price, qty: 1 });
+      }
+      updateCartUI();
+      triggerCartFeedback();
+    }
+
+    function addSignatureKitToCart() {
+      const selectedComb = document.getElementById('signatureCombSelect').value;
+      const itemName = `Signature Kit (2 Bamboo Brushes + 1 ${selectedComb})`;
+      const price = 499;
+
+      const existing = cart.find(item => item.name === itemName);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ name: itemName, price, qty: 1 });
+      }
+      updateCartUI();
+      triggerCartFeedback();
+    }
+
+    function addModalSignatureKitToCart() {
+      const selectedComb = document.getElementById('modalSignatureCombSelect').value;
+      const itemName = `Signature Kit (2 Bamboo Brushes + 1 ${selectedComb})`;
+      const price = 499;
+
+      const existing = cart.find(item => item.name === itemName);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ name: itemName, price, qty: 1 });
+      }
+      updateCartUI();
+      triggerCartFeedback();
+      closeProductModal();
+    }
+
+    function triggerCartFeedback() {
+      const icon = document.querySelector('a[href="#checkout"]');
+      icon.classList.add('ring-4', 'ring-[#79B948]/50', 'scale-110');
+      setTimeout(() => {
+        icon.classList.remove('ring-4', 'ring-[#79B948]/50', 'scale-110');
+      }, 300);
+    }
+
+    function updateCartUI() {
+      const cartCount = document.getElementById('cartCount');
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+      cartCount.textContent = totalItems;
+
+      const itemsList = document.getElementById('checkoutItemsList');
+      const totalAmountEl = document.getElementById('checkoutTotalAmount');
+      
+      if (cart.length === 0) {
+        itemsList.innerHTML = '<p class="text-gray-400 italic py-2">No items added to cart yet.</p>';
+        totalAmountEl.textContent = '₹0.00';
+        return;
+      }
+
+      let html = '';
+      let total = 0;
+      cart.forEach(item => {
+        let sub = item.price * item.qty;
+        total += sub;
+        html += `<div class="flex justify-between items-center py-1">
+          <span class="text-[#003822] font-bold">${item.name} <span class="text-gray-400 font-normal">x${item.qty}</span></span>
+          <span class="font-extrabold text-sm font-serif">₹${sub.toFixed(2)}</span>
+        </div>`;
+      });
+      itemsList.innerHTML = html;
+      totalAmountEl.textContent = '₹' + total.toFixed(2);
+    }
+
+    function processWebsiteCheckout(e) {
+      e.preventDefault();
+      if (cart.length === 0) {
+        alert('Please add items to your cart before checking out.');
+        return;
+      }
+      const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      document.getElementById('modalPayAmount').textContent = '₹' + total.toFixed(2);
+      document.getElementById('upiPayGatewayModal').classList.remove('hidden');
+    }
+
+    function closeUpiGateway() {
+      document.getElementById('upiPayGatewayModal').classList.add('hidden');
+    }
+
+    async function confirmWebsiteOrder() {
+      const utr = document.getElementById('utrReferenceNo').value.trim();
+      if (!utr || utr.length < 6) {
+        alert('Please enter a valid 12-digit UPI Transaction ID / UTR Number.');
+        return;
+      }
+
+      const orderData = {
+        firstName: document.getElementById('billingFirstName').value,
+        lastName: document.getElementById('billingLastName').value,
+        address: document.getElementById('billingAddress').value,
+        city: document.getElementById('billingCity').value,
+        state: document.getElementById('billingState').value,
+        pin: document.getElementById('billingPin').value,
+        phone: document.getElementById('billingPhone').value,
+        email: document.getElementById('billingEmail').value,
+        items: cart,
+        totalAmount: cart.reduce((sum, item) => sum + (item.price * item.qty), 0),
+        utrNumber: utr,
+        orderDate: new Date().toISOString()
+      };
+
+      try {
+        await fetch('https://flow.zoho.in/2012170324/flow/webhook/incoming?zapikey=', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(orderData)
+        });
+      } catch (err) {
+        console.log('Webhook triggered');
+      }
+
+      closeUpiGateway();
+      document.getElementById('orderSuccessModal').classList.remove('hidden');
+    }
+
+    function handleBulkEnquiry(e) {
+      e.preventDefault();
+      const name = document.getElementById('bulkName').value;
+      const phone = document.getElementById('bulkPhone').value;
+      const qty = document.getElementById('bulkQty').value;
+      const msg = document.getElementById('bulkMessage').value;
+
+      const whatsappUrl = `https://wa.me/919385410034?text=${encodeURIComponent(`Hello Aura Traditions, I want to place a Bulk Enquiry.%0AName: ${name}%0APhone: ${phone}%0AQty: ${qty}%0ADetails: ${msg}`)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+  </script>
 </body>
 </html>
