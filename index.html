@@ -37,7 +37,7 @@
                 <a href="#contact" class="hover:text-emerald-800 transition">Contact</a>
             </nav>
             <div class="flex items-center">
-                <span class="text-xs font-bold bg-pink-100 text-pink-700 px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-sm border border-pink-200">
+                <span id="cart-badge" class="text-xs font-bold bg-pink-100 text-pink-700 px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-sm border border-pink-200">
                     <span>🛒</span> Cart (1)
                 </span>
             </div>
@@ -72,61 +72,78 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             
-            <!-- Product 1: Signature Kit (2 Brushes + 1 Long Tail / Handle Neem Comb) -->
+            <!-- Product 1: Signature Kit Combo (Rs. 600 + Comb Variant Selector) -->
             <div class="border border-neutral-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition bg-white flex flex-col justify-between group">
                 <div>
-                    <div class="relative bg-white h-72 p-6 flex items-center justify-center overflow-hidden border-b border-neutral-100">
-                        <span class="absolute top-4 left-4 bg-pink-500 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider z-10 shadow-sm">Best Seller</span>
-                        <div class="flex items-center justify-center gap-2 w-full h-full">
-                            <img src="Bamboo Brushes.png" alt="2 Bamboo Brushes" class="max-h-56 w-1/2 object-contain group-hover:scale-105 transition duration-500">
-                            <img src="Handle Grip Neem Wooden Comb.png" alt="Long Tail Neem Comb" class="max-h-56 w-1/2 object-contain group-hover:scale-105 transition duration-500">
-                        </div>
+                    <div class="relative bg-neutral-50 h-72 p-4 flex items-center justify-center overflow-hidden border-b border-neutral-100">
+                        <span class="absolute top-4 left-4 bg-pink-500 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider z-10 shadow-sm">Signature Combo</span>
+                        <img id="kit-main-img" src="1000268606.png" alt="Aura Traditions Signature Kit Combo" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-500">
                     </div>
-                    <!-- Supporting Thumbnails -->
-                    <div class="flex gap-3 px-6 pt-3 overflow-x-auto pb-3 border-b border-neutral-100 bg-neutral-50/50">
-                        <img src="Bamboo Brushes.png" alt="Bamboo Brushes" class="w-14 h-14 object-contain bg-white p-1 rounded-xl border-2 border-emerald-700 shrink-0">
-                        <img src="Handle Grip Neem Wooden Comb.png" alt="Long Tail Comb" class="w-14 h-14 object-contain bg-white p-1 rounded-xl border border-neutral-200 shrink-0">
-                        <img src="Aura Traditions logo.jpg" alt="Aura Traditions Brand" class="w-14 h-14 object-contain bg-white p-1 rounded-xl border border-neutral-200 shrink-0">
+
+                    <!-- Supporting / View Thumbnails (Misseco style quick view switcher) -->
+                    <div class="flex gap-2.5 px-6 pt-3 overflow-x-auto pb-3 border-b border-neutral-100 bg-neutral-50/60">
+                        <button type="button" onclick="setKitView('1000268606.png', 'Combo Box View (2 Brushes + Neem Comb)')" class="w-14 h-14 object-cover bg-white p-0.5 rounded-xl border-2 border-emerald-700 shrink-0 overflow-hidden" title="Combo Box View">
+                            <img src="1000268606.png" alt="Combo Box" class="w-full h-full object-cover rounded-lg">
+                        </button>
+                        <button type="button" onclick="setKitView('Bamboo Brushes.png', '2 Bamboo Brushes View')" class="w-14 h-14 object-contain bg-white p-1 rounded-xl border border-neutral-200 hover:border-emerald-700 shrink-0 overflow-hidden" title="Bamboo Brushes">
+                            <img src="Bamboo Brushes.png" alt="Bamboo Brushes" class="w-full h-full object-contain">
+                        </button>
+                        <button type="button" onclick="setKitView('Handle Grip Neem Wooden Comb.png', 'Comb / Long Tail View')" class="w-14 h-14 object-contain bg-white p-1 rounded-xl border border-neutral-200 hover:border-emerald-700 shrink-0 overflow-hidden" title="Comb View">
+                            <img src="Handle Grip Neem Wooden Comb.png" alt="Comb View" class="w-full h-full object-contain">
+                        </button>
                     </div>
+
                     <div class="p-6 pt-4">
-                        <span class="text-[11px] text-pink-700 uppercase font-bold tracking-wider bg-pink-50 px-2 py-0.5 rounded border border-pink-100">Signature Combo</span>
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="text-[11px] text-pink-700 uppercase font-bold tracking-wider bg-pink-50 px-2 py-0.5 rounded border border-pink-100">Combo Pack</span>
+                            <span id="kit-view-label" class="text-[10px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded">Combo Box View</span>
+                        </div>
+
                         <h3 class="font-bold text-neutral-900 text-lg mt-2 leading-snug">Aura Traditions Signature Kit</h3>
-                        <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">Complete daily care combo: Includes 2 organic bamboo toothbrushes and 1 handcrafted long tail neem wood comb.</p>
-                        
-                        <div class="mt-3 bg-neutral-50 p-4 rounded-2xl border border-neutral-100 text-xs text-neutral-600 space-y-1.5">
-                            <p class="font-semibold text-emerald-800">✨ Kit Contents:</p>
-                            <p>• 2x Charcoal Bamboo Toothbrushes</p>
-                            <p>• 1x Long Tail / Handle Grip Neem Comb</p>
-                            <p>• 100% Plastic-Free Kraft Packaging</p>
+                        <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">Includes 2 organic bamboo toothbrushes and 1 neem comb. Choose your preferred comb style below:</p>
+
+                        <!-- Comb Option Selector (Handle / Wide / Long Tail) -->
+                        <div class="mt-3">
+                            <label for="comb-option" class="block text-[11px] font-bold text-neutral-700 uppercase tracking-wider mb-1.5">
+                                Select Comb Type:
+                            </label>
+                            <select id="comb-option" onchange="updateCombSelection()" class="w-full text-xs font-semibold text-neutral-800 bg-neutral-50 border border-neutral-300 rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-emerald-700">
+                                <option value="Long Tail Comb">Long Tail Comb (Styling & Sectioning)</option>
+                                <option value="Handle Grip Comb">Handle Grip Neem Comb</option>
+                                <option value="Wide Tooth Comb">Wide Tooth Neem Comb</option>
+                            </select>
+                            <p id="long-tail-note" class="text-[11px] text-amber-800 bg-amber-50 border border-amber-200 rounded-xl p-2.5 mt-2 leading-snug">
+                                <strong>Note:</strong> Box artwork shows standard comb[span_4](start_span)[span_4](end_span); selecting <strong>Long Tail Comb</strong> updates your kit selection note to Long Tail Comb.
+                            </p>
                         </div>
 
                         <div class="flex items-baseline gap-2 mt-4 pt-4 border-t border-neutral-100">
-                            <span class="text-neutral-400 line-through text-xs font-medium">₹600.00</span>
-                            <span class="text-emerald-800 font-bold text-xl">₹499.00</span>
+                            <span class="text-neutral-400 line-through text-xs font-medium">₹750.00</span>
+                            <span class="text-emerald-800 font-bold text-xl">₹600.00</span>
                         </div>
                     </div>
                 </div>
                 <div class="p-6 pt-0">
-                    <button class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs py-4 rounded-2xl transition uppercase tracking-wider shadow-md flex items-center justify-center gap-2">
-                        <span>🛒</span> Add to Cart
+                    <button type="button" onclick="addKitToCart()" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs py-4 rounded-2xl transition uppercase tracking-wider shadow-md flex items-center justify-center gap-2">
+                        <span>🛒</span> Add Signature Kit (₹600)
                     </button>
                 </div>
             </div>
 
-            <!-- Product 2: Long Tail / Handle Grip Neem Comb -->
+            <!-- Product 2: Handle Grip Neem Wood Comb -->
             <div class="border border-neutral-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition bg-white flex flex-col justify-between group">
                 <div>
                     <div class="relative bg-white h-72 p-6 flex items-center justify-center overflow-hidden border-b border-neutral-100">
                         <img src="Handle Grip Neem Wooden Comb.png" alt="Handle Grip Neem Wood Comb" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-500">
                     </div>
-                    <div class="flex gap-3 px-6 pt-3 overflow-x-auto pb-3 border-b border-neutral-100 bg-neutral-50/50">
-                        <img src="Handle Grip Neem Wooden Comb.png" alt="Comb View" class="w-14 h-14 object-contain bg-white p-1 rounded-xl border-2 border-emerald-700 shrink-0">
+                    <div class="flex gap-2.5 px-6 pt-3 overflow-x-auto pb-3 border-b border-neutral-100 bg-neutral-50/60">
+                        <img src="Handle Grip Neem Wooden Comb.png" alt="Handle Comb" class="w-14 h-14 object-contain bg-white p-1 rounded-xl border-2 border-emerald-700 shrink-0">
                         <img src="Aura Traditions logo.jpg" alt="Aura Traditions" class="w-14 h-14 object-contain bg-white p-1 rounded-xl border border-neutral-200 shrink-0">
                     </div>
                     <div class="p-6 pt-4">
                         <span class="text-[11px] text-pink-700 uppercase font-bold tracking-wider bg-pink-50 px-2 py-0.5 rounded border border-pink-100">Hair Care</span>
                         <h3 class="font-bold text-neutral-900 text-lg mt-2 leading-snug">Handle Grip Neem Wood Comb</h3>
-                        <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">Handcrafted from pure herbal neem wood. Ergonomic long handle design ensures comfortable grip and scalp massage.</p>
+                        <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">Handcrafted from pure herbal neem wood. Ergonomic handle design ensures comfortable grip and scalp massage.</p>
                         
                         <div class="mt-3 bg-neutral-50 p-4 rounded-2xl border border-neutral-100 text-xs text-neutral-600 space-y-1.5">
                             <p class="font-semibold text-emerald-800">✨ Benefits:</p>
@@ -141,7 +158,7 @@
                     </div>
                 </div>
                 <div class="p-6 pt-0">
-                    <button class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs py-4 rounded-2xl transition uppercase tracking-wider shadow-md flex items-center justify-center gap-2">
+                    <button type="button" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs py-4 rounded-2xl transition uppercase tracking-wider shadow-md flex items-center justify-center gap-2">
                         <span>🛒</span> Add to Cart
                     </button>
                 </div>
@@ -153,8 +170,8 @@
                     <div class="relative bg-white h-72 p-6 flex items-center justify-center overflow-hidden border-b border-neutral-100">
                         <img src="Bamboo Brushes.png" alt="Organic Bamboo Toothbrush" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-500">
                     </div>
-                    <div class="flex gap-3 px-6 pt-3 overflow-x-auto pb-3 border-b border-neutral-100 bg-neutral-50/50">
-                        <img src="Bamboo Brushes.png" alt="Brushes" class="w-14 h-14 object-contain bg-white p-1 rounded-xl border-2 border-emerald-700 shrink-0">
+                    <div class="flex gap-2.5 px-6 pt-3 overflow-x-auto pb-3 border-b border-neutral-100 bg-neutral-50/60">
+                        <img src="Bamboo Brushes.png" alt="Bamboo Brushes" class="w-14 h-14 object-contain bg-white p-1 rounded-xl border-2 border-emerald-700 shrink-0">
                         <img src="Aura Traditions logo.jpg" alt="Aura Traditions" class="w-14 h-14 object-contain bg-white p-1 rounded-xl border border-neutral-200 shrink-0">
                     </div>
                     <div class="p-6 pt-4">
@@ -175,25 +192,25 @@
                     </div>
                 </div>
                 <div class="p-6 pt-0">
-                    <button class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs py-4 rounded-2xl transition uppercase tracking-wider shadow-md flex items-center justify-center gap-2">
+                    <button type="button" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs py-4 rounded-2xl transition uppercase tracking-wider shadow-md flex items-center justify-center gap-2">
                         <span>🛒</span> Add to Cart
                     </button>
                 </div>
             </div>
 
-            <!-- Product 4: Classic Neem Comb -->
+            <!-- Product 4: Wide-Tooth Neem Comb -->
             <div class="border border-neutral-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition bg-white flex flex-col justify-between group">
                 <div>
                     <div class="relative bg-white h-72 p-6 flex items-center justify-center overflow-hidden border-b border-neutral-100">
-                        <img src="Handle Grip Neem Wooden Comb.png" alt="Classic Wide-Tooth Neem Comb" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-500">
+                        <img src="Handle Grip Neem Wooden Comb.png" alt="Wide-Tooth Neem Comb" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-500">
                     </div>
-                    <div class="flex gap-3 px-6 pt-3 overflow-x-auto pb-3 border-b border-neutral-100 bg-neutral-50/50">
-                        <img src="Handle Grip Neem Wooden Comb.png" alt="Comb" class="w-14 h-14 object-contain bg-white p-1 rounded-xl border-2 border-emerald-700 shrink-0">
+                    <div class="flex gap-2.5 px-6 pt-3 overflow-x-auto pb-3 border-b border-neutral-100 bg-neutral-50/60">
+                        <img src="Handle Grip Neem Wooden Comb.png" alt="Wide Comb" class="w-14 h-14 object-contain bg-white p-1 rounded-xl border-2 border-emerald-700 shrink-0">
                         <img src="Aura Traditions logo.jpg" alt="Aura Traditions" class="w-14 h-14 object-contain bg-white p-1 rounded-xl border border-neutral-200 shrink-0">
                     </div>
                     <div class="p-6 pt-4">
                         <span class="text-[11px] text-pink-700 uppercase font-bold tracking-wider bg-pink-50 px-2 py-0.5 rounded border border-pink-100">Hair Styling</span>
-                        <h3 class="font-bold text-neutral-900 text-lg mt-2 leading-snug">Classic Wide-Tooth Neem Comb</h3>
+                        <h3 class="font-bold text-neutral-900 text-lg mt-2 leading-snug">Wide-Tooth Neem Comb</h3>
                         <p class="text-xs text-neutral-500 mt-1.5 leading-relaxed">Perfect for detangling wet or dry hair without breakage. Wide spacing distributes natural scalp oils evenly.</p>
                         
                         <div class="mt-3 bg-neutral-50 p-4 rounded-2xl border border-neutral-100 text-xs text-neutral-600 space-y-1.5">
@@ -209,38 +226,12 @@
                     </div>
                 </div>
                 <div class="p-6 pt-0">
-                    <button class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs py-4 rounded-2xl transition uppercase tracking-wider shadow-md flex items-center justify-center gap-2">
+                    <button type="button" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs py-4 rounded-2xl transition uppercase tracking-wider shadow-md flex items-center justify-center gap-2">
                         <span>🛒</span> Add to Cart
                     </button>
                 </div>
             </div>
 
-        </div>
-    </section>
-
-    <!-- Value Proposition Section -->
-    <section class="bg-neutral-50 py-16 border-y border-neutral-200">
-        <div class="max-w-5xl mx-auto px-4 text-center">
-            <span class="bg-pink-100 text-pink-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider border border-pink-200">Why Switch to Aura Traditions?</span>
-            <h2 class="text-3xl sm:text-5xl font-bold text-neutral-900 mt-3 mb-10">Our Quality Promise</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-                <div class="bg-white p-8 rounded-3xl border border-neutral-200 shadow-sm space-y-4">
-                    <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xl">🌱</div>
-                    <h3 class="font-bold text-xl text-neutral-900">100% Biodegradable</h3>
-                    <p class="text-xs text-neutral-600 leading-relaxed">Our bamboo and neem products decompose naturally, returning nutrients to the earth without plastic waste.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl border border-neutral-200 shadow-sm space-y-4">
-                    <div class="w-12 h-12 rounded-2xl bg-pink-100 text-pink-800 flex items-center justify-center font-bold text-xl">✨</div>
-                    <h3 class="font-bold text-xl text-neutral-900">Antimicrobial & Safe</h3>
-                    <p class="text-xs text-neutral-600 leading-relaxed">Pure neem wood and charcoal-infused bristles naturally inhibit bacterial growth for daily hygiene.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl border border-neutral-200 shadow-sm space-y-4">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-xl">🤝</div>
-                    <h3 class="font-bold text-xl text-neutral-900">Artisan Crafted</h3>
-                    <p class="text-xs text-neutral-600 leading-relaxed">Directly supports traditional woodworkers and craftspeople in Tamil Nadu.</p>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -301,21 +292,21 @@
                         </div>
                         <div class="flex justify-between items-center py-4 border-b border-neutral-200 text-neutral-800">
                             <div class="flex items-center gap-4">
-                                <img src="Bamboo Brushes.png" alt="Signature Kit" class="w-12 h-12 object-contain rounded-xl border border-neutral-200 bg-white p-1">
+                                <img id="checkout-kit-img" src="1000268606.png" alt="Signature Kit" class="w-12 h-12 object-cover rounded-xl border border-neutral-200 bg-white p-0.5">
                                 <div>
                                     <p class="font-bold text-sm">Aura Traditions Signature Kit</p>
-                                    <span class="text-[11px] text-neutral-500">2 Bamboo Brushes + 1 Long Tail Neem Comb</span>
+                                    <span id="checkout-comb-desc" class="text-[11px] text-neutral-500">2 Bamboo Brushes + Long Tail Comb</span>
                                 </div>
                             </div>
-                            <span class="font-bold text-sm">₹499.00</span>
+                            <span class="font-bold text-sm">₹600.00</span>
                         </div>
                         <div class="flex justify-between items-center pt-2 font-bold text-base text-neutral-900">
                             <span>Total Payable Amount</span>
-                            <span class="text-emerald-800 text-2xl font-black">₹499.00</span>
+                            <span class="text-emerald-800 text-2xl font-black">₹600.00</span>
                         </div>
                     </div>
                 </div>
-                <button class="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold text-xs py-5 rounded-2xl uppercase tracking-widest shadow-xl transition flex items-center justify-center gap-2 text-sm">
+                <button type="button" class="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold text-xs py-5 rounded-2xl uppercase tracking-widest shadow-xl transition flex items-center justify-center gap-2 text-sm">
                     <span>Proceed to UPI Pay</span> <span>🔒</span>
                 </button>
             </div>
@@ -370,6 +361,24 @@
             &copy; 2026 Aura Traditions. All rights reserved.
         </div>
     </footer>
+
+    <script>
+        function setKitView(imgSrc, label) {
+            document.getElementById('kit-main-img').src = imgSrc;
+            document.getElementById('kit-view-label').textContent = label;
+        }
+
+        function updateCombSelection() {
+            const selectedComb = document.getElementById('comb-option').value;
+            document.getElementById('checkout-comb-desc').textContent = `2 Bamboo Brushes + ${selectedComb}`;
+        }
+
+        function addKitToCart() {
+            const selectedComb = document.getElementById('comb-option').value;
+            document.getElementById('checkout-comb-desc').textContent = `2 Bamboo Brushes + ${selectedComb}`;
+            document.getElementById('cart-badge').innerHTML = `<span>🛒</span> Cart (1 - ${selectedComb})`;
+        }
+    </script>
 
 </body>
 </html>
