@@ -13,13 +13,12 @@
     .font-serif { font-family: 'Playfair Display', serif; }
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-    /* Ensures full circular emblem including Tamil script fits inside round frames */
     .logo-circle-img {
       width: 100%;
       height: 100%;
       object-fit: contain;
       object-position: center;
-      transform: scale(0.86);
+      transform: scale(0.85);
     }
   </style>
 </head>
@@ -35,7 +34,6 @@
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-xs">
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
       
-      <!-- Brand Logo & Title -->
       <a href="#home" class="flex items-center gap-3 group">
         <div class="w-11 h-11 rounded-full shadow-md border border-[#79B948] bg-white flex items-center justify-center overflow-hidden shrink-0">
           <img src="AURA Traditions Logo1.jpg" alt="Aura Traditions Logo" class="logo-circle-img">
@@ -54,7 +52,6 @@
         <a href="#contact" class="hover:text-[#003822] transition">Contact</a>
       </nav>
 
-      <!-- Cart Icon Button -->
       <a href="#checkout" class="relative flex items-center justify-center p-2.5 bg-[#F4F9F1] rounded-full text-[#003822] hover:bg-[#E8F3E0] transition cursor-pointer">
         <span class="text-xl">🛍️</span>
         <span id="cartCount" class="absolute -top-1 -right-1 bg-[#FF2E93] text-white font-bold text-[10px] w-5 h-5 flex items-center justify-center rounded-full shadow-sm">0</span>
@@ -62,50 +59,50 @@
     </div>
   </header>
 
-  <!-- Horizontal Product Image Scroller (Below Header) -->
+  <!-- Horizontal Product Image Scroller -->
   <section class="bg-white border-b border-gray-100 py-4 shadow-xs">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex items-center gap-4 overflow-x-auto no-scrollbar py-2">
         
-        <div onclick="openProductModal('Signature Kit Combo')" class="flex items-center gap-3 bg-[#F8F7F4] border border-gray-200/60 px-4 py-2.5 rounded-2xl shrink-0 cursor-pointer hover:border-[#79B948] transition shadow-xs">
+        <button type="button" onclick="openProductModal('Signature Kit Combo')" class="flex items-center gap-3 bg-[#F8F7F4] border border-gray-200/60 px-4 py-2.5 rounded-2xl shrink-0 cursor-pointer hover:border-[#79B948] transition shadow-xs text-left">
           <img src="1794767848815.png" alt="Signature Kit" class="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-xs">
           <div>
             <h5 class="text-xs font-bold text-[#003822]">Signature Kit Combo</h5>
             <span class="text-[11px] font-extrabold text-[#79B948]">₹499.00</span>
           </div>
-        </div>
+        </button>
 
-        <div onclick="openProductModal('Handle Grip Neem Wooden Comb')" class="flex items-center gap-3 bg-[#F8F7F4] border border-gray-200/60 px-4 py-2.5 rounded-2xl shrink-0 cursor-pointer hover:border-[#79B948] transition shadow-xs">
-          <img src="1000271747.png" alt="Handle Grip Neem Comb" class="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-xs">[span_5](start_span)[span_5](end_span)
+        <button type="button" onclick="openProductModal('Handle Grip Neem Wooden Comb')" class="flex items-center gap-3 bg-[#F8F7F4] border border-gray-200/60 px-4 py-2.5 rounded-2xl shrink-0 cursor-pointer hover:border-[#79B948] transition shadow-xs text-left">
+          <img src="1000271747.png" alt="Handle Grip Neem Comb" class="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-xs">
           <div>
             <h5 class="text-xs font-bold text-[#003822]">Handle Grip Neem Comb</h5>
             <span class="text-[11px] font-extrabold text-[#79B948]">₹150.00</span>
           </div>
-        </div>
+        </button>
 
-        <div onclick="openProductModal('Bamboo Toothbrush')" class="flex items-center gap-3 bg-[#F8F7F4] border border-gray-200/60 px-4 py-2.5 rounded-2xl shrink-0 cursor-pointer hover:border-[#79B948] transition shadow-xs">
-          <img src="1000271748.png" alt="Bamboo Toothbrush" class="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-xs">[span_6](start_span)[span_6](end_span)
+        <button type="button" onclick="openProductModal('Bamboo Toothbrush')" class="flex items-center gap-3 bg-[#F8F7F4] border border-gray-200/60 px-4 py-2.5 rounded-2xl shrink-0 cursor-pointer hover:border-[#79B948] transition shadow-xs text-left">
+          <img src="1000271748.png" alt="Bamboo Toothbrush" class="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-xs">
           <div>
             <h5 class="text-xs font-bold text-[#003822]">Bamboo Toothbrush</h5>
             <span class="text-[11px] font-extrabold text-[#79B948]">₹100.00</span>
           </div>
-        </div>
+        </button>
 
-        <div onclick="openProductModal('Classic Wide-Tooth Neem Comb')" class="flex items-center gap-3 bg-[#F8F7F4] border border-gray-200/60 px-4 py-2.5 rounded-2xl shrink-0 cursor-pointer hover:border-[#79B948] transition shadow-xs">
-          <img src="1000271749.png" alt="Wide Tooth Comb" class="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-xs">[span_7](start_span)[span_7](end_span)
+        <button type="button" onclick="openProductModal('Classic Wide-Tooth Neem Comb')" class="flex items-center gap-3 bg-[#F8F7F4] border border-gray-200/60 px-4 py-2.5 rounded-2xl shrink-0 cursor-pointer hover:border-[#79B948] transition shadow-xs text-left">
+          <img src="1000271749.png" alt="Wide Tooth Comb" class="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-xs">
           <div>
             <h5 class="text-xs font-bold text-[#003822]">Wide-Tooth Neem Comb</h5>
             <span class="text-[11px] font-extrabold text-[#79B948]">₹150.00</span>
           </div>
-        </div>
+        </button>
 
-        <div onclick="openProductModal('Tail Neem Styling Comb')" class="flex items-center gap-3 bg-[#F8F7F4] border border-gray-200/60 px-4 py-2.5 rounded-2xl shrink-0 cursor-pointer hover:border-[#79B948] transition shadow-xs">
-          <img src="1000271750.png" alt="Tail Comb" class="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-xs">[span_8](start_span)[span_8](end_span)
+        <button type="button" onclick="openProductModal('Tail Neem Styling Comb')" class="flex items-center gap-3 bg-[#F8F7F4] border border-gray-200/60 px-4 py-2.5 rounded-2xl shrink-0 cursor-pointer hover:border-[#79B948] transition shadow-xs text-left">
+          <img src="1000271750.png" alt="Tail Comb" class="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-xs">[span_1](start_span)[span_1](end_span)
           <div>
             <h5 class="text-xs font-bold text-[#003822]">Tail Neem Styling Comb</h5>
             <span class="text-[11px] font-extrabold text-[#79B948]">₹140.00</span>
           </div>
-        </div>
+        </button>
 
       </div>
     </div>
@@ -136,27 +133,27 @@
     <div class="text-center mb-12">
       <span class="text-[#79B948] text-xs font-bold uppercase tracking-widest">Our Collection</span>
       <h3 class="text-3xl font-serif font-bold text-[#003822] mt-1 tracking-wide">Trending Sustainable Products</h3>
-      <p class="text-xs text-gray-500 mt-2">Click on any product card to view multiple photos, detailed specifications, and benefits.</p>
+      <p class="text-xs text-gray-500 mt-2">Click on any product photo or details button to view multiple photos and specifications.</p>
       <div class="w-16 h-1 bg-[#79B948] mx-auto mt-3 rounded-full"></div>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       
       <!-- Signature Kit Combo -->
-      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group cursor-pointer" onclick="openProductModal('Signature Kit Combo')">
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300">
         <div>
-          <div class="h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:scale-[1.02] transition duration-500">
+          <button type="button" onclick="openProductModal('Signature Kit Combo')" class="w-full h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden cursor-pointer text-left">
             <span class="absolute top-3 left-3 bg-[#FF2E93] text-white text-[9px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">Save ₹101</span>
             <span class="absolute bottom-2.5 right-2.5 bg-white/90 text-[#003822] text-[10px] font-bold px-2.5 py-1 rounded-full shadow-xs border border-gray-200">📷 View Photos</span>
             <img src="1794767848815.png" alt="Signature Kit Combo" class="object-contain max-h-full drop-shadow-md">
-          </div>
+          </button>
           <div class="flex items-center justify-between mb-1">
             <span class="text-[10px] uppercase font-bold text-[#79B948] tracking-widest bg-[#F4F9F1] px-2 py-0.5 rounded">Special Combo Kit</span>
           </div>
           <h4 class="font-bold text-base text-[#003822] leading-snug">Aura Traditions Signature Kit</h4>
           <p class="text-xs text-gray-500 mt-1 mb-3 leading-relaxed">Complete daily care: Includes 2 organic bamboo toothbrushes and 1 premium handcrafted neem wood comb of your choice.</p>
           
-          <div class="mb-4 p-3 bg-[#F9F8F6] rounded-xl border border-gray-200/60 text-xs" onclick="event.stopPropagation()">
+          <div class="mb-4 p-3 bg-[#F9F8F6] rounded-xl border border-gray-200/60 text-xs">
             <label class="block text-[#003822] font-bold mb-1.5">Select Your Preferred Comb:</label>
             <select id="signatureCombSelect" class="w-full p-2.5 bg-white border border-gray-300 rounded-lg text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#79B948]">
               <option value="Handle Grip Neem Comb">Handle Grip Neem Comb</option>
@@ -164,109 +161,109 @@
             </select>
           </div>
         </div>
-        <div onclick="event.stopPropagation()">
+        <div>
           <div class="flex items-center gap-3 mb-4">
             <span class="text-gray-400 line-through text-sm font-medium">₹600.00</span>
             <span class="font-extrabold text-[#79B948] text-2xl font-serif">₹499.00</span>
             <span class="text-[10px] text-gray-400 font-medium ml-auto">Incl. of all taxes</span>
           </div>
-          <button onclick="addSignatureKitToCart()" class="w-full bg-[#003822] hover:bg-[#154E36] text-white py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md transition cursor-pointer flex items-center justify-center gap-2">
+          <button type="button" onclick="addSignatureKitToCart()" class="w-full bg-[#003822] hover:bg-[#154E36] text-white py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md transition cursor-pointer flex items-center justify-center gap-2">
             <span>Add to Cart</span>
             <span>+</span>
           </button>
         </div>
       </div>
 
-      <!-- Product 1: Handle Grip Neem Wooden Comb (Main: 1000271747.png) -->
-      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group cursor-pointer" onclick="openProductModal('Handle Grip Neem Wooden Comb')">
+      <!-- Product 1: Handle Grip Neem Wooden Comb -->
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300">
         <div>
-          <div class="h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:scale-[1.02] transition duration-500">
+          <button type="button" onclick="openProductModal('Handle Grip Neem Wooden Comb')" class="w-full h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden cursor-pointer text-left">
             <span class="absolute bottom-2.5 right-2.5 bg-white/90 text-[#003822] text-[10px] font-bold px-2.5 py-1 rounded-full shadow-xs border border-gray-200">📷 View Photos</span>
-            <img src="1000271747.png" alt="Handle grip neem wooden comb" class="object-contain max-h-full drop-shadow-md">[span_9](start_span)[span_9](end_span)
-          </div>
+            <img src="1000271747.png" alt="Handle grip neem wooden comb" class="object-contain max-h-full drop-shadow-md">
+          </button>
           <span class="text-[10px] uppercase font-bold text-gray-400 tracking-widest block mb-1">Daily Rituals</span>
           <h4 class="font-bold text-base text-[#003822] leading-snug">Handle Grip Neem Wooden Comb</h4>
           <p class="text-xs text-gray-500 mt-1 mb-4 leading-relaxed">Handcrafted from pure herbal neem wood. Ergonomic handle design ensures comfortable grip while gently stimulating scalp acupoints.</p>
         </div>
-        <div onclick="event.stopPropagation()">
+        <div>
           <div class="flex items-center gap-3 mb-4">
             <span class="text-gray-400 line-through text-sm font-medium">₹250.00</span>
             <span class="font-extrabold text-[#003822] text-2xl font-serif">₹150.00</span>
             <span class="text-[10px] text-gray-400 font-medium ml-auto">Incl. of all taxes</span>
           </div>
-          <button onclick="addToCart('Handle Grip Neem Wooden Comb', 150)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md transition cursor-pointer flex items-center justify-center gap-2">
+          <button type="button" onclick="addToCart('Handle Grip Neem Wooden Comb', 150)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md transition cursor-pointer flex items-center justify-center gap-2">
             <span>Add to Cart</span>
             <span>+</span>
           </button>
         </div>
       </div>
 
-      <!-- Product 2: Bamboo Toothbrush (Main: 1000271748.png, Side: 1000267237.jpg) -->
-      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group cursor-pointer" onclick="openProductModal('Bamboo Toothbrush')">
+      <!-- Product 2: Bamboo Toothbrush -->
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300">
         <div>
-          <div class="h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:scale-[1.02] transition duration-500">
+          <button type="button" onclick="openProductModal('Bamboo Toothbrush')" class="w-full h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden cursor-pointer text-left">
             <span class="absolute bottom-2.5 right-2.5 bg-white/90 text-[#003822] text-[10px] font-bold px-2.5 py-1 rounded-full shadow-xs border border-gray-200">📷 View Photos</span>
-            <img src="1000271748.png" alt="Bamboo Toothbrush" class="object-contain max-h-full drop-shadow-md">[span_10](start_span)[span_10](end_span)
-          </div>
+            <img src="1000271748.png" alt="Bamboo Toothbrush" class="object-contain max-h-full drop-shadow-md">
+          </button>
           <span class="text-[10px] uppercase font-bold text-gray-400 tracking-widest block mb-1">Oral Care</span>
           <h4 class="font-bold text-base text-[#003822] leading-snug">Organic Bamboo Toothbrush</h4>
           <p class="text-xs text-gray-500 mt-1 mb-4 leading-relaxed">Biodegradable natural bamboo handle paired with soft, BPA-free bristles for gentle yet effective daily oral care.</p>
         </div>
-        <div onclick="event.stopPropagation()">
+        <div>
           <div class="flex items-center gap-3 mb-4">
             <span class="text-gray-400 line-through text-sm font-medium">₹180.00</span>
             <span class="font-extrabold text-[#003822] text-2xl font-serif">₹100.00</span>
             <span class="text-[10px] text-gray-400 font-medium ml-auto">Incl. of all taxes</span>
           </div>
-          <button onclick="addToCart('Bamboo Toothbrush', 100)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md transition cursor-pointer flex items-center justify-center gap-2">
+          <button type="button" onclick="addToCart('Bamboo Toothbrush', 100)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md transition cursor-pointer flex items-center justify-center gap-2">
             <span>Add to Cart</span>
             <span>+</span>
           </button>
         </div>
       </div>
 
-      <!-- Product 3: Classic Wide-Tooth Neem Comb (Main: 1000271749.png) -->
-      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group cursor-pointer" onclick="openProductModal('Classic Wide-Tooth Neem Comb')">
+      <!-- Product 3: Classic Wide-Tooth Neem Comb -->
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300">
         <div>
-          <div class="h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:scale-[1.02] transition duration-500">
+          <button type="button" onclick="openProductModal('Classic Wide-Tooth Neem Comb')" class="w-full h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden cursor-pointer text-left">
             <span class="absolute bottom-2.5 right-2.5 bg-white/90 text-[#003822] text-[10px] font-bold px-2.5 py-1 rounded-full shadow-xs border border-gray-200">📷 View Photos</span>
-            <img src="1000271749.png" alt="Classic Wide-Tooth Neem Comb" class="object-contain max-h-full drop-shadow-md">[span_11](start_span)[span_11](end_span)
-          </div>
+            <img src="1000271749.png" alt="Classic Wide-Tooth Neem Comb" class="object-contain max-h-full drop-shadow-md">
+          </button>
           <span class="text-[10px] uppercase font-bold text-gray-400 tracking-widest block mb-1">Hair Care</span>
           <h4 class="font-bold text-base text-[#003822] leading-snug">Classic Wide-Tooth Neem Comb</h4>
           <p class="text-xs text-gray-500 mt-1 mb-4 leading-relaxed">Perfect for detangling wet or dry hair without breakage. Wide spacing helps distribute natural scalp oils evenly.</p>
         </div>
-        <div onclick="event.stopPropagation()">
+        <div>
           <div class="flex items-center gap-3 mb-4">
             <span class="text-gray-400 line-through text-sm font-medium">₹240.00</span>
             <span class="font-extrabold text-[#003822] text-2xl font-serif">₹150.00</span>
             <span class="text-[10px] text-gray-400 font-medium ml-auto">Incl. of all taxes</span>
           </div>
-          <button onclick="addToCart('Classic Wide-Tooth Neem Comb', 150)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md transition cursor-pointer flex items-center justify-center gap-2">
+          <button type="button" onclick="addToCart('Classic Wide-Tooth Neem Comb', 150)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md transition cursor-pointer flex items-center justify-center gap-2">
             <span>Add to Cart</span>
             <span>+</span>
           </button>
         </div>
       </div>
 
-      <!-- Product 4: Tail Neem Styling Comb (Main: 1000271750.png) -->
-      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300 group cursor-pointer" onclick="openProductModal('Tail Neem Styling Comb')">
+      <!-- Product 4: Tail Neem Styling Comb -->
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-xl transition duration-300">
         <div>
-          <div class="h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:scale-[1.02] transition duration-500">
+          <button type="button" onclick="openProductModal('Tail Neem Styling Comb')" class="w-full h-56 rounded-xl mb-6 bg-[#F8F7F4] border border-gray-100 flex items-center justify-center p-6 relative overflow-hidden cursor-pointer text-left">
             <span class="absolute bottom-2.5 right-2.5 bg-white/90 text-[#003822] text-[10px] font-bold px-2.5 py-1 rounded-full shadow-xs border border-gray-200">📷 View Photos</span>
-            <img src="1000271750.png" alt="Tail Neem Styling Comb" class="object-contain max-h-full drop-shadow-md">[span_12](start_span)[span_12](end_span)
-          </div>
+            <img src="1000271750.png" alt="Tail Neem Styling Comb" class="object-contain max-h-full drop-shadow-md">[span_2](start_span)[span_2](end_span)
+          </button>
           <span class="text-[10px] uppercase font-bold text-gray-400 tracking-widest block mb-1">Styling Essentials</span>
           <h4 class="font-bold text-base text-[#003822] leading-snug">Tail Neem Styling Comb</h4>
           <p class="text-xs text-gray-500 mt-1 mb-4 leading-relaxed">Designed for precision parting, sectioning, and intricate hairstyling. Smooth neem teeth prevent static and protect sensitive scalp.</p>
         </div>
-        <div onclick="event.stopPropagation()">
+        <div>
           <div class="flex items-center gap-3 mb-4">
             <span class="text-gray-400 line-through text-sm font-medium">₹240.00</span>
             <span class="font-extrabold text-[#003822] text-2xl font-serif">₹140.00</span>
             <span class="text-[10px] text-gray-400 font-medium ml-auto">Incl. of all taxes</span>
           </div>
-          <button onclick="addToCart('Tail Neem Styling Comb', 140)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md transition cursor-pointer flex items-center justify-center gap-2">
+          <button type="button" onclick="addToCart('Tail Neem Styling Comb', 140)" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md transition cursor-pointer flex items-center justify-center gap-2">
             <span>Add to Cart</span>
             <span>+</span>
           </button>
@@ -277,12 +274,12 @@
   </section>
 
   <!-- Product Details Modal -->
-  <div id="productModal" onclick="if(event.target === this) closeProductModal()" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 hidden items-start sm:items-center justify-center p-3 sm:p-4 overflow-y-auto">
+  <div id="productModal" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 hidden items-start sm:items-center justify-center p-3 sm:p-4 overflow-y-auto">
     <div class="bg-white rounded-3xl max-w-2xl w-full text-[#333333] shadow-2xl relative my-4 sm:my-8 overflow-hidden">
       
       <div class="sticky top-0 z-30 bg-white/95 backdrop-blur-md px-5 py-3.5 border-b border-gray-100 flex items-center justify-between">
         <span class="text-[11px] font-bold uppercase tracking-wider text-[#003822]">Product Details</span>
-        <button onclick="closeProductModal()" aria-label="Close modal" class="bg-[#003822] hover:bg-[#FF2E93] text-white px-3.5 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-md cursor-pointer transition">
+        <button type="button" onclick="closeProductModal()" aria-label="Close modal" class="bg-[#003822] hover:bg-[#FF2E93] text-white px-3.5 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-md cursor-pointer transition">
           <span>Close</span>
           <span class="text-sm leading-none">✕</span>
         </button>
@@ -292,11 +289,11 @@
         <div class="flex flex-col sm:flex-row gap-6 sm:gap-8 items-start mb-8">
           
           <div class="w-full sm:w-1/2">
-            <div id="modalProductImageContainer" class="w-full h-64 rounded-2xl bg-[#F8F7F4] border border-gray-200/80 flex items-center justify-center p-3 relative overflow-hidden">
+            <div class="w-full h-64 rounded-2xl bg-[#F8F7F4] border border-gray-200/80 flex items-center justify-center p-3 relative overflow-hidden">
               <img id="modalProductImage" src="" alt="" class="object-contain max-h-full max-w-full rounded-xl drop-shadow-sm transition duration-300">
               
-              <button id="prevImgBtn" onclick="changeModalImage(-1)" class="hidden absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/90 hover:bg-[#003822] text-[#003822] hover:text-white shadow-md border border-gray-200 flex items-center justify-center font-bold text-sm cursor-pointer transition">‹</button>
-              <button id="nextImgBtn" onclick="changeModalImage(1)" class="hidden absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/90 hover:bg-[#003822] text-[#003822] hover:text-white shadow-md border border-gray-200 flex items-center justify-center font-bold text-sm cursor-pointer transition">›</button>
+              <button type="button" id="prevImgBtn" onclick="changeModalImage(-1)" class="hidden absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/90 hover:bg-[#003822] text-[#003822] hover:text-white shadow-md border border-gray-200 flex items-center justify-center font-bold text-sm cursor-pointer transition">‹</button>
+              <button type="button" id="nextImgBtn" onclick="changeModalImage(1)" class="hidden absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/90 hover:bg-[#003822] text-[#003822] hover:text-white shadow-md border border-gray-200 flex items-center justify-center font-bold text-sm cursor-pointer transition">›</button>
             </div>
 
             <div id="modalThumbnails" class="flex items-center gap-2 mt-3 overflow-x-auto no-scrollbar py-1"></div>
@@ -331,7 +328,7 @@
           </div>
 
           <div class="pt-2 text-center">
-            <button onclick="closeProductModal()" class="w-full sm:w-auto px-8 py-3 rounded-xl border-2 border-gray-200 hover:border-[#003822] text-xs font-bold uppercase tracking-wider text-gray-600 hover:text-[#003822] transition cursor-pointer">
+            <button type="button" onclick="closeProductModal()" class="w-full sm:w-auto px-8 py-3 rounded-xl border-2 border-gray-200 hover:border-[#003822] text-xs font-bold uppercase tracking-wider text-gray-600 hover:text-[#003822] transition cursor-pointer">
               ✕ Close Window
             </button>
           </div>
@@ -474,9 +471,9 @@
   </section>
 
   <!-- UPI Payment Gateway Modal -->
-  <div id="upiPayGatewayModal" onclick="if(event.target === this) closeUpiGateway()" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+  <div id="upiPayGatewayModal" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
     <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full text-[#333333] shadow-2xl relative">
-      <button onclick="closeUpiGateway()" class="absolute top-4 right-4 bg-[#003822] hover:bg-[#FF2E93] text-white w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold shadow-md cursor-pointer transition">✕</button>
+      <button type="button" onclick="closeUpiGateway()" class="absolute top-4 right-4 bg-[#003822] hover:bg-[#FF2E93] text-white w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold shadow-md cursor-pointer transition">✕</button>
       
       <div class="text-center mb-6 pt-2">
         <span class="bg-[#F4F9F1] text-[#79B948] text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full border border-[#79B948]/30">Secure Payment Gateway</span>
@@ -499,7 +496,7 @@
           <label class="block font-bold text-[#003822] mb-2">Enter 12-Digit UPI Transaction ID / UTR No <span class="text-[#FF2E93]">*</span></label>
           <input type="text" id="utrReferenceNo" placeholder="ex. 430982348123" class="w-full p-3.5 bg-[#F8F7F4] border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#79B948] text-sm font-mono font-bold text-center tracking-widest">
         </div>
-        <button onclick="confirmWebsiteOrder()" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-4 rounded-xl font-extrabold uppercase text-xs tracking-widest cursor-pointer shadow-lg transition flex items-center justify-center gap-2">
+        <button type="button" onclick="confirmWebsiteOrder()" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-4 rounded-xl font-extrabold uppercase text-xs tracking-widest cursor-pointer shadow-lg transition flex items-center justify-center gap-2">
           <span>VERIFY & CONFIRM ORDER</span>
           <span>✓</span>
         </button>
@@ -513,7 +510,7 @@
       <div class="w-20 h-20 bg-[#F4F9F1] text-[#79B948] rounded-full flex items-center justify-center text-4xl mx-auto mb-6 shadow-inner border-2 border-[#79B948]">✓</div>
       <h3 class="font-serif font-bold text-2xl text-[#003822] mb-2">Order Placed Successfully!</h3>
       <p class="text-xs text-gray-600 mb-8 leading-relaxed">Thank you for choosing Aura Traditions. Our team has received your payment details and will dispatch your eco-friendly shipment shortly.</p>
-      <button onclick="location.reload()" class="w-full bg-[#003822] hover:bg-[#154E36] text-white py-4 rounded-xl text-xs font-bold uppercase tracking-widest shadow-lg transition cursor-pointer">Back to Store</button>
+      <button type="button" onclick="location.reload()" class="w-full bg-[#003822] hover:bg-[#154E36] text-white py-4 rounded-xl text-xs font-bold uppercase tracking-widest shadow-lg transition cursor-pointer">Back to Store</button>
     </div>
   </div>
 
@@ -588,7 +585,7 @@
         price: 150,
         originalPrice: 250,
         images: [
-          "1000271747.png",[span_13](start_span)[span_13](end_span)
+          "1000271747.png",
           "1795276442492.jpg"
         ],
         description: "Handcrafted from pure herbal neem wood. Ergonomic handle design ensures comfortable grip while gently stimulating scalp acupoints to promote healthy hair growth.",
@@ -605,8 +602,8 @@
         price: 100,
         originalPrice: 180,
         images: [
-          "1000271748.png",[span_14](start_span)[span_14](end_span)
-          "1000267237.jpg[span_15](start_span)"[span_15](end_span)
+          "1000271748.png",
+          "1000267237.jpg"
         ],
         description: "Biodegradable natural bamboo handle paired with soft bristles for gentle yet effective daily oral care.",
         features: [
@@ -622,7 +619,7 @@
         price: 150,
         originalPrice: 240,
         images: [
-          "1000271749.png",[span_16](start_span)[span_16](end_span)
+          "1000271749.png",
           "1795276449851.jpg"
         ],
         description: "Perfect for detangling wet or dry hair without breakage. Wide spacing helps distribute natural scalp oils evenly from root to tip.",
@@ -639,7 +636,7 @@
         price: 140,
         originalPrice: 240,
         images: [
-          "1000271750.png",[span_17](start_span)[span_17](end_span)
+          "1000271750.png",[span_3](start_span)[span_3](end_span)
           "1792774431394%20(1).png"
         ],
         description: "Designed for precision parting, sectioning, and intricate hairstyling. Smooth neem teeth prevent static and protect sensitive scalp.",
@@ -749,13 +746,13 @@
               <option value="Classic Wide-Tooth Neem Comb">Classic Wide-Tooth Neem Comb</option>
             </select>
           </div>
-          <button onclick="addModalSignatureKitToCart()" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-4 rounded-xl text-xs font-extrabold uppercase tracking-widest shadow-md transition cursor-pointer">
+          <button type="button" onclick="addModalSignatureKitToCart()" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-4 rounded-xl text-xs font-extrabold uppercase tracking-widest shadow-md transition cursor-pointer">
             ADD TO CART
           </button>
         `;
       } else {
         actionArea.innerHTML = `
-          <button onclick="addToCart('${productKey}', ${product.price}); closeProductModal();" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-4 rounded-xl text-xs font-extrabold uppercase tracking-widest shadow-md transition cursor-pointer">
+          <button type="button" onclick="addToCart('${productKey}', ${product.price}); closeProductModal();" class="w-full bg-[#79B948] hover:bg-[#68A33C] text-[#003822] py-4 rounded-xl text-xs font-extrabold uppercase tracking-widest shadow-md transition cursor-pointer">
             ADD TO CART
           </button>
         `;
